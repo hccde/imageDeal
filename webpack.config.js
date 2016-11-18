@@ -1,5 +1,6 @@
 let webpack = require('webpack');
 module.exports = {
+	devtool:"sourcemap",
 	entry:{
 		dest:['./default.js']	
 	},
