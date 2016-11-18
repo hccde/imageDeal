@@ -41,16 +41,17 @@
 				};
 				//全局的状态 canvas元素，绘图上下文，图像数据
 				//进行图片的处理
+				console.log(State.imageData.height)
 				let imagedata = Compute.deal(State.imageData);
-				State.ctx.putImageData(imagedata,0,0);
+				//clear
+				State.ctx.clearRect(0,0,State.imageData.width,State.imageData.height);
+				//调整大小
+				State.canvasEle.height = imagedata.height;
+				State.canvasEle.width = imagedata.width;
+				State.ctx.putImageData(imagedata,0,0,0,0,imagedata.width,imagedata.height);
 				return;
 			}
 
 			gen = initCanvas(pic);
 			gen.next();
-		}
-
-		function writeImg(imagedata,ctx,el) {
-			ctx.putImageData(dealimg(imagedata),0,0);
-
 		}
