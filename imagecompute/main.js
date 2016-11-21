@@ -1,3 +1,4 @@
+	let charts = require('./charts');
 	module.exports = {
 		imagedata:Array,//原始图像数组
 		grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
@@ -9,14 +10,14 @@
 			//TODO
 
 			let that = this;
-			let pre = ['toGray'];
+			let pre = ['toGray','histogram'];
 			pre.forEach(function(e){
 				that[e]();
 			});
 			// this.toRawData(this.twoDime);
 			// this.powerChange(1);
 			// this.log(0.9);
-			this.bitmap(6);
+			// this.bitmap(6);
 			// let del = this.operImageData(0,this.imagedata,this.imagedata.width,this.imagedata.height/2);
 			// for(let i = 0;i< this.imagedata.height/2;i++){
 				// del.next(i);
@@ -129,7 +130,32 @@
 			}
 		},
 		histogram(){//直方图均衡
+			let data = [0];
+			let grayimage = this.grayimage.slice(0)
+			let sortArray = grayimage.sort(function(a,b){
+				return a-b
+			});
+			let len = this.grayimage.length;
+			let last = 0;
+			console.log(this.grayimage)
+			for(let i = 1;i<=255;i++){
+				let count = sortArray.indexOf(i);
+				// console.log(count)
+				if(count == -1){
+					count = 0;
+				}else{
+					let tem = count;
+					count = count - last;
+					last =tem;
+				}
+				data[i-1] = count;
+				len -= count;
+			}
+			data[255] = len;
 
+			new charts.Histogram({
+				data:data
+			});
 		}
 }
 

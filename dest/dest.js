@@ -111,8 +111,9 @@
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
+		let charts = __webpack_require__(3);
 		module.exports = {
 			imagedata:Array,//原始图像数组
 			grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
@@ -124,14 +125,14 @@
 				//TODO
 	
 				let that = this;
-				let pre = ['toGray'];
+				let pre = ['toGray','histogram'];
 				pre.forEach(function(e){
 					that[e]();
 				});
 				// this.toRawData(this.twoDime);
 				// this.powerChange(1);
 				// this.log(0.9);
-				this.bitmap(6);
+				// this.bitmap(6);
 				// let del = this.operImageData(0,this.imagedata,this.imagedata.width,this.imagedata.height/2);
 				// for(let i = 0;i< this.imagedata.height/2;i++){
 					// del.next(i);
@@ -244,11 +245,98 @@
 				}
 			},
 			histogram(){//直方图均衡
+				let data = [0];
+				let grayimage = this.grayimage.slice(0)
+				let sortArray = grayimage.sort(function(a,b){
+					return a-b
+				});
+				let len = this.grayimage.length;
+				let last = 0;
+				console.log(this.grayimage)
+				for(let i = 1;i<=255;i++){
+					let count = sortArray.indexOf(i);
+					// console.log(count)
+					if(count == -1){
+						count = 0;
+					}else{
+						let tem = count;
+						count = count - last;
+						last =tem;
+					}
+					data[i-1] = count;
+					len -= count;
+				}
+				data[255] = len;
 	
+				new charts.Histogram({
+					data:data
+				});
 			}
 	}
 	
 	// 6212261001026960531
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	function _init(el = document.getElementsByTagName('body')[0]){
+			let canvas = document.createElement('CANVAS');
+			canvas.height = el.height?el.height:600;
+			canvas.width = el.width?el.width:800;
+			el.appendChild(canvas);
+			return canvas;
+	}
+	
+	function _coordinate(canvas){
+		let {width,height} = canvas;
+	
+		let coor = new Path2D();
+		coor.moveTo(0,height);
+		coor.lineTo(width,height);
+		coor.moveTo(0,height);
+		coor.lineTo(0,0);
+		coor.closePath();
+	
+		canvas.getContext('2d').stroke(coor);
+	}
+	
+	/**
+		opt{
+			el:ElementObject,
+			data:Array
+		}
+	**/
+	class Histogram {
+		constructor(opt){
+			console.log(opt.data)
+			this.canvas = _init(opt.el);
+			this.ctx = this.canvas.getContext('2d');
+			new _coordinate(this.canvas);
+			let data = new Path2D();
+			let dataMax = Number.NEGATIVE_INFINITY;
+			let dataMin = Number.POSITIVE_INFINITY;
+			let dataXStep = opt.data.length > 5 ? this.canvas.width/opt.data.length:80;
+			opt.data.forEach(function(e){
+				dataMax = e > dataMax?e:dataMax;
+				dataMin = e < dataMin?e:dataMin;
+			});
+			let dataYStep = this.canvas.height/(dataMax - dataMin)*50;
+			let that = this;
+			opt.data.forEach(function(e,index){
+				//画图
+				data.moveTo(index*dataXStep,e*dataYStep);
+				data.lineTo((index+1)*dataXStep,e*dataYStep);
+				data.lineTo((index+1)*dataXStep,that.canvas.height);
+			});
+			this.ctx.stroke(data);
+		}
+	}
+	
+	module.exports= {
+		Histogram
+	
+	}
 
 /***/ }
 /******/ ]);
