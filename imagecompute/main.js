@@ -9,20 +9,22 @@
 			//TODO
 
 			let that = this;
-			let pre = ['toGray','toTwoDime'];
+			let pre = ['toGray'];
 			pre.forEach(function(e){
 				that[e]();
 			});
 			// this.toRawData(this.twoDime);
-
-			let del = this.delImageData(this.imagedata,this.imagedata.width,this.imagedata.height/2);
-			for(let i = 0;i< this.imagedata.height/2;i++){
+			// this.powerChange(1);
+			// this.log(0.9);
+			this.bitmap(6);
+			// let del = this.operImageData(0,this.imagedata,this.imagedata.width,this.imagedata.height/2);
+			// for(let i = 0;i< this.imagedata.height/2;i++){
 				// del.next(i);
-				for(let j = 0;j<this.imagedata.width;j++){
-					del.next(j+i*this.imagedata.width);
-				}
-			}
-			this.imagedata = del.next(true).value;
+				// for(let j = 0;j<this.imagedata.width;j++){
+					// del.next(j+i*this.imagedata.width);
+				// }
+			// }
+			// this.imagedata = del.next(true).value;
 			return this.imagedata;
 		},
 		toGray(){//灰度
@@ -67,7 +69,7 @@
 				});
 			})
 		},
-		*delImageData (imagedata,width,height){//只能4个4个的删
+		*operImageData (oper,imagedata,width,height){
 			let copyarry = [];
 			let flag = false;
 			for(let i = 0;i<imagedata.data.length;i++){
@@ -78,13 +80,57 @@
 				if(flag === true){
 					break;
 				}else{
-					copyarry.splice(parseInt(flag),4);
+					if(oper == 0){ //只能4个4个的删
+						delete copyarry[flag];
+						delete copyarry[flag+1]
+						delete copyarry[flag+2]
+						delete copyarry[flag+3]
+					}else{
+						//添加像素
+					}
 				}
 			}
 			let copyimage = new ImageData(width,height);
 			for(let i = 0;i<copyimage.data.length;i++){
-				copyimage.data[i] = copyarry[i];
+				if(copyarry[i]){
+					copyimage.data[i] = copyarry[i];
+				}
 			}
 			return copyimage;
+		},
+		reversal(){//图像反转
+			for(let i = 0;i<this.imagedata.data.length;i++){
+				this.imagedata.data[i] =  255 - this.imagedata.data[i];
+			}
+		},
+		powerChange(param,weight=1){//幂次变换
+			for(let i = 0;i<this.imagedata.data.length;i++){
+				let newdata = (weight*Math.pow(this.imagedata.data[i]/255,param)*this.imagedata.data[i]);
+				this.imagedata.data[i] = newdata<=255?newdata:255;
+			}
+		},
+		log(param,weight=1){//对数变换 parm 是 [0,1]
+			for(let i = 0;i<this.imagedata.data.length;i++){
+				let newdata = (weight*Math.log(this.imagedata.data[i]*param+1)/
+					Math.log(this.imagedata.data[i]+1))*this.imagedata.data[i];
+				this.imagedata.data[i] = newdata;
+			}
+		},
+		bitmap(index=0){//比特分层,输出哪个比特面
+			if(index > 7){
+				throw("invaild");
+			}
+			index = 7 - index;
+			let base = parseInt(10000000,2);
+			let bit = base >> index;
+			for(let i = 0;i<this.imagedata.data.length;i++){
+				let newdata = this.imagedata.data[i] & bit;
+				this.imagedata.data[i] = newdata;
+			}
+		},
+		histogram(){//直方图均衡
+
 		}
 }
+
+// 6212261001026960531

@@ -1,6 +1,6 @@
 		let Compute =  require('./imagecompute/main.js');
 
-		init('./1.png');
+		init('./1.jpg');
 
 		function init(pic) {
 			let State = {
@@ -41,7 +41,6 @@
 				};
 				//全局的状态 canvas元素，绘图上下文，图像数据
 				//进行图片的处理
-				console.log(State.imageData.height)
 				let imagedata = Compute.deal(State.imageData);
 				//clear
 				State.ctx.clearRect(0,0,State.imageData.width,State.imageData.height);
