@@ -114,6 +114,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 		let charts = __webpack_require__(3);
+		let worker = __webpack_require__(4);
 		module.exports = {
 			imagedata:Array,//原始图像数组
 			grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
@@ -125,7 +126,7 @@
 				//TODO
 	
 				let that = this;
-				let pre = ['toGray','histogram'];
+				let pre = ['toGray','createWorkers'];
 				pre.forEach(function(e){
 					that[e]();
 				});
@@ -245,15 +246,17 @@
 				}
 			},
 			histogram(){//直方图均衡
-				let data = [0];
-				let grayimage = this.grayimage.slice(0)
-				let sortArray = grayimage.sort(function(a,b){
-					return a-b
-				});
-				let len = this.grayimage.length;
-				let last = 0;
-				console.log(this.grayimage)
-				for(let i = 1;i<=255;i++){
+				
+				function getHistogram(grayimages){
+					let data = [0];
+					let grayimage = grayimages.slice(0);
+					let sortArray = grayimage.sort(function(a,b){
+						return a-b
+					});
+					let len = grayimage.length;
+					let last = 0;
+	
+					for(let i = 1;i<=255;i++){
 					let count = sortArray.indexOf(i);
 					// console.log(count)
 					if(count == -1){
@@ -265,12 +268,69 @@
 					}
 					data[i-1] = count;
 					len -= count;
-				}
-				data[255] = len;
+					}
 	
-				new charts.Histogram({
+					data[255] = len;
+					return data;
+				}
+	
+				let data = getHistogram(this.grayimage);
+				new charts.Histogram({//原图的直方图
 					data:data
 				});
+				//均衡
+				let table = [];
+				let sum=0;
+				for(let i = 0;i<256;i++){
+					sum += data[i];
+					table[i] = parseInt(255*1*sum/this.grayimage.length);
+				}
+				console.log(table)
+				//原像素到目标像素的映射 TODO
+				for(let i = 0;i<this.grayimage.length;i++){
+					this.grayimage[i] = table[this.grayimage[i]];
+				}
+	
+				data = getHistogram(this.grayimage);
+				console.log(charts.Histogram);
+				let fn = charts.Histogram;
+				new charts.Histogram({data:data})
+			},
+			graytoPic(){//一维的灰度数组转化为图片
+				let that = this;
+				let count = 0;
+				this.grayimage.forEach(function(e){
+					that.imagedata.data[count*4] = e;
+					that.imagedata.data[count*4+1] = e;
+					that.imagedata.data[count*4+2] = e;
+					count+=1;
+				})	
+			},
+			createCameraVideo(el = document.getElementsByTagName('body')[0]){
+				let video = document.createElement('VIDEO');
+				navigator.getUserMedia({"video":true},function(stream){
+					video.src = window.URL.createObjectURL(stream);
+					video.play();
+				},function(err){
+					console.log(err);
+				});
+	
+				video.addEventListener('play',function(){//抓取视频流,立刻抓取是白屏的
+					setTimeout(function(){console.log(getVideoFrame(video))},3000);//处理图像数据
+				});
+	
+				function getVideoFrame(video){//获取视频流中的帧
+					let canvas = document.createElement('CANVAS');
+					let ctx = canvas.getContext('2d');
+					ctx.drawImage(video,0,0,video.clientWidth, video.clientHeight);
+					//返回图像帧数据
+					console.log(video.height)
+					el.appendChild(canvas);
+					return ctx.getImageData(0,0,video.clientWidth, video.clientHeight);
+				}
+			},
+			createWorkers(){
+				let w = new worker.Worker();
 			}
 	}
 	
@@ -309,7 +369,6 @@
 	**/
 	class Histogram {
 		constructor(opt){
-			console.log(opt.data)
 			this.canvas = _init(opt.el);
 			this.ctx = this.canvas.getContext('2d');
 			new _coordinate(this.canvas);
@@ -321,12 +380,13 @@
 				dataMax = e > dataMax?e:dataMax;
 				dataMin = e < dataMin?e:dataMin;
 			});
-			let dataYStep = this.canvas.height/(dataMax - dataMin)*50;
+			console.log(dataMax)
+			let dataYStep = this.canvas.height/dataMax;
 			let that = this;
 			opt.data.forEach(function(e,index){
-				//画图
-				data.moveTo(index*dataXStep,e*dataYStep);
-				data.lineTo((index+1)*dataXStep,e*dataYStep);
+				data.moveTo(index*dataXStep,that.canvas.height);
+				data.lineTo(index*dataXStep,that.canvas.height-e*dataYStep);
+				data.lineTo((index+1)*dataXStep,that.canvas.height-e*dataYStep);
 				data.lineTo((index+1)*dataXStep,that.canvas.height);
 			});
 			this.ctx.stroke(data);
@@ -335,7 +395,21 @@
 	
 	module.exports= {
 		Histogram
-	
+	}
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	//因为worker需要序列化反序列化，并且是无论如何都拷贝数据，所以在传递图像数据的时候开销极大
+	//但是通过类似于C++或者rust中的move borrow 我们可以极大的提高数据传递的效率
+	class Worker{
+		constructor(){
+			new window.Worker('var a= 2')
+		}
+	}
+	module.exports= {
+		Worker
 	}
 
 /***/ }

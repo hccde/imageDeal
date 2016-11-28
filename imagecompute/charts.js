@@ -27,7 +27,6 @@ function _coordinate(canvas){
 **/
 class Histogram {
 	constructor(opt){
-		console.log(opt.data)
 		this.canvas = _init(opt.el);
 		this.ctx = this.canvas.getContext('2d');
 		new _coordinate(this.canvas);
@@ -39,12 +38,13 @@ class Histogram {
 			dataMax = e > dataMax?e:dataMax;
 			dataMin = e < dataMin?e:dataMin;
 		});
-		let dataYStep = this.canvas.height/(dataMax - dataMin)*50;
+		console.log(dataMax)
+		let dataYStep = this.canvas.height/dataMax;
 		let that = this;
 		opt.data.forEach(function(e,index){
-			//画图
-			data.moveTo(index*dataXStep,e*dataYStep);
-			data.lineTo((index+1)*dataXStep,e*dataYStep);
+			data.moveTo(index*dataXStep,that.canvas.height);
+			data.lineTo(index*dataXStep,that.canvas.height-e*dataYStep);
+			data.lineTo((index+1)*dataXStep,that.canvas.height-e*dataYStep);
 			data.lineTo((index+1)*dataXStep,that.canvas.height);
 		});
 		this.ctx.stroke(data);
@@ -53,5 +53,4 @@ class Histogram {
 
 module.exports= {
 	Histogram
-
 }
