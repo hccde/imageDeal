@@ -215,8 +215,31 @@
 			}
 		},
 		createWorkers(){
-			let w = new worker.Worker();
-		}
+			//写一个最简单的测试一下
+			let jsstr = `
+				onmessage = function(e){
+				// e.data.m+=1；
+				}
+				postMessage('1');
+			`;
+			let w = new worker.Worker([jsstr]);
+			let r = w.receive();
+			console.log(r.next(function(){
+				console.log(1);
+				// console.log(e);
+			}))
+			console.log(r.next(function(e){
+				console.log(1);
+				// console.log(e);
+			}))
+
+			let s = w.send();
+			// w.receive().next(function(e){
+			// 	console.log(e);
+			// });
+			s.next('111');			
+			console.log(s.next('1111'));
+			}
 }
 
 // 6212261001026960531

@@ -330,8 +330,31 @@
 				}
 			},
 			createWorkers(){
-				let w = new worker.Worker();
-			}
+				//写一个最简单的测试一下
+				let jsstr = `
+					onmessage = function(e){
+					// e.data.m+=1；
+					}
+					postMessage('1');
+				`;
+				let w = new worker.Worker([jsstr]);
+				let r = w.receive();
+				console.log(r.next(function(){
+					console.log(1);
+					// console.log(e);
+				}))
+				console.log(r.next(function(e){
+					console.log(1);
+					// console.log(e);
+				}))
+	
+				let s = w.send();
+				// w.receive().next(function(e){
+				// 	console.log(e);
+				// });
+				s.next('111');			
+				console.log(s.next('1111'));
+				}
 	}
 	
 	// 6212261001026960531
@@ -404,9 +427,43 @@
 	//因为worker需要序列化反序列化，并且是无论如何都拷贝数据，所以在传递图像数据的时候开销极大
 	//但是通过类似于C++或者rust中的move borrow 我们可以极大的提高数据传递的效率
 	class Worker{
-		constructor(){
-			new window.Worker('var a= 2')
+		constructor(jsArray){
+			for(let i = 0;i<jsArray.length;i++){
+	
+			};
+			this.workers = jsArray.map(function(e) { //根据机器核的数目来确定开的webworker的数目，一个新的worker就是新的线程
+				return new window.Worker(e);
+			});
 		}
+	
+		*_receive(){//主线程接受来自worker的消息调用fn，生成器函数
+			let fn = function(){};
+			for(let i = 0;i< this.workers.length;i++){
+				this.workers[i].onmessage = yield fn;
+			}
+			return 0;
+		}
+	
+		*_send(){
+			let param = {};
+			for(let i = 0;i<this.workers.length;i++){
+				 let realparam = yield param;
+				  // window.Worker.prototype.postMessage.call(this.workers[i],'11')
+				this.workers[i].postMessage('11');//主线程向worker传递数据,move和borrow
+			}
+			return 11;
+		}
+	
+		receive(){
+			let rece = this._receive();
+			return rece;
+		}
+	
+		send(){
+			let sen = this._send();
+			return sen;
+		}
+	
 	}
 	module.exports= {
 		Worker
