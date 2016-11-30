@@ -1,12 +1,15 @@
+//这个worker类以一个函数初始化，建立worker，receive,send 分别为发送函数所需的数据，接收函数执行的结果
 //因为worker需要序列化反序列化，并且是无论如何都拷贝数据，所以在传递图像数据的时候开销极大
 //但是通过类似于C++或者rust中的move borrow 我们可以极大的提高数据传递的效率
 class Worker{
 	constructor(jsArray){
-		for(let i = 0;i<jsArray.length;i++){
-
-		};
 		this.workers = jsArray.map(function(e) { //根据机器核的数目来确定开的webworker的数目，一个新的worker就是新的线程
-			return new window.Worker(e);
+			let w = new window.Worker('worker.js');//由页面上的url确定
+			w.postMessage(JSON.stringify({
+				type:'function',
+				value:e,
+			}));
+			return w;
 		});
 	}
 

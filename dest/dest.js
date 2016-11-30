@@ -126,10 +126,17 @@
 				//TODO
 	
 				let that = this;
-				let pre = ['toGray','createWorkers'];
-				pre.forEach(function(e){
-					that[e]();
+	
+				// let pre = ['toGray','toTwoDime','createWorkers'];
+				// pre.forEach(function(e){
+				// 	that[e]();
+				// });
+				this.toGray();
+				this.toTwoDime();
+				this.moveTmpl([[0,0],[0,0]],function(templ,imagearea){
+					return imagearea[0][0]*0.5;
 				});
+				this.toRawData(this.twoDime);
 				// this.toRawData(this.twoDime);
 				// this.powerChange(1);
 				// this.log(0.9);
@@ -173,7 +180,7 @@
 					}
 				}
 			},
-			toRawData(twoDime){//二维图像数组信息同步回原始图像数组
+			toRawData(twoDime){//二维图像数组信息同步回原始图像数组,大小不更改
 				let that = this;
 				let count=0;
 				this.imagedata.data
@@ -331,12 +338,11 @@
 			},
 			createWorkers(){
 				//写一个最简单的测试一下
-				let jsstr = `
-					onmessage = function(e){
-					// e.data.m+=1；
+				jsstr = `
+					function t(){
+						return 0;
 					}
-					postMessage('1');
-				`;
+				`
 				let w = new worker.Worker([jsstr]);
 				let r = w.receive();
 				console.log(r.next(function(){
@@ -354,10 +360,71 @@
 				// });
 				s.next('111');			
 				console.log(s.next('1111'));
+				},
+				//模板运算
+				moveTmpl(tmpl,fn){//移动tmpl 传入对应的回调fn
+					let tmplrow = tmpl.length;
+					let tmplcol = tmpl[0].length;
+					let imagerow = this.twoDime.length;
+					let imagecol = this.twoDime[0].length;
+	
+					//对原图的边缘像素添加像素
+					let extraRow = Math.ceil((tmplrow-1)/2);
+					let extraCol = Math.ceil((tmplcol-1)/2);
+					//上面添加行
+					for(let i = 0;i<extraRow;i++){
+						this.twoDime.unshift(this.twoDime[2*i+1])//插入行的时候下标也变了！注意
+					}
+				// 	//下面添加行
+					for(let i = 0;i<extraRow;i++){
+						this.twoDime.push(this.twoDime[this.twoDime.length-2-i])
+					}
+				// 	//左边添加列
+					for(let i = 0;i<this.twoDime.length;i++){
+						for(let k = 0;k<extraCol;k++){
+							this.twoDime[i].unshift(this.twoDime[i][2*k+1]);
+						}
+					}
+				// 	//右边添加列
+					for(let i = 0;i<this.twoDime.length;i++){
+						for(let k = 0;k<extraCol;k++){
+							this.twoDime[i].push(this.twoDime[i][this.twoDime[0].length-2-k])
+						}
+					}
+	
+					function getArea(r,c){
+						let area = []
+						for(let i = 0;i<tmplrow;i++){	
+							area.push([]);
+							for(let j = 0;j<tmplcol;j++){
+								area[i][j] = this.twoDime[r+i][j+c];
+							}
+						}
+						return area;
+					}
+				// 	//key step
+					for(let i = extraRow;i < imagerow;i++){//逐像素处理
+						for(let j = extraCol;j < imagecol;j++){
+							this.twoDime[i][j] = fn(tmpl,getArea.bind(this)(i,j));
+						}
+					}
+	
+				// 	//消除多余的行
+					for(let i = 0;i<extraRow;i++){
+						this.twoDime.shift();
+						this.twoDime.pop();
+					}
+	
+				// 	//消除多余的列
+					for(let i = 0;i<this.twoDime.length;i++){
+						for(let k = 0;k<extraCol;k++){
+							this.twoDime[i].shift();
+							this.twoDime[i].pop();
+						}
+					}
+	
 				}
 	}
-	
-	// 6212261001026960531
 
 /***/ },
 /* 3 */
@@ -424,15 +491,18 @@
 /* 4 */
 /***/ function(module, exports) {
 
+	//这个worker类以一个函数初始化，建立worker，receive,send 分别为发送函数所需的数据，接收函数执行的结果
 	//因为worker需要序列化反序列化，并且是无论如何都拷贝数据，所以在传递图像数据的时候开销极大
 	//但是通过类似于C++或者rust中的move borrow 我们可以极大的提高数据传递的效率
 	class Worker{
 		constructor(jsArray){
-			for(let i = 0;i<jsArray.length;i++){
-	
-			};
 			this.workers = jsArray.map(function(e) { //根据机器核的数目来确定开的webworker的数目，一个新的worker就是新的线程
-				return new window.Worker(e);
+				let w = new window.Worker('worker.js');//由页面上的url确定
+				w.postMessage(JSON.stringify({
+					type:'function',
+					value:e,
+				}));
+				return w;
 			});
 		}
 	
