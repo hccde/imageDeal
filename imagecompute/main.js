@@ -5,20 +5,34 @@
 		grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
 		twoDime:Array,//二维的图像像素数组，不能直接输出为图像
 		pic:Array,
-		deal(imagedata) {
-			this.imagedata = imagedata;
-			this.pic = imagedata;
+		prepic:Array,//所需要的图片，提前加载完毕
+		colorfulTunel:Array,
+		deal(State){
+			this.imagedata = State.imageData;
+			this.prepic = State.prepic;
+			this.pic = State.imageData;
+			
+			//彩色图像分为RGBA通道
+			// this.divThreeTunel();
+			// for(let i = 0;i<3;i++){
+			// 	this.grayimage =  this.colorfulTunel[i];
+			// 	this.toTwoDime();
+			// 	this.LaplaceSharpen();
+			// 	this.colorfulTunel[i] = this.toOneDime();
+			// 	console.log(i)
+			// }
+			// this.toColorfulImg();
 			//给imagedata 加上set get 方法
 			//TODO
 
-			let that = this;
+			// let that = this;
 
 			// let pre = ['toGray','toTwoDime','createWorkers'];
 			// pre.forEach(function(e){
 			// 	that[e]();
 			// });
 			// this.toGray();
-			this.createCameraVideo();
+			// this.createCameraVideo();
 			// this.toTwoDime();
 			// this.CarlFilter();
 			// this.Sharpen();
@@ -82,6 +96,15 @@
 					count+=1;
 				});
 			})
+		},
+		toOneDime(){//二维数组转一维数组
+			let res = [];
+			for(let i = 0;i<this.twoDime.length;i++){
+				for(let j = 0;j<this.twoDime[0].length;j++){
+					res[i*this.twoDime[0].length+j] = this.twoDime[i][j];
+				}
+			}
+			return res;
 		},
 		*operImageData (oper,imagedata,width,height){
 			let copyarry = [];
@@ -207,7 +230,7 @@
 				count+=1;
 			})	
 		},
-		createCameraVideo(el = document.getElementsByTagName('body')[0]){
+		createCameraVideo(el = document.getElementsByTagName('body')[0]){//TODO 捉猫猫逻辑
 			let video = document.createElement('VIDEO');
 			el.appendChild(video);
 			let that = this;
@@ -256,8 +279,8 @@
 			// this.toTwoDime();
 			// this.LaplaceSharpen();
 			// this.toRawData();
-			console.log(this.prePic)
 			this.imageAdd(this.pic,20,60);
+			this.imageAdd(this.prepic[0],100,50)
 			return this.imagedata;
 		},
 		createWorkers(){
@@ -445,10 +468,27 @@
 			imageSub(imagedata2){
 
 			},
-			//快速获得选取内的元素
-			//先进行拉普拉斯变换 然后和原来的图片比较
-			getObject(){
+			divThreeTunel(){//将彩色图片分为RGBA通道
+				this.colorfulTunel = [[],[],[],[]];
+				this.imagedata.data
+				for(let i = 0;i<this.imagedata.data.length;){
+					this.colorfulTunel[0].push(this.imagedata.data[i]);//R
+					this.colorfulTunel[1].push(this.imagedata.data[i+1]);//G
+					this.colorfulTunel[2].push(this.imagedata.data[i+2]);//B
+					this.colorfulTunel[3].push(this.imagedata.data[i+3]);//A
+					i = i+4;
+				}
 
+			},
+			toColorfulImg(){//将RGBA通道数据同步回对象
+				let length = this.colorfulTunel[0].length;
+				for(let i = 0;i<length;i++){
+					this.imagedata.data[4*i] = this.colorfulTunel[0][i];
+					this.imagedata.data[1+4*i] = this.colorfulTunel[1][i];
+					this.imagedata.data[2+4*i] = this.colorfulTunel[2][i];
+					this.imagedata.data[3+4*i] = this.colorfulTunel[3][i];
+
+				}
 			}
 
 }

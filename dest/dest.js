@@ -52,15 +52,40 @@
 /***/ function(module, exports, __webpack_require__) {
 
 			let Compute =  __webpack_require__(2);
+			loadPrePic(['./amazingball.png'])
 			function loadPrePic(picArray){
-				
+				let count  = picArray.length;
+				let picarray = [];
+				picArray.forEach(function(e){
+					let canvasEle = document.createElement(`CANVAS`);
+					let ctx = canvasEle.getContext('2d');
+					
+					let img = new Image();
+					img.src = e;
+					img.onload = function(){
+						let {
+							height,
+							width
+						} = img;
+						canvasEle.height = height;
+						canvasEle.width = width;
+						count-=1;
+						ctx.drawImage(img, 0, 0);
+						let imageData = ctx.getImageData(0, 0, width, height);
+						ctx.clearRect(0,0,imageData.width,imageData.height);
+						picarray.push(imageData);//不保证图片的顺序
+						if(count == 0){
+							init('./2.jpg',picarray);//前置图片加载完毕之后初始化
+						}
+					}
+				});
 			}
-			init('./4.png');//TODO
 			function init(pic,prepic) {
 				let State = {
 					canvasEle: Object,
 					ctx: Object,
-					imageData: Object
+					imageData: Object,
+					prepic:Array
 				};
 				let gen;
 	
@@ -81,8 +106,10 @@
 					State = {
 						canvasEle,
 						ctx,
-						imageData
+						imageData,
+						prepic
 					};
+					console.log(prepic)
 					gen.next();
 				}
 	
@@ -95,7 +122,7 @@
 					};
 					//全局的状态 canvas元素，绘图上下文，图像数据
 					//进行图片的处理
-					let imagedata = Compute.deal(State.imageData);
+					let imagedata = Compute.deal(State);
 					//clear
 					State.ctx.clearRect(0,0,State.imageData.width,State.imageData.height);
 					//调整大小
@@ -121,20 +148,34 @@
 			grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
 			twoDime:Array,//二维的图像像素数组，不能直接输出为图像
 			pic:Array,
-			deal(imagedata) {
-				this.imagedata = imagedata;
-				this.pic = imagedata;
+			prepic:Array,//所需要的图片，提前加载完毕
+			colorfulTunel:Array,
+			deal(State){
+				this.imagedata = State.imageData;
+				this.prepic = State.prepic;
+				this.pic = State.imageData;
+				
+				//彩色图像分为RGBA通道
+				// this.divThreeTunel();
+				// for(let i = 0;i<3;i++){
+				// 	this.grayimage =  this.colorfulTunel[i];
+				// 	this.toTwoDime();
+				// 	this.LaplaceSharpen();
+				// 	this.colorfulTunel[i] = this.toOneDime();
+				// 	console.log(i)
+				// }
+				// this.toColorfulImg();
 				//给imagedata 加上set get 方法
 				//TODO
 	
-				let that = this;
+				// let that = this;
 	
 				// let pre = ['toGray','toTwoDime','createWorkers'];
 				// pre.forEach(function(e){
 				// 	that[e]();
 				// });
 				// this.toGray();
-				this.createCameraVideo();
+				// this.createCameraVideo();
 				// this.toTwoDime();
 				// this.CarlFilter();
 				// this.Sharpen();
@@ -198,6 +239,15 @@
 						count+=1;
 					});
 				})
+			},
+			toOneDime(){//二维数组转一维数组
+				let res = [];
+				for(let i = 0;i<this.twoDime.length;i++){
+					for(let j = 0;j<this.twoDime[0].length;j++){
+						res[i*this.twoDime[0].length+j] = this.twoDime[i][j];
+					}
+				}
+				return res;
 			},
 			*operImageData (oper,imagedata,width,height){
 				let copyarry = [];
@@ -323,7 +373,7 @@
 					count+=1;
 				})	
 			},
-			createCameraVideo(el = document.getElementsByTagName('body')[0]){
+			createCameraVideo(el = document.getElementsByTagName('body')[0]){//TODO 捉猫猫逻辑
 				let video = document.createElement('VIDEO');
 				el.appendChild(video);
 				let that = this;
@@ -372,8 +422,8 @@
 				// this.toTwoDime();
 				// this.LaplaceSharpen();
 				// this.toRawData();
-				console.log(this.prePic)
 				this.imageAdd(this.pic,20,60);
+				this.imageAdd(this.prepic[0],100,50)
 				return this.imagedata;
 			},
 			createWorkers(){
@@ -561,10 +611,27 @@
 				imageSub(imagedata2){
 	
 				},
-				//快速获得选取内的元素
-				//先进行拉普拉斯变换 然后和原来的图片比较
-				getObject(){
+				divThreeTunel(){//将彩色图片分为RGBA通道
+					this.colorfulTunel = [[],[],[],[]];
+					this.imagedata.data
+					for(let i = 0;i<this.imagedata.data.length;){
+						this.colorfulTunel[0].push(this.imagedata.data[i]);//R
+						this.colorfulTunel[1].push(this.imagedata.data[i+1]);//G
+						this.colorfulTunel[2].push(this.imagedata.data[i+2]);//B
+						this.colorfulTunel[3].push(this.imagedata.data[i+3]);//A
+						i = i+4;
+					}
 	
+				},
+				toColorfulImg(){//将RGBA通道数据同步回对象
+					let length = this.colorfulTunel[0].length;
+					for(let i = 0;i<length;i++){
+						this.imagedata.data[4*i] = this.colorfulTunel[0][i];
+						this.imagedata.data[1+4*i] = this.colorfulTunel[1][i];
+						this.imagedata.data[2+4*i] = this.colorfulTunel[2][i];
+						this.imagedata.data[3+4*i] = this.colorfulTunel[3][i];
+	
+					}
 				}
 	
 	}
