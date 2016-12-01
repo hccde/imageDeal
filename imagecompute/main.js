@@ -4,9 +4,10 @@
 		imagedata:Array,//原始图像数组
 		grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
 		twoDime:Array,//二维的图像像素数组，不能直接输出为图像
+		pic:Array,
 		deal(imagedata) {
 			this.imagedata = imagedata;
-
+			this.pic = imagedata;
 			//给imagedata 加上set get 方法
 			//TODO
 
@@ -16,15 +17,20 @@
 			// pre.forEach(function(e){
 			// 	that[e]();
 			// });
-			this.toGray();
-			this.toTwoDime();
-			this.moveTmpl([[0,0],[0,0]],function(templ,imagearea){
-				return imagearea[0][0]*0.5;
-			});
-			this.toRawData(this.twoDime);
+			// this.toGray();
+			this.createCameraVideo();
+			// this.toTwoDime();
+			// this.CarlFilter();
+			// this.Sharpen();
+			// this.LaplaceSharpen();
+			// this.toRawData(this.twoDime);
+			// this.reversal()
 			// this.toRawData(this.twoDime);
 			// this.powerChange(1);
 			// this.log(0.9);
+			// this.bitmap(6);
+			// this.LaplaceSharpen();
+			// this.toRawData(this.twoDime);
 			// this.bitmap(6);
 			// let del = this.operImageData(0,this.imagedata,this.imagedata.width,this.imagedata.height/2);
 			// for(let i = 0;i< this.imagedata.height/2;i++){
@@ -37,18 +43,18 @@
 			return this.imagedata;
 		},
 		toGray(){//灰度
-			let imagedata = this.imagedata;
 			this.grayimage = [];
-			for (let i = 0; i < imagedata.data.length;) {
-				let gray = (imagedata.data[i] * 30 + imagedata.data[i + 1] * 59 + imagedata.data[i + 2] * 11) / 100;
+			for (let i = 0; i < this.imagedata.data.length;) {
+				let gray = (this.imagedata.data[i] * 30 + this.imagedata.data[i + 1] * 59 + this.imagedata.data[i + 2] * 11) / 100;
 				gray = parseInt(gray);
-				imagedata.data[i] = gray;
-				imagedata.data[i + 1] = gray;
-				imagedata.data[i + 2] = gray;
+				gray = gray>255?255:gray;
+				this.imagedata.data[i] = gray;
+				this.imagedata.data[i + 1] = gray;
+				this.imagedata.data[i + 2] = gray;
+				// this.imagedata.data[i + 3] = 1;// aplah 通道置1
 				this.grayimage.push(gray);
 				i = i + 4;
 			}	
-			return imagedata;
 		},
 		toTwoDime(){//一维图像数组转二维
 			this.twoDime = [];
@@ -65,11 +71,10 @@
 				}
 			}
 		},
-		toRawData(twoDime){//二维图像数组信息同步回原始图像数组,大小不更改
+		toRawData(){//二维图像数组信息同步回原始图像数组,大小不更改
 			let that = this;
 			let count=0;
-			this.imagedata.data
-			twoDime.forEach(function(e,index){
+			this.twoDime.forEach(function(e,index){
 				e.forEach(function(ee,indexs){
 					that.imagedata.data[count*4] = ee;
 					that.imagedata.data[count*4+1] = ee;
@@ -108,8 +113,12 @@
 			return copyimage;
 		},
 		reversal(){//图像反转
+			let count = 0;
 			for(let i = 0;i<this.imagedata.data.length;i++){
-				this.imagedata.data[i] =  255 - this.imagedata.data[i];
+				this.imagedata.data[i] = 255-this.imagedata.data[i];
+				// this.imagedata.data[i + 1] = 255-this.imagedata.data[i+1];
+				// this.imagedata.data[i + 2] = 255-this.imagedata.data[i+2];
+				// i = i + 4;
 			}
 		},
 		powerChange(param,weight=1){//幂次变换
@@ -200,6 +209,8 @@
 		},
 		createCameraVideo(el = document.getElementsByTagName('body')[0]){
 			let video = document.createElement('VIDEO');
+			el.appendChild(video);
+			let that = this;
 			navigator.getUserMedia({"video":true},function(stream){
 				video.src = window.URL.createObjectURL(stream);
 				video.play();
@@ -208,18 +219,46 @@
 			});
 
 			video.addEventListener('play',function(){//抓取视频流,立刻抓取是白屏的
-				setTimeout(function(){console.log(getVideoFrame(video))},3000);//处理图像数据
+				function begin(){
+					//展示的canvas
+					let canvas = document.createElement('CANVAS');
+					canvas.height = video.clientHeight;
+					canvas.width = video.clientWidth;
+					el.appendChild(canvas);
+					let ctx = canvas.getContext('2d');
+					// ctx.globalCompositeOperation="source-over"
+					let that = this;
+					setTimeout(function(){
+						let streamImageData = getVideoFrame(video);					
+						ctx.putImageData(that.dealStream(streamImageData,ctx),0,0,0,0,streamImageData.width,streamImageData.height);
+					},0)
+				}
+					//				}
+				setTimeout(begin.bind(that),1000);//处理图像数据
 			});
 
 			function getVideoFrame(video){//获取视频流中的帧
 				let canvas = document.createElement('CANVAS');
+				canvas.height = video.clientHeight;
+				canvas.width = video.clientWidth;
+				canvas.style.position = "absolute";
+				canvas.style.top = '-10000px';
 				let ctx = canvas.getContext('2d');
 				ctx.drawImage(video,0,0,video.clientWidth, video.clientHeight);
 				//返回图像帧数据
-				console.log(video.height)
 				el.appendChild(canvas);
 				return ctx.getImageData(0,0,video.clientWidth, video.clientHeight);
 			}
+		},
+		dealStream(imagedata,ctx){
+			this.imagedata = imagedata;
+			// this.toGray();
+			// this.toTwoDime();
+			// this.LaplaceSharpen();
+			// this.toRawData();
+			console.log(this.prePic)
+			this.imageAdd(this.pic,20,60);
+			return this.imagedata;
 		},
 		createWorkers(){
 			//写一个最简单的测试一下
@@ -247,11 +286,11 @@
 			console.log(s.next('1111'));
 			},
 			//模板运算
-			moveTmpl(tmpl,fn){//移动tmpl 传入对应的回调fn
+			moveTmpl(tmpl,fn,x=0,y=0,width=0,height=0){//移动tmpl 传入对应的回调fn
 				let tmplrow = tmpl.length;
 				let tmplcol = tmpl[0].length;
-				let imagerow = this.twoDime.length;
-				let imagecol = this.twoDime[0].length;
+				let imagerow = height?(height+x):this.twoDime.length;
+				let imagecol = width?(width+y):this.twoDime[0].length;
 
 				//对原图的边缘像素添加像素
 				let extraRow = Math.ceil((tmplrow-1)/2);
@@ -288,6 +327,7 @@
 					return area;
 				}
 			// 	//key step
+
 				for(let i = extraRow;i < imagerow;i++){//逐像素处理
 					for(let j = extraCol;j < imagecol;j++){
 						this.twoDime[i][j] = fn(tmpl,getArea.bind(this)(i,j));
@@ -308,5 +348,107 @@
 					}
 				}
 
+			},
+			//高斯模糊，用于去除孤立噪声,默认3*3，也可用作毛玻璃效果
+			CarlFilter(){
+				this.moveTmpl([
+					[1,2,1],
+					[2,4,2],
+					[1,2,1]
+					],function(tmpl,imagearea){
+						let row = tmpl.length;
+						let col = tmpl[0].length;
+						let sum=0;
+						let div = 0;
+						for(let i =0;i<tmpl.length;i++){
+							for(let j = 0;j<tmpl[0].length;j++){
+								div+=tmpl[i][j];
+							}
+						}
+						for(let i = 0;i<row;i++){
+							for(let j = 0;j<col;j++){
+								sum += tmpl[i][j]*imagearea[i][j];
+							}
+						}
+						return parseInt(sum/div);
+					})
+			},
+			//图片锐化
+			Sharpen(){
+				this.moveTmpl([
+					[-1,-1,-1],
+					[-1,9.5,-1],
+					[-1,-1,-1]
+					],function(tmpl,imagearea){
+						let row = tmpl.length;
+						let col = tmpl[0].length;
+						let sum=0;
+						for(let i = 0;i<row;i++){
+							for(let j = 0;j<col;j++){
+								sum += tmpl[i][j]*imagearea[i][j];
+							}
+						}
+						return sum;
+				})
+			},
+			LaplaceSharpen(){
+				this.moveTmpl([
+					[0,1,0],
+					[1,-4,1],
+					[0,1,0]
+					],function(tmpl,imagearea){
+						let row = tmpl.length;
+						let col = tmpl[0].length;
+						let sum=0;
+						for(let i = 0;i<row;i++){
+							for(let j = 0;j<col;j++){
+								sum += tmpl[i][j]*imagearea[i][j];
+							}
+						}
+						return sum;
+				},0,0,0,0)
+			},
+			createSizeImg(width,height){//创建指定大小的空白图片，返回imagedata
+				let imageEle = document.createElement('IMG');
+				imageEle.height = height;
+				imageEle.width = width;
+				let canvasEle = document.createElement(`CANVAS`);
+				let ctx = canvasEle.getContext('2d');
+
+				canvasEle.height = height;
+				canvasEle.width = width;
+				ctx.drawImage(img, 0, 0);
+				let imageData = ctx.getImageData(0, 0, width, height);
+				return imageData;
+			},
+			insertData(){//图片插值，有多种方式
+
+			},
+			//不同尺寸的图片应该先通过剪裁或者插值变成相同尺寸 todo
+			imageAdd(imagedata2,x,y){
+				let imagedata2height = imagedata2.height;
+				let imagedata2width = imagedata2.width;
+				for(let i = 0;i<imagedata2height;i++){
+					for(let j = 0;j<imagedata2width*4;){
+						if(imagedata2.data[i*imagedata2width*4+j+3] == 0){
+							j = j+4;
+							continue;
+						}
+						this.imagedata.data[(this.imagedata.width*4)*(y+i)+x*4+j] = imagedata2.data[i*imagedata2width*4+j];
+						this.imagedata.data[(this.imagedata.width*4)*(y+i)+x*4+j+1] = imagedata2.data[i*imagedata2width*4+j+1];
+						this.imagedata.data[(this.imagedata.width*4)*(y+i)+x*4+j+2] = imagedata2.data[i*imagedata2width*4+j+2];
+						this.imagedata.data[(this.imagedata.width*4)*(y+i)+x*4+j+3] = imagedata2.data[i*imagedata2width*4+j+3];
+						j = j+4;
+					}
+				}
+			},
+			imageSub(imagedata2){
+
+			},
+			//快速获得选取内的元素
+			//先进行拉普拉斯变换 然后和原来的图片比较
+			getObject(){
+
 			}
+
 }

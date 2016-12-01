@@ -1,8 +1,9 @@
 		let Compute =  require('./imagecompute/main.js');
-
-		init('./1.jpg');
-
-		function init(pic) {
+		function loadPrePic(picArray){
+			
+		}
+		init('./4.png');//TODO
+		function init(pic,prepic) {
 			let State = {
 				canvasEle: Object,
 				ctx: Object,
