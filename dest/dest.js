@@ -155,6 +155,13 @@
 				this.prepic = State.prepic;
 				this.pic = State.imageData;
 				
+				// console.log(this.imagedata)
+					this.toGray();
+					this.toTwoDime();
+				// this.transform(110,110);
+					this.spin();
+					this.toRawData();
+				// this.LaplaceSharpen();
 				//彩色图像分为RGBA通道
 				// this.divThreeTunel();
 				// for(let i = 0;i<3;i++){
@@ -228,7 +235,8 @@
 					}
 				}
 			},
-			toRawData(){//二维图像数组信息同步回原始图像数组,大小不更改
+			toRawData(){//二维图像数组信息同步回原始图像数组
+				this.imagedata = this.createEmptyImageData(this.twoDime[0].length,this.twoDime.length);
 				let that = this;
 				let count=0;
 				this.twoDime.forEach(function(e,index){
@@ -236,6 +244,7 @@
 						that.imagedata.data[count*4] = ee;
 						that.imagedata.data[count*4+1] = ee;
 						that.imagedata.data[count*4+2] = ee;
+						that.imagedata.data[count*4+3] = 255;
 						count+=1;
 					});
 				})
@@ -587,9 +596,6 @@
 					let imageData = ctx.getImageData(0, 0, width, height);
 					return imageData;
 				},
-				insertData(){//图片插值，有多种方式
-	
-				},
 				//不同尺寸的图片应该先通过剪裁或者插值变成相同尺寸 todo
 				imageAdd(imagedata2,x,y){
 					let imagedata2height = imagedata2.height;
@@ -632,6 +638,111 @@
 						this.imagedata.data[3+4*i] = this.colorfulTunel[3][i];
 	
 					}
+				},
+				createEmptyImageData(width,height){//创建空的图像数据 留作他用
+					return new ImageData(width,height);
+				},
+				transform(widths,heights){//双线性插值，注意对边缘的处理，如果性能问题就考虑最邻近插值
+					//对原图的边缘像素添加像素
+					let height = this.twoDime.length;
+					let width = this.twoDime[0].length;
+					let extraRow = 1;
+					let extraCol = 1;
+					let newTwoDime = [];
+					let heightfactor = height/heights;
+					let widthfactor = width/widths;
+	
+					function hasPos(posx,posy){ //判断新像素在旧像素是否有对应位置
+						if(parseInt(posx) !== posx || parseInt(posy) !== posy||
+							posx>=this.twoDime.length || posy >= this.twoDime[0].length){
+							return -1;
+						}else{
+							return this.twoDime[posx][posy];
+						}
+					}
+	
+					function getNewValue(i,j){
+						posx = i*heightfactor+1 //因为增加了一行一列
+						posy = j*widthfactor+1;
+	
+						let newPos = hasPos.bind(this)(posx,posy);
+						if(newPos == -1){
+							//双线性插值
+							f00 = this.twoDime[Math.floor(posx)][Math.floor(posy)];
+							f10 = this.twoDime[Math.floor(posx)][Math.ceil(posy)];
+							f01 = this.twoDime[Math.ceil(posx)][Math.floor(posy)];
+							f11 = this.twoDime[Math.ceil(posx)][Math.ceil(posy)];
+							return Math.floor(f00*(1-posx)*(1-posy)+f10*posy*(1-posx)+f01*posx*(1-posy)+f11*posx*posy);
+						}else{
+							return newPos;
+						}
+					}
+	
+	
+					//上面添加行
+					for(let i = 0;i<extraRow;i++){
+						this.twoDime.unshift(this.twoDime[2*i+1])//插入行的时候下标也变了！注意
+					}
+				// 	//下面添加行
+					for(let i = 0;i<extraRow;i++){
+						this.twoDime.push(this.twoDime[this.twoDime.length-2-i])
+					}
+				// 	//左边添加列
+					for(let i = 0;i<this.twoDime.length;i++){
+						for(let k = 0;k<extraCol;k++){
+							this.twoDime[i].unshift(this.twoDime[i][2*k+1]);
+						}
+					}
+				// 	//右边添加列
+					for(let i = 0;i<this.twoDime.length;i++){
+						for(let k = 0;k<extraCol;k++){
+							this.twoDime[i].push(this.twoDime[i][this.twoDime[0].length-2-k])
+						}
+					}
+					for(let i = 0;i<heights;i++){
+						newTwoDime.push([]);
+						for(let j= 0;j<widths;j++){
+							newTwoDime[i][j] = getNewValue.bind(this)(i,j);
+						}
+					}
+					this.twoDime = newTwoDime;
+				},
+				spin(){
+					//中心像素，作为旋转点,90度旋转
+					this.y = this.twoDime.length / 2;
+					this.x = this.twoDime[0].length / 2;
+					let newRect = Math.max(this.twoDime.length,this.twoDime[0].length);
+					let newTwoDime = [];
+					function spinStep(i,j,angle){//90度
+						let x = j*Math.sin(angle)+i*Math.cos(angle)-0.5*newRect*Math.sin(angle)-0.5*Math.cos(angle)*newRect+0.5*this.twoDime.length;
+						let y = j*Math.cos(angle)-i*Math.sin(angle)-0.5*newRect*Math.cos(angle)+0.5*Math.sin(angle)*newRect+0.5*this.twoDime[0].length;
+						return {
+							x:parseInt(x),
+							y:parseInt(y)
+						}
+					}
+	
+					function getNewValue(i,j){
+						let point = spinStep.bind(this)(i,j,Math.PI/2);
+						let x= point.x;
+						let y=point.y;
+						if(this.twoDime[x][y]){
+							return this.twoDime[x][y];
+						}else{
+							return 0;
+						}
+	
+					}
+					for(let i =0;i<newRect;i++){
+						newTwoDime.push([]);
+						for(let j = 0;j<newRect;j++){
+							newTwoDime[i][j] = getNewValue.bind(this)(i,j);
+						}
+					}
+					this.twoDime = newTwoDime;
+				},
+				detectFace(){//探测人脸
+	
 				}
 	
 	}
