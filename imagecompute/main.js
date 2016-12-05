@@ -1,5 +1,6 @@
 	let charts = require('./charts');
 	let worker = require('./worker');
+	let classier = require('../haarjson.js');
 	module.exports = {
 		imagedata:Array,//原始图像数组
 		grayimage:Array,//灰度之后的图像数组,失去rgba信息,不能直接输出为图像
@@ -7,6 +8,7 @@
 		pic:Array,
 		prepic:Array,//所需要的图片，提前加载完毕
 		colorfulTunel:Array,
+		calculusGrap:Array,
 		deal(State){
 			this.imagedata = State.imageData;
 			this.prepic = State.prepic;
@@ -16,7 +18,9 @@
 				this.toGray();
 				this.toTwoDime();
 			// this.transform(110,110);
-				this.spin();
+				// this.spin();
+				// this.getCalculusGraph()
+				// this.detectFace();
 				this.toRawData();
 			// this.LaplaceSharpen();
 			//彩色图像分为RGBA通道
@@ -599,7 +603,79 @@
 				this.twoDime = newTwoDime;
 			},
 			detectFace(){//探测人脸
+				console.log(classier);
+				cascade = classier.opencv_storage.cascade
+				// console.log(this.calculusGrap);
+				let features = classier.opencv_storage.cascade.features._;
+				function getOnePointCalGraphValue(x,y){
+					return this.calculusGrap[y][x];
+				}
+				function getCalGraphValue(x,y,width,height){
+					x = parseInt(x);
+					y = parseInt(y);
+					width  = parseInt(width);
+					height = parseInt(height);
+					return getOnePointCalGraphValue.bind(this)(x+width,y+height) - 
+					getOnePointCalGraphValue.bind(this)(x,y+height)- 
+					getOnePointCalGraphValue.bind(this)(x+width,y)+
+					getOnePointCalGraphValue.bind(this)(x,y)
+				}
+
+				function computeFeture(index){
+					let rect = cascade.features._[index].rects._;
+					let sum = 0;
+					for(let i = 0 ;i<rect.length;i++){
+						sum += rect[i][4]*getCalGraphValue.bind(this)(rect[i][0],rect[i][1],rect[i][2],rect[i][3]);
+					}
+					return sum;
+				}
+
+				function isCorrect(res,arr){
+					let upper = Math.max(arr[0],arr[1]);
+					let lower = Math.min(arr[0],arr[1]);
+					if(res>=lower && res<=upper){
+						return true;
+					}else{
+						return false
+					}
+				}
+				// console.log(getCalGraphValue.bind(this)(6,4,12,9))
+				for(let i = 0;i<cascade.stageNum;i++){
+					for(let j = 0;j<cascade.stages._[i]['maxWeakCount'];j++){
+						let weakclassier = cascade.stages._[i].weakClassifiers._[j]
+						let res = weakclassier.internalNodes[3]*computeFeture.bind(this)(weakclassier.internalNodes[2]);
+						if(!isCorrect.bind(this)(res,weakclassier.leafValues)){
+							console.log(res)
+							console.log('incorrect');
+							return;// 当前子图像不合格
+						}else{
+							//todo 为强分类器投票做准备
+							console.log(11111);
+						}
+					}
+				}
+					
+			},
+			getCalculusGraph(twoDime){
+				let newTwoDime = [];
+				function getSum(height,width){
+					let sum = 0;
+					for(let i = 0;i<height;i++){
+						for(let j = 0;j<width;j++){
+							sum+=twoDime[i][j];
+						}
+					}
+					return sum;
+				}
+				for(let i = 0;i<twoDime.length;i++){
+					newTwoDime.push([]);
+					for(let j = 0;j<twoDime[0].length;j++){
+						newTwoDime[i][j] = getSum.bind(this)(i,j);
+					}
+				}
+				this.calculusGrap = newTwoDime;
+			},
+			produceWindow(){//产生检测头像的子窗口
 
 			}
-
 }

@@ -22,7 +22,7 @@
 					ctx.clearRect(0,0,imageData.width,imageData.height);
 					picarray.push(imageData);//不保证图片的顺序
 					if(count == 0){
-						init('./2.jpg',picarray);//前置图片加载完毕之后初始化
+						init('./test.jpg',picarray);//前置图片加载完毕之后初始化
 					}
 				}
 			});
