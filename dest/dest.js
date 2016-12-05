@@ -160,8 +160,9 @@
 				// console.log(this.imagedata)
 					this.toGray();
 					this.toTwoDime();
+					this.transform(690/2,517/2)
 					this.produceWindow()
-				// this.transform(110,110);
+					// this.transform(110,110);
 					// this.spin();
 					// this.getCalculusGraph()
 					// this.detectFace();
@@ -752,6 +753,8 @@
 					// console.log(this.calculusGrap);
 					let features = classier.opencv_storage.cascade.features._;
 					function getOnePointCalGraphValue(x,y){
+						if(x>=24){x =x-1}
+						if(y>=24){y=y-1}
 						return this.calculusGrap[y][x];
 					}
 					function getCalGraphValue(x,y,width,height){
@@ -784,23 +787,31 @@
 						}
 					}
 					// console.log(getCalGraphValue.bind(this)(6,4,12,9))
+					let weakSum = 0
 					for(let i = 0;i<cascade.stageNum;i++){
 						for(let j = 0;j<cascade.stages._[i]['maxWeakCount'];j++){
 							let weakclassier = cascade.stages._[i].weakClassifiers._[j]
 							let res = weakclassier.internalNodes[3]*computeFeture.bind(this)(weakclassier.internalNodes[2]);
 							if(!isCorrect.bind(this)(res,weakclassier.leafValues)){
-								console.log(res)
+								// console.log(res)
 								console.log('incorrect');
+								weakSum = 0;
 								return;// 当前子图像不合格
 							}else{
 								//todo 为强分类器投票做准备
+								weakSum +=res;
 								console.log(11111);
 							}
+						}
+						if(weakSum>cascade.stages._[i]['stageThreshold']){
+							console.log('ok');
+						}else{
+							return;
 						}
 					}
 						
 				},
-				getCalculusGraph(twoDime){
+				getCalculusGraph(twoDime){ //积分图有问题
 					let newTwoDime = [];
 					function getSum(height,width){
 						let sum = 0;
@@ -824,20 +835,20 @@
 					let width = this.twoDime[0].length;
 	
 					let childWindow = []
-					for(let m=0;m<this.twoDime.length;){
-						for(let n=0;n<this.twoDime[0].length;){
+					for(let m=0;m<this.twoDime.length-24;){
+						for(let n=0;n<this.twoDime[0].length-24;){
 							for(let i = 0;i<24;i++){
 								childWindow.push([]);
 								for(let j = 0;j<24;j++){
-									childWindow[i][j] = this.twoDime[i+m*24][j+n*24]
+									childWindow[i][j] = this.twoDime[i+m][j+n]
 								}
 							}
 							this.getCalculusGraph.bind(this)(childWindow);//
 							this.detectFace.bind(this)();
-							n+=24;//步长24
+							n+=4;//步长24
 							childWindow = [];
 						}
-						m+=24
+						m+=8
 					}
 				}
 	}
@@ -978,7 +989,7 @@
 	                "_": [
 	                    {
 	                        "maxWeakCount": "9",
-	                        "stageThreshold": "-5.0425500869750977e+00",
+	                        "stageThreshold": -5.0425500869750977,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -1094,7 +1105,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "16",
-	                        "stageThreshold": "-4.9842400550842285e+00",
+	                        "stageThreshold": -4.9842400550842285,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -1294,7 +1305,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "27",
-	                        "stageThreshold": "-4.6551899909973145e+00",
+	                        "stageThreshold": -4.6551899909973145,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -1626,7 +1637,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "32",
-	                        "stageThreshold": "-4.4531588554382324e+00",
+	                        "stageThreshold": -4.4531588554382324,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -2018,7 +2029,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "52",
-	                        "stageThreshold": "-4.3864588737487793e+00",
+	                        "stageThreshold": -4.3864588737487793,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -2650,7 +2661,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "53",
-	                        "stageThreshold": "-4.1299300193786621e+00",
+	                        "stageThreshold": -4.1299300193786621,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -3294,7 +3305,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "62",
-	                        "stageThreshold": "-4.0218091011047363e+00",
+	                        "stageThreshold": -4.0218091011047363,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -4046,7 +4057,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "72",
-	                        "stageThreshold": "-3.8832089900970459e+00",
+	                        "stageThreshold": -3.8832089900970459,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -4918,7 +4929,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "83",
-	                        "stageThreshold": "-3.8424909114837646e+00",
+	                        "stageThreshold": -3.8424909114837646,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -5922,7 +5933,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "91",
-	                        "stageThreshold": "-3.6478610038757324e+00",
+	                        "stageThreshold": -3.6478610038757324,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -7022,7 +7033,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "99",
-	                        "stageThreshold": "-3.8700489997863770e+00",
+	                        "stageThreshold": -3.8700489997863770,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -8218,7 +8229,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "115",
-	                        "stageThreshold": "-3.7160909175872803e+00",
+	                        "stageThreshold": -3.7160909175872803,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -9606,7 +9617,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "127",
-	                        "stageThreshold": "-3.5645289421081543e+00",
+	                        "stageThreshold": -3.5645289421081543,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -11138,7 +11149,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "135",
-	                        "stageThreshold": "-3.7025990486145020e+00",
+	                        "stageThreshold": -3.7025990486145020,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -12766,7 +12777,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "136",
-	                        "stageThreshold": "-3.4265899658203125e+00",
+	                        "stageThreshold": -3.4265899658203125,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -14406,7 +14417,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "137",
-	                        "stageThreshold": "-3.5125269889831543e+00",
+	                        "stageThreshold": -3.5125269889831543,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -16058,7 +16069,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "159",
-	                        "stageThreshold": "-3.5939640998840332e+00",
+	                        "stageThreshold": -3.5939640998840332,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -17974,7 +17985,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "155",
-	                        "stageThreshold": "-3.3933560848236084e+00",
+	                        "stageThreshold": -3.3933560848236084,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -19842,7 +19853,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "169",
-	                        "stageThreshold": "-3.2396929264068604e+00",
+	                        "stageThreshold": -3.2396929264068604,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -21878,7 +21889,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "196",
-	                        "stageThreshold": "-3.2103500366210938e+00",
+	                        "stageThreshold": -3.2103500366210938,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -24238,7 +24249,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "197",
-	                        "stageThreshold": "-3.2772979736328125e+00",
+	                        "stageThreshold": -3.2772979736328125,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -26610,7 +26621,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "181",
-	                        "stageThreshold": "-3.3196411132812500e+00",
+	                        "stageThreshold": -3.3196411132812500,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -28790,7 +28801,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "199",
-	                        "stageThreshold": "-3.2573320865631104e+00",
+	                        "stageThreshold": -3.2573320865631104,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -31186,7 +31197,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "211",
-	                        "stageThreshold": "-3.3703000545501709e+00",
+	                        "stageThreshold": -3.3703000545501709,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {
@@ -33726,7 +33737,7 @@
 	                    },
 	                    {
 	                        "maxWeakCount": "200",
-	                        "stageThreshold": "-2.9928278923034668e+00",
+	                        "stageThreshold": -2.9928278923034668,
 	                        "weakClassifiers": {
 	                            "_": [
 	                                {

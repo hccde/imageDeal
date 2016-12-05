@@ -17,8 +17,9 @@
 			// console.log(this.imagedata)
 				this.toGray();
 				this.toTwoDime();
+				this.transform(690/2,517/2)
 				this.produceWindow()
-			// this.transform(110,110);
+				// this.transform(110,110);
 				// this.spin();
 				// this.getCalculusGraph()
 				// this.detectFace();
@@ -609,6 +610,8 @@
 				// console.log(this.calculusGrap);
 				let features = classier.opencv_storage.cascade.features._;
 				function getOnePointCalGraphValue(x,y){
+					if(x>=24){x =x-1}
+					if(y>=24){y=y-1}
 					return this.calculusGrap[y][x];
 				}
 				function getCalGraphValue(x,y,width,height){
@@ -641,23 +644,31 @@
 					}
 				}
 				// console.log(getCalGraphValue.bind(this)(6,4,12,9))
+				let weakSum = 0
 				for(let i = 0;i<cascade.stageNum;i++){
 					for(let j = 0;j<cascade.stages._[i]['maxWeakCount'];j++){
 						let weakclassier = cascade.stages._[i].weakClassifiers._[j]
 						let res = weakclassier.internalNodes[3]*computeFeture.bind(this)(weakclassier.internalNodes[2]);
 						if(!isCorrect.bind(this)(res,weakclassier.leafValues)){
-							console.log(res)
+							// console.log(res)
 							console.log('incorrect');
+							weakSum = 0;
 							return;// 当前子图像不合格
 						}else{
 							//todo 为强分类器投票做准备
+							weakSum +=res;
 							console.log(11111);
 						}
+					}
+					if(weakSum>cascade.stages._[i]['stageThreshold']){
+						console.log('ok');
+					}else{
+						return;
 					}
 				}
 					
 			},
-			getCalculusGraph(twoDime){
+			getCalculusGraph(twoDime){ //积分图有问题
 				let newTwoDime = [];
 				function getSum(height,width){
 					let sum = 0;
@@ -681,20 +692,20 @@
 				let width = this.twoDime[0].length;
 
 				let childWindow = []
-				for(let m=0;m<this.twoDime.length;){
-					for(let n=0;n<this.twoDime[0].length;){
+				for(let m=0;m<this.twoDime.length-24;){
+					for(let n=0;n<this.twoDime[0].length-24;){
 						for(let i = 0;i<24;i++){
 							childWindow.push([]);
 							for(let j = 0;j<24;j++){
-								childWindow[i][j] = this.twoDime[i+m*24][j+n*24]
+								childWindow[i][j] = this.twoDime[i+m][j+n]
 							}
 						}
 						this.getCalculusGraph.bind(this)(childWindow);//
 						this.detectFace.bind(this)();
-						n+=24;//步长24
+						n+=4;//步长24
 						childWindow = [];
 					}
-					m+=24
+					m+=8
 				}
 			}
 }

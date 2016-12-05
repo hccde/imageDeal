@@ -17,7 +17,7 @@ module.exports = {
                 "_": [
                     {
                         "maxWeakCount": "9",
-                        "stageThreshold": "-5.0425500869750977e+00",
+                        "stageThreshold": -5.0425500869750977,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -133,7 +133,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "16",
-                        "stageThreshold": "-4.9842400550842285e+00",
+                        "stageThreshold": -4.9842400550842285,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -333,7 +333,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "27",
-                        "stageThreshold": "-4.6551899909973145e+00",
+                        "stageThreshold": -4.6551899909973145,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -665,7 +665,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "32",
-                        "stageThreshold": "-4.4531588554382324e+00",
+                        "stageThreshold": -4.4531588554382324,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -1057,7 +1057,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "52",
-                        "stageThreshold": "-4.3864588737487793e+00",
+                        "stageThreshold": -4.3864588737487793,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -1689,7 +1689,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "53",
-                        "stageThreshold": "-4.1299300193786621e+00",
+                        "stageThreshold": -4.1299300193786621,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -2333,7 +2333,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "62",
-                        "stageThreshold": "-4.0218091011047363e+00",
+                        "stageThreshold": -4.0218091011047363,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -3085,7 +3085,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "72",
-                        "stageThreshold": "-3.8832089900970459e+00",
+                        "stageThreshold": -3.8832089900970459,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -3957,7 +3957,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "83",
-                        "stageThreshold": "-3.8424909114837646e+00",
+                        "stageThreshold": -3.8424909114837646,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -4961,7 +4961,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "91",
-                        "stageThreshold": "-3.6478610038757324e+00",
+                        "stageThreshold": -3.6478610038757324,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -6061,7 +6061,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "99",
-                        "stageThreshold": "-3.8700489997863770e+00",
+                        "stageThreshold": -3.8700489997863770,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -7257,7 +7257,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "115",
-                        "stageThreshold": "-3.7160909175872803e+00",
+                        "stageThreshold": -3.7160909175872803,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -8645,7 +8645,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "127",
-                        "stageThreshold": "-3.5645289421081543e+00",
+                        "stageThreshold": -3.5645289421081543,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -10177,7 +10177,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "135",
-                        "stageThreshold": "-3.7025990486145020e+00",
+                        "stageThreshold": -3.7025990486145020,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -11805,7 +11805,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "136",
-                        "stageThreshold": "-3.4265899658203125e+00",
+                        "stageThreshold": -3.4265899658203125,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -13445,7 +13445,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "137",
-                        "stageThreshold": "-3.5125269889831543e+00",
+                        "stageThreshold": -3.5125269889831543,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -15097,7 +15097,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "159",
-                        "stageThreshold": "-3.5939640998840332e+00",
+                        "stageThreshold": -3.5939640998840332,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -17013,7 +17013,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "155",
-                        "stageThreshold": "-3.3933560848236084e+00",
+                        "stageThreshold": -3.3933560848236084,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -18881,7 +18881,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "169",
-                        "stageThreshold": "-3.2396929264068604e+00",
+                        "stageThreshold": -3.2396929264068604,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -20917,7 +20917,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "196",
-                        "stageThreshold": "-3.2103500366210938e+00",
+                        "stageThreshold": -3.2103500366210938,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -23277,7 +23277,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "197",
-                        "stageThreshold": "-3.2772979736328125e+00",
+                        "stageThreshold": -3.2772979736328125,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -25649,7 +25649,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "181",
-                        "stageThreshold": "-3.3196411132812500e+00",
+                        "stageThreshold": -3.3196411132812500,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -27829,7 +27829,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "199",
-                        "stageThreshold": "-3.2573320865631104e+00",
+                        "stageThreshold": -3.2573320865631104,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -30225,7 +30225,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "211",
-                        "stageThreshold": "-3.3703000545501709e+00",
+                        "stageThreshold": -3.3703000545501709,
                         "weakClassifiers": {
                             "_": [
                                 {
@@ -32765,7 +32765,7 @@ module.exports = {
                     },
                     {
                         "maxWeakCount": "200",
-                        "stageThreshold": "-2.9928278923034668e+00",
+                        "stageThreshold": -2.9928278923034668,
                         "weakClassifiers": {
                             "_": [
                                 {
