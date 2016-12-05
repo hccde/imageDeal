@@ -160,7 +160,7 @@
 				// console.log(this.imagedata)
 					this.toGray();
 					this.toTwoDime();
-					this.transform(690/2,517/2)
+					this.transform(690/3,517/3)
 					this.produceWindow()
 					// this.transform(110,110);
 					// this.spin();
@@ -777,13 +777,13 @@
 						return sum;
 					}
 	
-					function isCorrect(res,arr){
-						let upper = Math.max(arr[0],arr[1]);
-						let lower = Math.min(arr[0],arr[1]);
-						if(res>=lower && res<=upper){
-							return true;
+					function isCorrect(res,arr,jud){
+						// let upper = Math.max(arr[0],arr[1]);
+						// let lower = Math.min(arr[0],arr[1]);
+						if(res>jud){
+							return arr[1];
 						}else{
-							return false
+							return arr[0]
 						}
 					}
 					// console.log(getCalGraphValue.bind(this)(6,4,12,9))
@@ -791,25 +791,24 @@
 					for(let i = 0;i<cascade.stageNum;i++){
 						for(let j = 0;j<cascade.stages._[i]['maxWeakCount'];j++){
 							let weakclassier = cascade.stages._[i].weakClassifiers._[j]
-							let res = weakclassier.internalNodes[3]*computeFeture.bind(this)(weakclassier.internalNodes[2]);
-							if(!isCorrect.bind(this)(res,weakclassier.leafValues)){
-								// console.log(res)
-								console.log('incorrect');
-								weakSum = 0;
-								return;// 当前子图像不合格
-							}else{
-								//todo 为强分类器投票做准备
-								weakSum +=res;
-								console.log(11111);
-							}
+							let res = computeFeture.bind(this)(weakclassier.internalNodes[2])/(this.twoDime.length*this.twoDime[0].length);
+							weakSum+=isCorrect.bind(this)(res,weakclassier.leafValues,weakclassier.internalNodes[3]);
+						// console.log(res);
+	
 						}
 						if(weakSum>cascade.stages._[i]['stageThreshold']){
+							weakSum = 0;
 							console.log('ok');
 						}else{
+							// console.log(weakSum)
+							// console.log('no');
+							weakSum = 0;
 							return;
 						}
 					}
-						
+					console.log('yse')
+					console.log(this.nn)
+					console.log(this.mm)
 				},
 				getCalculusGraph(twoDime){ //积分图有问题
 					let newTwoDime = [];
@@ -844,11 +843,13 @@
 								}
 							}
 							this.getCalculusGraph.bind(this)(childWindow);//
+							this.nn = n //标识区域
+							this.mm = m;
 							this.detectFace.bind(this)();
-							n+=4;//步长24
+							n+=1;//步长24
 							childWindow = [];
 						}
-						m+=8
+						m+=1
 					}
 				}
 	}
