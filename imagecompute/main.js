@@ -17,6 +17,7 @@
 			// console.log(this.imagedata)
 				this.toGray();
 				this.toTwoDime();
+				this.produceWindow()
 			// this.transform(110,110);
 				// this.spin();
 				// this.getCalculusGraph()
@@ -603,8 +604,8 @@
 				this.twoDime = newTwoDime;
 			},
 			detectFace(){//探测人脸
-				console.log(classier);
-				cascade = classier.opencv_storage.cascade
+				// console.log(classier);
+				let cascade = classier.opencv_storage.cascade
 				// console.log(this.calculusGrap);
 				let features = classier.opencv_storage.cascade.features._;
 				function getOnePointCalGraphValue(x,y){
@@ -676,6 +677,24 @@
 				this.calculusGrap = newTwoDime;
 			},
 			produceWindow(){//产生检测头像的子窗口
+				let height = this.twoDime.length;
+				let width = this.twoDime[0].length;
 
+				let childWindow = []
+				for(let m=0;m<this.twoDime.length;){
+					for(let n=0;n<this.twoDime[0].length;){
+						for(let i = 0;i<24;i++){
+							childWindow.push([]);
+							for(let j = 0;j<24;j++){
+								childWindow[i][j] = this.twoDime[i+m*24][j+n*24]
+							}
+						}
+						this.getCalculusGraph.bind(this)(childWindow);//
+						this.detectFace.bind(this)();
+						n+=24;//步长24
+						childWindow = [];
+					}
+					m+=24
+				}
 			}
 }
