@@ -38,7 +38,7 @@ class Histogram {
 			dataMax = e > dataMax?e:dataMax;
 			dataMin = e < dataMin?e:dataMin;
 		});
-		console.log(dataMax)
+		// console.log(dataMax)
 		let dataYStep = this.canvas.height/dataMax;
 		let that = this;
 		opt.data.forEach(function(e,index){

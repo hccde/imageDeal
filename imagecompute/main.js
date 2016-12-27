@@ -9,21 +9,53 @@
 		prepic:Array,//所需要的图片，提前加载完毕
 		colorfulTunel:Array,
 		calculusGrap:Array,
+		//tem
+		ball:{
+			x:240-50,
+			y:480-100,
+			flagx:true,
+			flagy:true
+		},
+		pika:{
+			x:20,
+			y:60,
+			flagx:true,
+			flagy:true
+		},
 		deal(State){
 			this.imagedata = State.imageData;
 			this.prepic = State.prepic;
 			this.pic = State.imageData;
-			
-			// console.log(this.imagedata)
-				this.toGray();
-				this.toTwoDime();
-				this.transform(690/3,517/3)
-				this.produceWindow()
-				// this.transform(110,110);
+			//demo
+			// this.demo.detectFace.bind(this)()
+			// this.demo.createCameraVideo.bind(this)();//替换图片
+			// this.demo.Cartoon.bind(this)() 
+			// this.demo.histogram.bind(this)();
+			// this.demo.bitmap.bind(this)(0);
+			// this.demo.transform.bind(this)(50,50);
+			this.demo.LaplaceSharpen.bind(this)();
+			// this.demo.spin.bind(this)()
+			// this.demo.powerChange.bind(this)(6);
+			// this.demo.log.bind(this)(0.1);
+			// this.demo.CarlFilter.bind(this)();
+
+
+				// this.toGray();
+				// this.toTwoDime();
+				// this.save = this.twoDime.slice(0);
+				// let factor =parseInt(this.twoDime[0].length / 200);
+				// factor = factor>0?factor:1;
+				// console.log(factor);
+				// this.transform(this.twoDime[0].length/factor,this.twoDime.length/factor)
+				// this.produceWindow(factor)//4是相对于原图的缩放因子
 				// this.spin();
 				// this.getCalculusGraph()
 				// this.detectFace();
-				this.toRawData();
+				// this.twoDime = this.save;
+				// this.toRawData();
+
+				// this.Cartoon.bind(this)()
+
 			// this.LaplaceSharpen();
 			//彩色图像分为RGBA通道
 			// this.divThreeTunel();
@@ -214,26 +246,26 @@
 			}
 
 			let data = getHistogram(this.grayimage);
-			new charts.Histogram({//原图的直方图
-				data:data
-			});
-			//均衡
+			// new charts.Histogram({//原图的直方图
+			// 	data:data
+			// });
+			// 均衡
 			let table = [];
 			let sum=0;
 			for(let i = 0;i<256;i++){
 				sum += data[i];
 				table[i] = parseInt(255*1*sum/this.grayimage.length);
 			}
-			console.log(table)
+			// console.log(table)
 			//原像素到目标像素的映射 TODO
 			for(let i = 0;i<this.grayimage.length;i++){
 				this.grayimage[i] = table[this.grayimage[i]];
 			}
 
 			data = getHistogram(this.grayimage);
-			console.log(charts.Histogram);
+			// console.log(charts.Histogram);
 			let fn = charts.Histogram;
-			new charts.Histogram({data:data})
+			// new charts.Histogram({data:data})
 		},
 		graytoPic(){//一维的灰度数组转化为图片
 			let that = this;
@@ -266,22 +298,22 @@
 					let ctx = canvas.getContext('2d');
 					// ctx.globalCompositeOperation="source-over"
 					let that = this;
-					setTimeout(function(){
-						let streamImageData = getVideoFrame(video);					
+					let canvast = document.createElement('CANVAS');//获取的canvas
+					canvast.height = video.clientHeight;
+					canvast.width = video.clientWidth;
+					canvast.style.position = "absolute";
+					canvast.style.top = '-10000px';
+					let ctxt = canvast.getContext('2d');
+					setInterval(function(){
+						let streamImageData = getVideoFrame(video,ctxt,canvast);			
 						ctx.putImageData(that.dealStream(streamImageData,ctx),0,0,0,0,streamImageData.width,streamImageData.height);
-					},0)
+					},50)
 				}
-					//				}
 				setTimeout(begin.bind(that),1000);//处理图像数据
 			});
 
-			function getVideoFrame(video){//获取视频流中的帧
-				let canvas = document.createElement('CANVAS');
-				canvas.height = video.clientHeight;
-				canvas.width = video.clientWidth;
-				canvas.style.position = "absolute";
-				canvas.style.top = '-10000px';
-				let ctx = canvas.getContext('2d');
+			function getVideoFrame(video,ctx,canvas){//获取视频流中的帧
+				ctx.clearRect(0,0,canvas.width,canvas.height);
 				ctx.drawImage(video,0,0,video.clientWidth, video.clientHeight);
 				//返回图像帧数据
 				el.appendChild(canvas);
@@ -290,13 +322,91 @@
 		},
 		dealStream(imagedata,ctx){
 			this.imagedata = imagedata;
+			
 			// this.toGray();
 			// this.toTwoDime();
 			// this.LaplaceSharpen();
 			// this.toRawData();
-			this.imageAdd(this.pic,20,60);
-			this.imageAdd(this.prepic[0],100,50)
+			if(!window.flag){
+				if(this.ball.x-10<=0||this.ball.y-10<=0){
+					//置位1
+					this.ball.x= 240-50;
+					this.ball.y=480-100;
+
+				}else if(this.ball.y>=400){
+					window.flag = true;//停止
+				}else{
+					if(this.ball.flagx){
+						this.ball.x +=1;
+						this.ball.y -=2;
+					}else{
+						this.ball.x-=1;
+						this.ball.y+=2
+					}
+				}
+			}
+
+
+			if(this.pika.x-10<10){
+					this.pika.flagx = true;
+					this.pika.x+=4;
+				}else if(this.pika.x>=(640-130)){
+					this.pika.flagx = false;
+					this.pika.x-=4;
+				}else{
+					if(this.pika.flagx){
+						this.pika.x+=1;
+					}else{
+						this.pika.x-=1;
+					}
+				}
+
+				if(this.pika.y-10<10){
+					this.pika.flagy = true;
+					this.pika.y+=4;
+				}else if(this.pika.y>=imagedata.height-330){
+					this.pika.flagy = false;
+					this.pika.y-=4;
+				}else{
+					if(this.pika.flagy){
+						this.pika.y+=1;
+					}else{
+						this.pika.y-=1;
+					}
+				}
+
+			let collision = this.iscollision.bind(this)();
+			if(collision){
+				this.ball.flagy=false;
+				this.ball.flagx = false;
+				this.pika.flagx = false;
+				this.pika.flagy = false;
+			}
+			this.imageAdd(this.pic,this.pika.x,this.pika.y);//皮卡丘 110*100
+			this.imageAdd(this.prepic[0],this.ball.x,this.ball.y)//球 50*50
 			return this.imagedata;
+		},
+		iscollision(){
+			//球和皮卡是否碰撞
+			let judx = false;
+			let judy = false;
+			Math.abs(this.pika.y-this.ball.y)<=150;
+			if(this.ball.x<this.pika.x){
+				judx = this.pika.x-this.ball.x<=52
+			}else{
+				judx = this.ball.x-this.pika.x<=112;
+			}
+
+			if(this.ball.y>this.pika.y){
+				judy = this.ball.y-this.pika.y<=102;
+			}else{
+				judy = this.pika.y-this.ball.y<=52
+			}
+			if(judx && judy){
+				console.log('stop');
+				return true;
+			}
+
 		},
 		createWorkers(){
 			//写一个最简单的测试一下
@@ -390,10 +500,11 @@
 			//高斯模糊，用于去除孤立噪声,默认3*3，也可用作毛玻璃效果
 			CarlFilter(){
 				this.moveTmpl([
-					[1,2,1],
-					[2,4,2],
-					[1,2,1]
-					],function(tmpl,imagearea){
+					[2,4,5,4,2],
+					[4,9,12,9,4],
+  					[5,12,15,12,5],
+  					[4,9,12,9,4],
+  					[2,4,5,4,2]],function(tmpl,imagearea){
 						let row = tmpl.length;
 						let col = tmpl[0].length;
 						let sum=0;
@@ -589,7 +700,7 @@
 					let point = spinStep.bind(this)(i,j,Math.PI/2);
 					let x= point.x;
 					let y=point.y;
-					if(this.twoDime[x][y]){
+					if(this.twoDime[x]&&this.twoDime[x][y]){
 						return this.twoDime[x][y];
 					}else{
 						return 0;
@@ -604,7 +715,7 @@
 				}
 				this.twoDime = newTwoDime;
 			},
-			detectFace(){//探测人脸
+			detectFace(factor){//探测人脸
 				// console.log(classier);
 				let cascade = classier.opencv_storage.cascade
 				// console.log(this.calculusGrap);
@@ -655,7 +766,7 @@
 					}
 					if(weakSum>cascade.stages._[i]['stageThreshold']){
 						weakSum = 0;
-						console.log('ok');
+						// console.log('ok');
 					}else{
 						// console.log(weakSum)
 						// console.log('no');
@@ -663,11 +774,15 @@
 						return;
 					}
 				}
-				console.log('yse')
-				console.log(this.nn)
-				console.log(this.mm)
+				// console.log('yse')
+				for(let i = this.mm*factor;i<this.mm*factor+24*factor;i++){
+					for(let j = this.nn*factor;j<this.nn*factor+24*factor;j++){
+						console.log('change');
+						this.save[i][j] = 0; 
+					}
+				}
 			},
-			getCalculusGraph(twoDime){ //积分图有问题
+			getCalculusGraph(twoDime){
 				let newTwoDime = [];
 				function getSum(height,width){
 					let sum = 0;
@@ -686,7 +801,7 @@
 				}
 				this.calculusGrap = newTwoDime;
 			},
-			produceWindow(){//产生检测头像的子窗口
+			produceWindow(factor){//产生检测头像的子窗口
 				let height = this.twoDime.length;
 				let width = this.twoDime[0].length;
 
@@ -702,11 +817,100 @@
 						this.getCalculusGraph.bind(this)(childWindow);//
 						this.nn = n //标识区域
 						this.mm = m;
-						this.detectFace.bind(this)();
+						this.detectFace.bind(this)(factor);//缩放因子
 						n+=1;//步长24
 						childWindow = [];
 					}
 					m+=1
+				}
+			},
+			Cartoon(){
+				//直方图均衡
+				this.powerChange(0.4,2);
+				this.powerChange(2,2);
+				this.divThreeTunel();
+			for(let i = 0;i<3;i++){
+				this.grayimage =  this.colorfulTunel[i];
+				this.toTwoDime();
+				// this.LaplaceSharpen();
+				this.histogram()
+				this.CarlFilter()
+				this.CarlFilter()
+				this.CarlFilter()
+				this.Sharpen();
+				this.colorfulTunel[i] = this.grayimage.slice(0);
+			}
+			this.toColorfulImg();
+			},
+			demo:{
+				detectFace(){
+					this.toGray();
+					this.toTwoDime();
+					this.save = this.twoDime.slice(0);
+					let factor =parseInt(this.twoDime[0].length / 200);
+					factor = factor>0?factor:1;
+					console.log(factor);
+					this.transform(this.twoDime[0].length/factor,this.twoDime.length/factor)
+					this.produceWindow(factor)//4是相对于原图的缩放因子
+					this.twoDime = this.save;
+					this.toRawData();
+				},
+				createCameraVideo(){
+					this.createCameraVideo();
+					document.getElementsByTagName('canvas')[0].style.display='none';
+					document.getElementsByTagName('video')[0].style.position = 'absolute';
+					document.getElementsByTagName('video')[0].style.marginTop = '-10000px';
+				},
+				Cartoon(){
+					this.Cartoon();
+				},
+				bitmap(index){
+					this.toGray();
+					this.bitmap(index)
+				},
+				histogram(){
+					this.toGray();
+					this.histogram();
+				},
+				transform(width,height){
+					this.toGray();
+					this.toTwoDime();
+					this.transform(width,height);
+					this.toRawData();
+				},
+				LaplaceSharpen(){
+					this.toGray();
+					this.toTwoDime()
+					this.LaplaceSharpen();
+					this.toRawData();
+				},
+				spin(){
+					this.toGray();
+					this.toTwoDime()
+					this.spin();
+					this.toRawData();
+				},
+				powerChange(index){
+					// this.toGray();
+					this.powerChange(index)
+				},
+				log(index){
+					this.log(index);
+				},
+				CarlFilter(){
+					this.toGray()
+					this.toTwoDime();
+					this.CarlFilter();
+					// this.CarlFilter();
+					// this.CarlFilter();
+					// this.CarlFilter();
+					this.toRawData();
+				},
+				Sharpen(){
+					this.toGray()
+					this.toTwoDime();
+					this.Sharpen();
+					this.toRawData();
 				}
 			}
 }
