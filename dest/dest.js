@@ -49,7 +49,7 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 			// let Compute =  require('./imagecompute/main.js');
 			// loadPrePic(['./amazingball.png'])
@@ -136,26 +136,18 @@
 			// 	gen.next();
 			// }
 		
-		let Image = __webpack_require__(2);
-		let image = new Image('./amazingball.png');
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	class Image {
-		constructor(url){
-			console.log(url);
-			function _getImageData(url){
-			let handle = load_img(url);
-			function* load_img(src){
-				let img = new Image();
-				console.log(src);
-				img.src = src;
-					let canvasEle = document.createElement('CANVAS');
-					let ctx = canvasEle.getContext('2d');
-					let imageData;
+		// document.getElementsByTagName('BODY')[0].appendChild(imgele);
+		// console.log(img);
+		function _getImageData(url){
+				var handles = load_img(url);
+				handles.next();
+				function* load_img(src){
+					let img = new Image();
+					img.src = src;
 					img.onload = function(){
+						let canvasEle = document.createElement('CANVAS');
+						let ctx = canvasEle.getContext('2d');
+						let imageData;
 						let {height,width} = img;
 						canvasEle.height = height;
 						canvasEle.width = width;
@@ -163,40 +155,37 @@
 						imageData= ctx.getImageData(0, 0, width, height);
 						ctx.clearRect(0,0,imageData.width,imageData.height);
 						console.log('over')
-						handle.next();
+						handles.next();
+						return imageData
+					}
+					console.log(img);
+					let a = yield 1;
+					console.log('返回')
 				}
-				yield imageData;
-				return imageData;
-				console.log('返回')
 			}
-		}
-			_getImageData(url);
-		}
-		static _getImageData(url){
-			let handle = load_img(url);
-			function* load_img(src){
-				let img = new Image();
-				img.src = src;
-					let canvasEle = document.createElement('CANVAS');
-					let ctx = canvasEle.getContext('2d');
-					let imageData;
-					img.onload = function(){
-						let {height,width} = img;
-						canvasEle.height = height;
-						canvasEle.width = width;
-						ctx.drawImage(img, 0, 0);
-						imageData= ctx.getImageData(0, 0, width, height);
-						ctx.clearRect(0,0,imageData.width,imageData.height);
-						console.log('over')
-						handle.next();
-				}
-				yield imageData;
-				return imageData;
-				console.log('返回')
-			}
-		}
-	}
-	module.exports = Image;
+			 // _getImageData('./amazingball.png');
+	
+			 //todo need babel
+			 // async function imageLoad(url){
+			 // 	let img = new Image();
+			 // 	img.src = url;
+			 // 	await img.onload = function(){
+			 // 		console.log('await')
+			 // 	}
+			 // }
+	
+			 //promise
+	
+			 new Promise(function(resolve,reject){
+			 	let img = new Image();
+			 	img.src = './amazingball.png';
+			 	img.onload = function(){
+			 		console.log('success');
+			 		resolve(1)
+			 	}
+			 }).then(function(val){
+			 	console.log(2)
+			 })
 
 /***/ }
 /******/ ]);
