@@ -1,3 +1,4 @@
+
 		// let Compute =  require('./imagecompute/main.js');
 		// loadPrePic(['./amazingball.png'])
 		// function loadPrePic(picArray){
@@ -85,51 +86,47 @@
 	
 	// document.getElementsByTagName('BODY')[0].appendChild(imgele);
 	// console.log(img);
-	function _getImageData(url){
-			var handles = load_img(url);
-			handles.next();
-			function* load_img(src){
-				let img = new Image();
-				img.src = src;
-				img.onload = function(){
-					let canvasEle = document.createElement('CANVAS');
-					let ctx = canvasEle.getContext('2d');
-					let imageData;
-					let {height,width} = img;
-					canvasEle.height = height;
-					canvasEle.width = width;
-					ctx.drawImage(img, 0, 0);
-					imageData= ctx.getImageData(0, 0, width, height);
-					ctx.clearRect(0,0,imageData.width,imageData.height);
-					console.log('over')
-					handles.next();
-					return imageData
-				}
-				console.log(img);
-				let a = yield 1;
-				console.log('返回')
-			}
-		}
+	// function _getImageData(url){
+	// 		var handles = load_img(url);
+	// 		handles.next();
+	// 		function* load_img(src){
+	// 			let img = new Image();
+	// 			img.src = src;
+	// 			img.onload = function(){
+	// 				let canvasEle = document.createElement('CANVAS');
+	// 				let ctx = canvasEle.getContext('2d');
+	// 				let imageData;
+	// 				let {height,width} = img;
+	// 				canvasEle.height = height;
+	// 				canvasEle.width = width;
+	// 				ctx.drawImage(img, 0, 0);
+	// 				imageData= ctx.getImageData(0, 0, width, height);
+	// 				ctx.clearRect(0,0,imageData.width,imageData.height);
+	// 				console.log('over')
+	// 				handles.next();
+	// 				return imageData
+	// 			}
+	// 			console.log(img);
+	// 			let a = yield 1;
+	// 			console.log('返回')
+	// 		}
+	// 	}
 		 // _getImageData('./amazingball.png');
 
 		 //todo need babel
-		 // async function imageLoad(url){
-		 // 	let img = new Image();
-		 // 	img.src = url;
-		 // 	await img.onload = function(){
-		 // 		console.log('await')
-		 // 	}
-		 // }
+		 
 
 		 //promise
 
-		 new Promise(function(resolve,reject){
-		 	let img = new Image();
-		 	img.src = './amazingball.png';
-		 	img.onload = function(){
-		 		console.log('success');
-		 		resolve(1)
-		 	}
-		 }).then(function(val){
-		 	console.log(2)
-		 })
+		 // new Promise(function(resolve,reject){
+		 // 	let img = new Image();
+		 // 	img.src = './amazingball.png';
+		 // 	img.onload = function(){
+		 // 		console.log('success');
+		 // 		resolve(1)
+		 // 	}
+		 // }).then(function(val){
+		 // 	console.log(2)
+		 // })
+		 let imgclass =require('./class/index');
+		 imgclass.imageLoad();

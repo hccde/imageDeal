@@ -1,6 +1,7 @@
 	let gulp = require('gulp'),
 		xml = require('xml2js').parseString,
 		fs = require('fs'),
+		babel = require('gulp-babel'),
 		webpack = require('webpack');
 
 	let webpackConfig = require('./webpack.config.js');
@@ -69,8 +70,7 @@
 	});
 
 	gulp.task('js',function(){
-		gulp.src('./dest/*.js')
-    		.pipe(connect.reload());
+		gulp.src('./dest/*.js').pipe(connect.reload());
 	})
 
 	gulp.task('reload',function(){

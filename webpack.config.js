@@ -8,7 +8,15 @@ module.exports = {
 		path:'./dest',
 		filename:"[name].js"
 	},
-	module:{
-		
-	}
+	module: {
+	loaders: [
+		{
+			test: /\.js$/,
+			loader: "babel",
+			query: {
+			  presets: ['es2015', 'stage-3']
+			}
+		},
+	]
+}
 }

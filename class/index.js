@@ -1,3 +1,14 @@
+console.log(2)
+async function imageLoad(url){
+	console.log(1)
+		 	let img = new Image();
+		 	img.src = url;
+		 	await img.onload = function(){
+		 		console.log('await')
+		 	}
+	}
+	imageLoad()
+
 class Image {
 	constructor(url){
 		// function _getImageData(url){
@@ -52,4 +63,6 @@ class Image {
 	// 	}
 	// }
 }
-module.exports = Image;
+module.exports = {
+	imageLoad
+};
