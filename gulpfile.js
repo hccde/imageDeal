@@ -17,7 +17,7 @@
 	});
 	gulp.task('watch',function(){
 		gulp.watch(['*.html'],['html']);
-		gulp.watch(['./*.js','./imagecompute/**/*.js'],['webpack']);
+		// gulp.watch(['./*.js','./imagecompute/**/*.js'],['webpack']);
 		gulp.watch(['./dest/**/*.js'],['js']);
 	})
 

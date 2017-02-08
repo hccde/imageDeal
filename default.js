@@ -85,3 +85,8 @@
 	
 	let Image = require('./class/index');
 	let image = new Image('./amazingball.png');
+	let t = {
+		async test(){
+			let m = await 2;
+		}
+	}
