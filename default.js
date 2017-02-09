@@ -85,6 +85,7 @@
 			gen.next();
 		}
 	
+<<<<<<< HEAD
 	// document.getElementsByTagName('BODY')[0].appendChild(imgele);
 	function _getImageData(url){
 			var handles = load_img(url);
