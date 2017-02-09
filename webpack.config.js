@@ -1,12 +1,10 @@
 let webpack = require('webpack');
 module.exports = {
 	devtool:"sourcemap",
-	entry:{
-		dest:['./default.js']	
-	},
+	entry:['babel-polyfill','./default.js'],
 	output:{
 		path:'./dest',
-		filename:"[name].js"
+		filename:"dest.js"
 	},
 	module: {
 	loaders: [
