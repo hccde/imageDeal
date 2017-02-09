@@ -1,7 +1,5 @@
-		require("babel-core/register");
-		require("babel-polyfill");
-		// let Compute =  require('./imagecompute/main.js');
-		// loadPrePic(['./amazingball.png'])
+
+
 		function loadPrePic(picArray){
 			let count  = picArray.length;
 			let picarray = [];
@@ -85,7 +83,7 @@
 			gen.next();
 		}
 	
-<<<<<<< HEAD
+
 	// document.getElementsByTagName('BODY')[0].appendChild(imgele);
 	function _getImageData(url){
 			var handles = load_img(url);
@@ -136,6 +134,7 @@
 		 			resolve(1)
 		 		}
 		 	}))
+		 	console.log(2)
 		 	document.getElementsByTagName('BODY')[0].appendChild(img);
 		}
 
