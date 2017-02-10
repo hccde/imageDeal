@@ -2,12 +2,10 @@ let webpack = require('webpack');
 module.exports = {
 	devtool:"sourcemap",
 	watch:true,
-	entry:{
-		dest:['./default.js']	
-	},
+	entry:['babel-polyfill','./default.js'],
 	output:{
 		path:'./dest',
-		filename:"[name].js"
+		filename:"dest.js"
 	},
 	module:{
 		loaders:[{
@@ -15,7 +13,8 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader",
                 query: {
-                	presets: ['es2015', 'stage-3']
+                	// presets: ['es2015', 'stage-3'],
+                	// sourceMaps: ['both']//babel的sourcemap
                 }
 		}]	
 	}
