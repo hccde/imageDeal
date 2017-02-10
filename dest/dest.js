@@ -8195,7 +8195,7 @@
 	'use strict';
 	
 	var imageLoad = function () {
-		var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(url) {
+		var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(url, pre) {
 			var img, res;
 			return regeneratorRuntime.wrap(function _callee$(_context3) {
 				while (1) {
@@ -8226,7 +8226,7 @@
 			}, _callee, this);
 		}));
 	
-		return function imageLoad(_x2) {
+		return function imageLoad(_x2, _x3) {
 			return _ref.apply(this, arguments);
 		};
 	}();

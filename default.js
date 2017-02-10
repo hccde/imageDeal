@@ -1,5 +1,3 @@
-
-
 		function loadPrePic(picArray){
 			let count  = picArray.length;
 			let picarray = [];
@@ -122,13 +120,13 @@
 		 // 	console.log(2)
 		 // })
 
-		 let imgclass =require('./class/index');
+		 // let imgclass =require('./class/index');moch
 
-		async function imageLoad(url){
+		async function imageLoad(url,pre){
 
 		 	let img = new Image();
 		 	img.src = url;
-		  	let res  =  await (new Promise(function(resolve,reject){
+		  	await (new Promise(function(resolve,reject){
 		 		img.onload = function(){
 		 			console.log('success');
 		 			resolve(1)
