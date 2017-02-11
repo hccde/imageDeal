@@ -13,7 +13,7 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader",
                 query: {
-                	// presets: ['es2015', 'stage-3'],
+                	presets: ['es2015', 'stage-3'],
                 	// sourceMaps: ['both']//babel的sourcemap
                 }
 		}]	
