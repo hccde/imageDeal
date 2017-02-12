@@ -12,7 +12,7 @@
 						height,
 						width
 					} = img;
-					canvasEle.height = height;
+					canvasEle.height = height
 					canvasEle.width = width;
 					count-=1;
 					ctx.drawImage(img, 0, 0);

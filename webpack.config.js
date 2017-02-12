@@ -1,10 +1,16 @@
 let webpack = require('webpack');
+let path = require('path');
 module.exports = {
 	devtool:"sourcemap",
 	watch:true,
 	entry:['babel-polyfill','./default.js'],
+	devServer: {
+  		contentBase: path.join(__dirname, "dist"),
+  		compress: true,
+  		port: 9000
+	},
 	output:{
-		path:'./dest',
+		path:path.join(__dirname, "dist"),
 		filename:"dest.js"
 	},
 	module:{
@@ -17,5 +23,8 @@ module.exports = {
                 	// sourceMaps: ['both']//babel的sourcemap
                 }
 		}]	
-	}
+	},
+	plugins:[
+  		new webpack.HotModuleReplacementPlugin()
+	]
 }

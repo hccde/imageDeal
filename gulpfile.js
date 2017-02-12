@@ -1,24 +1,35 @@
-	let gulp = require('gulp'),
+	const gulp = require('gulp'),
 		xml = require('xml2js').parseString,
 		fs = require('fs'),
 		babel = require('gulp-babel'),
+		path = require('path'),
 		webpack = require('webpack');
 
-	let webpackConfig = require('./webpack.config.js');
-	let connect = require('gulp-connect');//livereload
+	const webpackConfig = require('./webpack.config.js');
+	const WebpackDevServer = require("webpack-dev-server");
 
-	gulp.task('webpack',function(cb){
-		webpack(webpackConfig, (err, stats) => {
-			if(err){
-				console.log(err)
-			}
-  			console.log(stats.toString())
-  			cb()
-  		});
+
+	gulp.task('webpack', function(cb) {
+			
+
+
+const compiler = webpack(webpackConfig);
+const server = new WebpackDevServer(compiler, {
+	contentBase: path.join(__dirname, "dist"),
+	stats: {
+		colors: true,
+	}
+});
+
+server.listen(8080, "127.0.0.1", function() {
+	console.log("Starting server on http://localhost:8080");
+});
+
+
 	});
 	gulp.task('watch',function(){
-		gulp.watch(['*.html'],['html']);
-		gulp.watch(['./dest/**/*.js'],['js']);
+		// gulp.watch(['*.html'],['html']);
+		// gulp.watch(['./dest/**/*.js'],['js']);
 	})
 
 	gulp.task('xml',function(){
@@ -64,20 +75,15 @@
 	})
 
 	gulp.task('html',function(){
-		gulp.src('./*.html')
-    		.pipe(connect.reload());
+		// gulp.src('./*.html')
+  //   		.pipe(connect.reload());
 	});
 
 	gulp.task('js',function(){
-		gulp.src('./dest/*.js').pipe(connect.reload());
+		// gulp.src('./dest/*.js').pipe(connect.reload());
+
 	})
 
-	gulp.task('reload',function(){
-		connect.server({
-	       livereload: true
-	    });
-	})
-
-	gulp.task('default',['webpack','reload'],() => {
- 		gulp.run(['watch']);
+	gulp.task('default',['webpack'],() => {
+ 		// gulp.run(['watch']);
 	});
