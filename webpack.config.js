@@ -21,10 +21,24 @@ module.exports = {
                 query: {
                 	presets: ['es2015', 'stage-3'],
                 	// sourceMaps: ['both']//babel的sourcemap
-                }
-		}]	
+                	}
+            	},{
+                	test:/\.html$/,
+                	loader: 'html-loader',
+    				query: {
+      					minimize: true
+    				}
+                },{
+                	test: /\.jpg$/, loader: "file-loader" 
+             	},
+      			{ 
+      				test: /\.png$/, loader: "url-loader?mimetype=image/png" 
+      			}]	
 	},
 	plugins:[
-  		new webpack.HotModuleReplacementPlugin()
+  		new webpack.HotModuleReplacementPlugin(),
+  		new webpack.DefinePlugin({
+  			_ENV_DEV:JSON.stringify(true)// we can judge environment in source code
+		})
 	]
 }

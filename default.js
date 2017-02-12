@@ -1,3 +1,7 @@
+		if(_ENV_DEV == true){
+			let html = require('./dest/default.html');
+			// document.write(html);
+		}
 		function loadPrePic(picArray){
 			let count  = picArray.length;
 			let picarray = [];

@@ -8,36 +8,55 @@
 	const webpackConfig = require('./webpack.config.js');
 	const WebpackDevServer = require("webpack-dev-server");
 
-
 	gulp.task('webpack', function(cb) {
-			
-
-
-const compiler = webpack(webpackConfig);
-const server = new WebpackDevServer(compiler, {
-	contentBase: path.join(__dirname, "dist"),
-	stats: {
-		colors: true,
-	}
-});
-
-server.listen(8080, "127.0.0.1", function() {
-	console.log("Starting server on http://localhost:8080");
-});
-
-
+		const compiler = webpack(webpackConfig);
+		const server = new WebpackDevServer(compiler, {
+			contentBase: path.join(__dirname, "dest"),
+			stats: {
+				colors: true,
+			}
+		});
+		console.log(path.join(__dirname, "dest"))
+		server.listen(8080, "127.0.0.1", function() {
+			console.log("Starting server on http://localhost:8080");
+		});
 	});
-	gulp.task('watch',function(){
-		// gulp.watch(['*.html'],['html']);
-		// gulp.watch(['./dest/**/*.js'],['js']);
+
+	gulp.task('watch', function() {
+		gulp.watch(['*.html'],['html']);
 	})
 
-	gulp.task('xml',function(){
+
+	gulp.task('html', function() {
+		//todo production env
+		// copy html move to dist
+		// gulp.src('./*.html')
+		fs.readdir(__dirname,(err,files)=>{
+
+			if(err){
+
+			}else{
+				files.forEach((file)=>{
+					if(file.split('.').pop().toLowerCase() == 'html'){
+						gulp.src(file).pipe(gulp.dest("dest"))
+					}
+				})
+			}
+		})
+	});
+
+	gulp.task('default', ['html'], () => {
+		gulp.run(['webpack','watch']);
+	});
+
+
+	gulp.task('xml', function() {
 		// let str = fs.readFileSync('./haar.js');
 		let obj = require('./haarJSON.js');
-		function toNumber(str){
+
+		function toNumber(str) {
 			str = str.toString()
-			if(str.indexOf('e') == -1){
+			if (str.indexOf('e') == -1) {
 				console.log(str)
 				str = str.split('');
 				str.pop();
@@ -45,8 +64,8 @@ server.listen(8080, "127.0.0.1", function() {
 			}
 			console.log(str)
 			let tem = str.split('e');
-			tem[1][1] == 0?tem[1][1].replace('0',''):undefined;
-			return tem[0]*Math.pow(10,tem[1]);
+			tem[1][1] == 0 ? tem[1][1].replace('0', '') : undefined;
+			return tem[0] * Math.pow(10, tem[1]);
 		}
 		//对过滤器的修改
 		// obj.opencv_storage.cascade.stages._.forEach(function(e){
@@ -71,19 +90,5 @@ server.listen(8080, "127.0.0.1", function() {
 		// 		return tem;
 		// 	})
 		// })
-		fs.writeFileSync('./haarJson.js',JSON.stringify(obj));
+		fs.writeFileSync('./haarJson.js', JSON.stringify(obj));
 	})
-
-	gulp.task('html',function(){
-		// gulp.src('./*.html')
-  //   		.pipe(connect.reload());
-	});
-
-	gulp.task('js',function(){
-		// gulp.src('./dest/*.js').pipe(connect.reload());
-
-	})
-
-	gulp.task('default',['webpack'],() => {
- 		// gulp.run(['watch']);
-	});
