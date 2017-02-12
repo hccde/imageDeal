@@ -3,11 +3,11 @@ let path = require('path');
 module.exports = {
 	devtool:"sourcemap",
 	watch:true,
-	entry:['babel-polyfill','./default.js'],
+	entry:['webpack-dev-server/client?http://localhost:8080/','babel-polyfill','./default.js'],
 	devServer: {
-  		contentBase: path.join(__dirname, "dist"),
+  		contentBase: path.join(__dirname, "dest"),
   		compress: true,
-  		port: 9000
+  		port: 8080
 	},
 	output:{
 		path:path.join(__dirname, "dist"),

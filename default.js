@@ -44,7 +44,7 @@
 					width
 				} = img;
 				let canvasEle = document.createElement(`CANVAS`);
-				let ctx = canvasEle.getContext('2d');
+				let ctx = canvasEle.getContext('2d')
 
 				canvasEle.height = height;
 				canvasEle.width = width;
@@ -141,3 +141,5 @@
 		}
 
 		imageLoad('./amazingball.png');
+		console.log()
+		alert(1)

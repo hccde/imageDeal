@@ -7,19 +7,31 @@
 
 	const webpackConfig = require('./webpack.config.js');
 	const WebpackDevServer = require("webpack-dev-server");
-
+	let webpackServer;//子进程
 	gulp.task('webpack', function(cb) {
-		const compiler = webpack(webpackConfig);
-		const server = new WebpackDevServer(compiler, {
-			contentBase: path.join(__dirname, "dest"),
-			stats: {
-				colors: true,
-			}
-		});
-		console.log(path.join(__dirname, "dest"))
-		server.listen(8080, "127.0.0.1", function() {
-			console.log("Starting server on http://localhost:8080");
-		});
+		//current api don't support refresh,so i start from cmdline
+		// const compiler = webpack(webpackConfig);
+		// const server = new WebpackDevServer(compiler, {
+		// 	contentBase: path.join(__dirname, "dest"),
+		// 	stats: {
+		// 		colors: true,
+		// 	},
+		// 	inline:false,
+		// 	hot:true
+		// });
+		// console.log(path.join(__dirname, "dest"))
+		// server.listen(8080, "127.0.0.1", function() {
+		// 	console.log("Starting server on http://localhost:8080");
+		// });
+
+		webpackServer =  require('child_process').spawn('webpack-dev-server', ['--inline']); 
+		console.log(webpackServer.pid);
+		webpackServer.stdout.on('data', function (data) { 
+		console.log(data.toString()); 
+		}); 
+		webpackServer.stderr.on('data', function (data) { 
+		console.log(data.toString()); 
+		}); 
 	});
 
 	gulp.task('watch', function() {
@@ -30,7 +42,6 @@
 	gulp.task('html', function() {
 		//todo production env
 		// copy html move to dist
-		// gulp.src('./*.html')
 		fs.readdir(__dirname,(err,files)=>{
 
 			if(err){
@@ -46,6 +57,12 @@
 	});
 
 	gulp.task('default', ['html'], () => {
+		process.on('SIGINT', function() {
+  			console.log('Got SIGINT.  Press Control-D/Control-C to exit.');
+  			//退出子进程
+  			webpackServer.kill('SIGINT');
+  			process.exit();
+  		})
 		gulp.run(['webpack','watch']);
 	});
 
