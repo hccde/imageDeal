@@ -24,7 +24,7 @@
 		// 	console.log("Starting server on http://localhost:8080");
 		// });
 
-		webpackServer =  require('child_process').spawn('webpack-dev-server', ['--inline']); 
+		webpackServer =  require('child_process').spawn('webpack-dev-server', ['--inline','--color']); 
 		console.log(webpackServer.pid);
 		webpackServer.stdout.on('data', function (data) { 
 		console.log(data.toString()); 
