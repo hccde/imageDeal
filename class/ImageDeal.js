@@ -5,8 +5,10 @@ class ImageDeal{
 	constructor(img){
 		img instanceof ImageData? (this.imageData = img):
 			utils.error('image must be a instance of ImageData');
+		this._imageData = this.imageData //keep initally imageData;
 		this._grayimageMatrix = [];
 		this._grayimage2DMatrix = [];
+		this._apha = [];//keep initally imageData apha channel
 	};
 
 	/**
@@ -14,7 +16,7 @@ class ImageDeal{
 	 * @return {Array} [generate two-dimensional Array for loop]
 	 */
 	static imageDataTo2DMatrix(imagedata){
-
+		//for colorful image
 	};
 
 	get grayimageMatrix(){
@@ -59,18 +61,33 @@ class ImageDeal{
 		return this._grayimage2DMatrix;
 	}
 
-	out(imagedata,el){
-		return utils.imageOutput(imagedata&&this.imagedata,el)
+	out(el,imagedata){
+		imagedata = imagedata?imagedata:this.imageData;
+		console.log(imagedata)
+		return utils.imageOutput(imagedata,el);
 	};
 
-	static outImageData(array,width,height){
-		let imagedata;
-		if(utils.isflatArray(array)){
-			imagedata = createImageData(width,height);
-			//todo
-		}else{
+	outgrayImageData(){
+		let [width,height] = [this.imageData.width,this.imageData.height],
+			imagedata = new ImageData(width,height),
+			data = imagedata.data;
 
+		let rowoffset 
+		for(let i = 0; i<height; i++){
+				rowoffset = i*width*4;
+
+				let offset,value;
+				for(let j = 0; j<width;j++){
+					value = this.grayimage2DMatrix[i][j];
+					imagedata.data[rowoffset] = value;
+					imagedata.data[rowoffset+1] = value;
+					imagedata.data[rowoffset+2] = value;
+					imagedata.data[rowoffset+3] = this._apha[rowoffset/4];
+					rowoffset+=4;
+				}
 		}
+		this.imageData = imagedata;
+		return this;
 	};
 
 	toGray(){
@@ -81,6 +98,7 @@ class ImageDeal{
 					 + this.imageData.data[i + 2] * 11) / 100;
 				gray = parseInt(gray);
 				this._grayimageMatrix[j] = gray;
+				this._apha[j] = this.imageData.data[i+3];
 				i = i + 4;
 			}
 		}
