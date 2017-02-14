@@ -13,5 +13,5 @@
 	// };
 	utils.imageLoad('./amazingball.png',function(imagedata){
 		let image = new ImageDeal(imagedata);
-		console.log(image.outgrayImageData().out(document.getElementsByTagName('body')[0]))
+		console.log(image.toGray().out(document.getElementsByTagName('body')[0]));
 	});
