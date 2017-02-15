@@ -14,6 +14,5 @@
 
 	utils.imageLoad('./house.jpg',function(imagedata){
 		let image = new ImageDeal(imagedata);
-		image.test()
-		// utils.imageOutput(image.toGray(),document.getElementsByTagName('body')[0])
+		utils.imageOutput(image.power({factor:6,degree:1,offset:6})[0],document.getElementsByTagName('body')[0])
  	});

@@ -5,8 +5,8 @@ class ImageDeal{
 	constructor(img){
 		img instanceof ImageData? (this._imageData = img):
 			utils.error('image must be a instance of ImageData');
-		this._height = this._imageData.height;
-		this._width = this._imageData.width;
+		// this._height = this._imageData.height;
+		// this._width = this._imageData.width;
 		this._oldimageData = this.imageData //keep initally imageData;
 		this._Matrix = [];
 		this._grayMatrix = [];
@@ -157,9 +157,55 @@ class ImageDeal{
 		return this;
 	};
 
-	toGray(){
+	gray(){
 		this._imageData =  ImageDeal.grayMatrixtoImageData(this.grayMatrix);
 		return this._imageData
 	};
+
+	reversal(){
+		//dont need to turn into abstruct matrix
+		let [width,height] = [this._imageData.width,this._imageData.height],
+		length = width*height*4,
+		data = this._imageData.data;
+
+		for(let i=0;i<length;i=i+4){
+			data[i] = 255-data[i];
+			data[i+1] = 255-data[i+1];
+			data[i+2] = 255-data[i+2];
+		}
+		return this._imageData;
+	};
+	/**
+	 * @params {Array} [The param of power Transform]
+	 * @param {Object} [parm] [{factor:double,degree:double,offset:double}]
+	 * @return {Array}
+	 */
+	power(...params){
+		if(params.length<0){return}
+		let [width,height] = [this._imageData.width,this._imageData.width],
+			length = width*height*4,
+			data = this._imageData.data,
+			paramslength = params.length,
+			param,value;
+			let returnData = params.map(()=>{
+				return new ImageData(width,height)
+			})
+		for(let i = 0;i<length;i=i+4){
+			for(let j = 0;j<paramslength;j++){
+				param = params[j];
+				value = parseInt(param.degree*Math.pow(data[i]/255,param.factor)*255+param.offset)
+				returnData[j].data[i] = value>255?255:value;
+				value = parseInt(param.degree*Math.pow(data[i+1]/255,param.factor)*255+param.offset)
+				returnData[j].data[i+1] = value>255?255:value;
+				value = parseInt(param.degree*Math.pow(data[i+2]/255,param.factor)*255+param.offset)
+				returnData[j].data[i+2] = value>255?255:value;
+				returnData[j].data[i+3] = data[i+3];
+			}
+		}
+		this._imageData = returnData[0];
+		console.log(this._imageData)
+		return returnData;
+	};
+
 }
 export default ImageDeal;

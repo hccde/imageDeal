@@ -1,9 +1,8 @@
 class Compute{
-	constructor(matrix=undefined){
+	constructor(matrix){
 		this.Matrix = matrix;
-	}
-	test(){
-		console.log(this.matrix);
+		this.apha = matrix[1];
+		this.colorMatrix = matrix[0];
 	}
 }
 
