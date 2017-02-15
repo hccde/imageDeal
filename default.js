@@ -11,7 +11,9 @@
 	// 				imageData,
 	// 				prepic
 	// };
-	utils.imageLoad('./amazingball.png',function(imagedata){
+
+	utils.imageLoad('./house.jpg',function(imagedata){
 		let image = new ImageDeal(imagedata);
-		console.log(image.toGray().out(document.getElementsByTagName('body')[0]));
-	});
+		image.test()
+		// utils.imageOutput(image.toGray(),document.getElementsByTagName('body')[0])
+ 	});
