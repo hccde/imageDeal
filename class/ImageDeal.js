@@ -182,7 +182,7 @@ class ImageDeal{
 	 */
 	power(...params){
 		if(params.length<0){return}
-		let [width,height] = [this._imageData.width,this._imageData.width],
+		let [width,height] = [this._imageData.width,this._imageData.height],
 			length = width*height*4,
 			data = this._imageData.data,
 			paramslength = params.length,
@@ -205,6 +205,37 @@ class ImageDeal{
 		this._imageData = returnData[0];
 		console.log(this._imageData)
 		return returnData;
+	};
+	/**
+	 * simple zip
+	 * @param  {int} [scale]
+	 * @return {[type]}
+	 */
+	scale(factor=1,fn){
+		fn = function(r,b,g,a){return [r,b,g,a]}
+		let [width,height] = [this._imageData.width,this._imageData.height],
+			data = this._imageData.data,
+			length = width*height*4,
+			samllerwidth = Math.floor(width/factor),
+			samllerheight = Math.floor(height/factor);
+
+		let imagedata = new ImageData(samllerwidth,samllerheight),
+			smalldata = imagedata.data,
+			temp = [];
+		for(let i = 0,j=0,t=0;i<length;i=i+factor*4,j=j+4,t++){
+			temp = fn(data[i],data[i+1],data[i+2],data[i+3]);
+			smalldata[j] = temp[0];
+			smalldata[j+1] = temp[1];
+			smalldata[j+2] = temp[2];
+			smalldata[j+3] = temp[3];
+		}
+		//todo
+		for(){
+			for(){
+
+			}
+		}
+		return imagedata;
 	};
 
 }
