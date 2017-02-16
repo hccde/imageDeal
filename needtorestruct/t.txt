@@ -1,0 +1,2440 @@
+http://localhost:8080/webpack-dev-server/
+webpack result is served from /
+content is served from /Users/admos/Documents/collect/img
+Hash: 6f2a61f2b5043c8c7123
+Version: webpack 1.13.1
+Time: 13331ms
+      Asset     Size  Chunks             Chunk Names
+    dest.js  5.24 MB       0  [emitted]  main
+dest.js.map   6.3 MB       0  [emitted]  main
+chunk    {0} dest.js, dest.js.map (main) 4.95 MB [rendered]
+    [0] multi main 52 bytes {0} [built]
+    [1] ./~/babel-polyfill/lib/index.js 833 bytes {0} [built]
+    [2] ./~/core-js/shim.js 7.38 kB {0} [built]
+    [3] ./~/core-js/modules/es6.symbol.js 8.93 kB {0} [built]
+    [4] ./~/core-js/modules/_global.js 322 bytes {0} [built]
+    [5] ./~/core-js/modules/_has.js 117 bytes {0} [built]
+    [6] ./~/core-js/modules/_descriptors.js 177 bytes {0} [built]
+    [7] ./~/core-js/modules/_fails.js 99 bytes {0} [built]
+    [8] ./~/core-js/modules/_export.js 1.6 kB {0} [built]
+    [9] ./~/core-js/modules/_core.js 117 bytes {0} [built]
+   [10] ./~/core-js/modules/_hide.js 288 bytes {0} [built]
+   [11] ./~/core-js/modules/_object-dp.js 608 bytes {0} [built]
+   [12] ./~/core-js/modules/_an-object.js 149 bytes {0} [built]
+   [13] ./~/core-js/modules/_is-object.js 107 bytes {0} [built]
+   [14] ./~/core-js/modules/_ie8-dom-define.js 192 bytes {0} [built]
+   [15] ./~/core-js/modules/_dom-create.js 286 bytes {0} [built]
+   [16] ./~/core-js/modules/_to-primitive.js 644 bytes {0} [built]
+   [17] ./~/core-js/modules/_property-desc.js 183 bytes {0} [built]
+   [18] ./~/core-js/modules/_redefine.js 1.05 kB {0} [built]
+   [19] ./~/core-js/modules/_uid.js 158 bytes {0} [built]
+   [20] ./~/core-js/modules/_ctx.js 505 bytes {0} [built]
+   [21] ./~/core-js/modules/_a-function.js 120 bytes {0} [built]
+   [22] ./~/core-js/modules/_meta.js 1.55 kB {0} [built]
+   [23] ./~/core-js/modules/_shared.js 198 bytes {0} [built]
+   [24] ./~/core-js/modules/_set-to-string-tag.js 253 bytes {0} [built]
+   [25] ./~/core-js/modules/_wks.js 368 bytes {0} [built]
+   [26] ./~/core-js/modules/_wks-ext.js 30 bytes {0} [built]
+   [27] ./~/core-js/modules/_wks-define.js 439 bytes {0} [built]
+   [28] ./~/core-js/modules/_library.js 23 bytes {0} [built]
+   [29] ./~/core-js/modules/_keyof.js 307 bytes {0} [built]
+   [30] ./~/core-js/modules/_object-keys.js 225 bytes {0} [built]
+   [31] ./~/core-js/modules/_object-keys-internal.js 546 bytes {0} [built]
+   [32] ./~/core-js/modules/_to-iobject.js 213 bytes {0} [built]
+   [33] ./~/core-js/modules/_iobject.js 236 bytes {0} [built]
+   [34] ./~/core-js/modules/_cof.js 103 bytes {0} [built]
+   [35] ./~/core-js/modules/_defined.js 157 bytes {0} [built]
+   [36] ./~/core-js/modules/_array-includes.js 788 bytes {0} [built]
+   [37] ./~/core-js/modules/_to-length.js 217 bytes {0} [built]
+   [38] ./~/core-js/modules/_to-integer.js 158 bytes {0} [built]
+   [39] ./~/core-js/modules/_to-index.js 230 bytes {0} [built]
+   [40] ./~/core-js/modules/_shared-key.js 158 bytes {0} [built]
+   [41] ./~/core-js/modules/_enum-bug-keys.js 159 bytes {0} [built]
+   [42] ./~/core-js/modules/_enum-keys.js 472 bytes {0} [built]
+   [43] ./~/core-js/modules/_object-gops.js 41 bytes {0} [built]
+   [44] ./~/core-js/modules/_object-pie.js 36 bytes {0} [built]
+   [45] ./~/core-js/modules/_is-array.js 145 bytes {0} [built]
+   [46] ./~/core-js/modules/_object-create.js 1.52 kB {0} [built]
+   [47] ./~/core-js/modules/_object-dps.js 404 bytes {0} [built]
+   [48] ./~/core-js/modules/_html.js 75 bytes {0} [built]
+   [49] ./~/core-js/modules/_object-gopn-ext.js 603 bytes {0} [built]
+   [50] ./~/core-js/modules/_object-gopn.js 290 bytes {0} [built]
+   [51] ./~/core-js/modules/_object-gopd.js 607 bytes {0} [built]
+   [52] ./~/core-js/modules/es6.object.create.js 158 bytes {0} [built]
+   [53] ./~/core-js/modules/es6.object.define-property.js 214 bytes {0} [built]
+   [54] ./~/core-js/modules/es6.object.define-properties.js 214 bytes {0} [built]
+   [55] ./~/core-js/modules/es6.object.get-own-property-descriptor.js 353 bytes {0} [built]
+   [56] ./~/core-js/modules/_object-sap.js 368 bytes {0} [built]
+   [57] ./~/core-js/modules/es6.object.get-prototype-of.js 275 bytes {0} [built]
+   [58] ./~/core-js/modules/_to-object.js 129 bytes {0} [built]
+   [59] ./~/core-js/modules/_object-gpo.js 497 bytes {0} [built]
+   [60] ./~/core-js/modules/es6.object.keys.js 223 bytes {0} [built]
+   [61] ./~/core-js/modules/es6.object.get-own-property-names.js 147 bytes {0} [built]
+   [62] ./~/core-js/modules/es6.object.freeze.js 266 bytes {0} [built]
+   [63] ./~/core-js/modules/es6.object.seal.js 255 bytes {0} [built]
+   [64] ./~/core-js/modules/es6.object.prevent-extensions.js 333 bytes {0} [built]
+   [65] ./~/core-js/modules/es6.object.is-frozen.js 239 bytes {0} [built]
+   [66] ./~/core-js/modules/es6.object.is-sealed.js 239 bytes {0} [built]
+   [67] ./~/core-js/modules/es6.object.is-extensible.js 263 bytes {0} [built]
+   [68] ./~/core-js/modules/es6.object.assign.js 159 bytes {0} [built]
+   [69] ./~/core-js/modules/_object-assign.js 1.16 kB {0} [built]
+   [70] ./~/core-js/modules/es6.object.is.js 136 bytes {0} [built]
+   [71] ./~/core-js/modules/_same-value.js 142 bytes {0} [built]
+   [72] ./~/core-js/modules/es6.object.set-prototype-of.js 157 bytes {0} [built]
+   [73] ./~/core-js/modules/_set-proto.js 893 bytes {0} [built]
+   [74] ./~/core-js/modules/es6.object.to-string.js 319 bytes {0} [built]
+   [75] ./~/core-js/modules/_classof.js 709 bytes {0} [built]
+   [76] ./~/core-js/modules/es6.function.bind.js 161 bytes {0} [built]
+   [77] ./~/core-js/modules/_bind.js 855 bytes {0} [built]
+   [78] ./~/core-js/modules/_invoke.js 709 bytes {0} [built]
+   [79] ./~/core-js/modules/es6.function.name.js 652 bytes {0} [built]
+   [80] ./~/core-js/modules/es6.function.has-instance.js 655 bytes {0} [built]
+   [81] ./~/core-js/modules/es6.parse-int.js 192 bytes {0} [built]
+   [82] ./~/core-js/modules/_parse-int.js 403 bytes {0} [built]
+   [83] ./~/core-js/modules/_string-trim.js 894 bytes {0} [built]
+   [84] ./~/core-js/modules/_string-ws.js 169 bytes {0} [built]
+   [85] ./~/core-js/modules/es6.parse-float.js 201 bytes {0} [built]
+   [86] ./~/core-js/modules/_parse-float.js 361 bytes {0} [built]
+   [87] ./~/core-js/modules/es6.number.constructor.js 2.93 kB {0} [built]
+   [88] ./~/core-js/modules/_inherit-if-required.js 331 bytes {0} [built]
+   [89] ./~/core-js/modules/es6.number.to-fixed.js 2.71 kB {0} [built]
+   [90] ./~/core-js/modules/_a-number-value.js 153 bytes {0} [built]
+   [91] ./~/core-js/modules/_string-repeat.js 366 bytes {0} [built]
+   [92] ./~/core-js/modules/es6.number.to-precision.js 615 bytes {0} [built]
+   [93] ./~/core-js/modules/es6.number.epsilon.js 122 bytes {0} [built]
+   [94] ./~/core-js/modules/es6.number.is-finite.js 245 bytes {0} [built]
+   [95] ./~/core-js/modules/es6.number.is-integer.js 142 bytes {0} [built]
+   [96] ./~/core-js/modules/_is-integer.js 206 bytes {0} [built]
+   [97] ./~/core-js/modules/es6.number.is-nan.js 170 bytes {0} [built]
+   [98] ./~/core-js/modules/es6.number.is-safe-integer.js 298 bytes {0} [built]
+   [99] ./~/core-js/modules/es6.number.max-safe-integer.js 140 bytes {0} [built]
+  [100] ./~/core-js/modules/es6.number.min-safe-integer.js 142 bytes {0} [built]
+  [101] ./~/core-js/modules/es6.number.parse-float.js 228 bytes {0} [built]
+  [102] ./~/core-js/modules/es6.number.parse-int.js 219 bytes {0} [built]
+  [103] ./~/core-js/modules/es6.math.acosh.js 573 bytes {0} [built]
+  [104] ./~/core-js/modules/_math-log1p.js 152 bytes {0} [built]
+  [105] ./~/core-js/modules/es6.math.asinh.js 339 bytes {0} [built]
+  [106] ./~/core-js/modules/es6.math.atanh.js 303 bytes {0} [built]
+  [107] ./~/core-js/modules/es6.math.cbrt.js 218 bytes {0} [built]
+  [108] ./~/core-js/modules/_math-sign.js 131 bytes {0} [built]
+  [109] ./~/core-js/modules/es6.math.clz32.js 206 bytes {0} [built]
+  [110] ./~/core-js/modules/es6.math.cosh.js 188 bytes {0} [built]
+  [111] ./~/core-js/modules/es6.math.expm1.js 184 bytes {0} [built]
+  [112] ./~/core-js/modules/_math-expm1.js 341 bytes {0} [built]
+  [113] ./~/core-js/modules/es6.math.fround.js 743 bytes {0} [built]
+  [114] ./~/core-js/modules/es6.math.hypot.js 660 bytes {0} [built]
+  [115] ./~/core-js/modules/es6.math.imul.js 532 bytes {0} [built]
+  [116] ./~/core-js/modules/es6.math.log10.js 164 bytes {0} [built]
+  [117] ./~/core-js/modules/es6.math.log1p.js 126 bytes {0} [built]
+  [118] ./~/core-js/modules/es6.math.log2.js 160 bytes {0} [built]
+  [119] ./~/core-js/modules/es6.math.sign.js 123 bytes {0} [built]
+  [120] ./~/core-js/modules/es6.math.sinh.js 454 bytes {0} [built]
+  [121] ./~/core-js/modules/es6.math.tanh.js 318 bytes {0} [built]
+  [122] ./~/core-js/modules/es6.math.trunc.js 179 bytes {0} [built]
+  [123] ./~/core-js/modules/es6.string.from-code-point.js 848 bytes {0} [built]
+  [124] ./~/core-js/modules/es6.string.raw.js 516 bytes {0} [built]
+  [125] ./~/core-js/modules/es6.string.trim.js 163 bytes {0} [built]
+  [126] ./~/core-js/modules/es6.string.iterator.js 523 bytes {0} [built]
+  [127] ./~/core-js/modules/_string-at.js 611 bytes {0} [built]
+  [128] ./~/core-js/modules/_iter-define.js 2.82 kB {0} [built]
+  [129] ./~/core-js/modules/_iterators.js 20 bytes {0} [built]
+  [130] ./~/core-js/modules/_iter-create.js 528 bytes {0} [built]
+  [131] ./~/core-js/modules/es6.string.code-point-at.js 250 bytes {0} [built]
+  [132] ./~/core-js/modules/es6.string.ends-with.js 840 bytes {0} [built]
+  [133] ./~/core-js/modules/_string-context.js 309 bytes {0} [built]
+  [134] ./~/core-js/modules/_is-regexp.js 292 bytes {0} [built]
+  [135] ./~/core-js/modules/_fails-is-regexp.js 244 bytes {0} [built]
+  [136] ./~/core-js/modules/es6.string.includes.js 476 bytes {0} [built]
+  [137] ./~/core-js/modules/es6.string.repeat.js 155 bytes {0} [built]
+  [138] ./~/core-js/modules/es6.string.starts-with.js 767 bytes {0} [built]
+  [139] ./~/core-js/modules/es6.string.anchor.js 200 bytes {0} [built]
+  [140] ./~/core-js/modules/_string-html.js 696 bytes {0} [built]
+  [141] ./~/core-js/modules/es6.string.big.js 179 bytes {0} [built]
+  [142] ./~/core-js/modules/es6.string.blink.js 187 bytes {0} [built]
+  [143] ./~/core-js/modules/es6.string.bold.js 180 bytes {0} [built]
+  [144] ./~/core-js/modules/es6.string.fixed.js 184 bytes {0} [built]
+  [145] ./~/core-js/modules/es6.string.fontcolor.js 216 bytes {0} [built]
+  [146] ./~/core-js/modules/es6.string.fontsize.js 209 bytes {0} [built]
+  [147] ./~/core-js/modules/es6.string.italics.js 189 bytes {0} [built]
+  [148] ./~/core-js/modules/es6.string.link.js 192 bytes {0} [built]
+  [149] ./~/core-js/modules/es6.string.small.js 188 bytes {0} [built]
+  [150] ./~/core-js/modules/es6.string.strike.js 192 bytes {0} [built]
+  [151] ./~/core-js/modules/es6.string.sub.js 180 bytes {0} [built]
+  [152] ./~/core-js/modules/es6.string.sup.js 180 bytes {0} [built]
+  [153] ./~/core-js/modules/es6.date.now.js 149 bytes {0} [built]
+  [154] ./~/core-js/modules/es6.date.to-json.js 510 bytes {0} [built]
+  [155] ./~/core-js/modules/es6.date.to-iso-string.js 1.01 kB {0} [built]
+  [156] ./~/core-js/modules/es6.date.to-string.js 393 bytes {0} [built]
+  [157] ./~/core-js/modules/es6.date.to-primitive.js 189 bytes {0} [built]
+  [158] ./~/core-js/modules/_date-to-primitive.js 318 bytes {0} [built]
+  [159] ./~/core-js/modules/es6.array.is-array.js 142 bytes {0} [built]
+  [160] ./~/core-js/modules/es6.array.from.js 1.67 kB {0} [built]
+  [161] ./~/core-js/modules/_iter-call.js 403 bytes {0} [built]
+  [162] ./~/core-js/modules/_is-array-iter.js 277 bytes {0} [built]
+  [163] ./~/core-js/modules/_create-property.js 270 bytes {0} [built]
+  [164] ./~/core-js/modules/core.get-iterator-method.js 293 bytes {0} [built]
+  [165] ./~/core-js/modules/_iter-detect.js 582 bytes {0} [built]
+  [166] ./~/core-js/modules/es6.array.of.js 599 bytes {0} [built]
+  [167] ./~/core-js/modules/es6.array.join.js 451 bytes {0} [built]
+  [168] ./~/core-js/modules/_strict-method.js 187 bytes {0} [built]
+  [169] ./~/core-js/modules/es6.array.slice.js 909 bytes {0} [built]
+  [170] ./~/core-js/modules/es6.array.sort.js 648 bytes {0} [built]
+  [171] ./~/core-js/modules/es6.array.for-each.js 403 bytes {0} [built]
+  [172] ./~/core-js/modules/_array-methods.js 1.56 kB {0} [built]
+  [173] ./~/core-js/modules/_array-species-create.js 220 bytes {0} [built]
+  [174] ./~/core-js/modules/_array-species-constructor.js 464 bytes {0} [built]
+  [175] ./~/core-js/modules/es6.array.map.js 359 bytes {0} [built]
+  [176] ./~/core-js/modules/es6.array.filter.js 373 bytes {0} [built]
+  [177] ./~/core-js/modules/es6.array.some.js 364 bytes {0} [built]
+  [178] ./~/core-js/modules/es6.array.every.js 368 bytes {0} [built]
+  [179] ./~/core-js/modules/es6.array.reduce.js 405 bytes {0} [built]
+  [180] ./~/core-js/modules/_array-reduce.js 816 bytes {0} [built]
+  [181] ./~/core-js/modules/es6.array.reduce-right.js 424 bytes {0} [built]
+  [182] ./~/core-js/modules/es6.array.index-of.js 605 bytes {0} [built]
+  [183] ./~/core-js/modules/es6.array.last-index-of.js 973 bytes {0} [built]
+  [184] ./~/core-js/modules/es6.array.copy-within.js 234 bytes {0} [built]
+  [185] ./~/core-js/modules/_array-copy-within.js 833 bytes {0} [built]
+  [186] ./~/core-js/modules/_add-to-unscopables.js 292 bytes {0} [built]
+  [187] ./~/core-js/modules/es6.array.fill.js 212 bytes {0} [built]
+  [188] ./~/core-js/modules/_array-fill.js 610 bytes {0} [built]
+  [189] ./~/core-js/modules/es6.array.find.js 523 bytes {0} [built]
+  [190] ./~/core-js/modules/es6.array.find-index.js 543 bytes {0} [built]
+  [191] ./~/core-js/modules/es6.array.species.js 35 bytes {0} [built]
+  [192] ./~/core-js/modules/_set-species.js 367 bytes {0} [built]
+  [193] ./~/core-js/modules/es6.array.iterator.js 1.13 kB {0} [built]
+  [194] ./~/core-js/modules/_iter-step.js 81 bytes {0} [built]
+  [195] ./~/core-js/modules/es6.regexp.constructor.js 1.71 kB {0} [built]
+  [196] ./~/core-js/modules/_flags.js 375 bytes {0} [built]
+  [197] ./~/core-js/modules/es6.regexp.to-string.js 821 bytes {0} [built]
+  [198] ./~/core-js/modules/es6.regexp.flags.js 198 bytes {0} [built]
+  [199] ./~/core-js/modules/es6.regexp.match.js 381 bytes {0} [built]
+  [200] ./~/core-js/modules/_fix-re-wks.js 944 bytes {0} [built]
+  [201] ./~/core-js/modules/es6.regexp.replace.js 491 bytes {0} [built]
+  [202] ./~/core-js/modules/es6.regexp.search.js 390 bytes {0} [built]
+  [203] ./~/core-js/modules/es6.regexp.split.js 3.32 kB {0} [built]
+  [204] ./~/core-js/modules/es6.promise.js 10 kB {0} [built]
+  [205] ./~/core-js/modules/_an-instance.js 232 bytes {0} [built]
+  [206] ./~/core-js/modules/_for-of.js 1.19 kB {0} [built]
+  [207] ./~/core-js/modules/_species-constructor.js 340 bytes {0} [built]
+  [208] ./~/core-js/modules/_task.js 2.28 kB {0} [built]
+  [209] ./~/core-js/modules/_microtask.js 1.75 kB {0} [built]
+  [210] ./~/core-js/modules/_redefine-all.js 164 bytes {0} [built]
+  [211] ./~/core-js/modules/es6.map.js 541 bytes {0} [built]
+  [212] ./~/core-js/modules/_collection-strong.js 4.83 kB {0} [built]
+  [213] ./~/core-js/modules/_collection.js 3.4 kB {0} [built]
+  [214] ./~/core-js/modules/es6.set.js 396 bytes {0} [built]
+  [215] ./~/core-js/modules/es6.weak-map.js 1.8 kB {0} [built]
+  [216] ./~/core-js/modules/_collection-weak.js 2.69 kB {0} [built]
+  [217] ./~/core-js/modules/es6.weak-set.js 373 bytes {0} [built]
+  [218] ./~/core-js/modules/es6.typed.array-buffer.js 1.8 kB {0} [built]
+  [219] ./~/core-js/modules/_typed.js 671 bytes {0} [built]
+  [220] ./~/core-js/modules/_typed-buffer.js 9.59 kB {0} [built]
+  [221] ./~/core-js/modules/es6.typed.data-view.js 159 bytes {0} [built]
+  [222] ./~/core-js/modules/es6.typed.int8-array.js 165 bytes {0} [built]
+  [223] ./~/core-js/modules/_typed-array.js 18.8 kB {0} [built]
+  [224] ./~/core-js/modules/es6.typed.uint8-array.js 167 bytes {0} [built]
+  [225] ./~/core-js/modules/es6.typed.uint8-clamped-array.js 180 bytes {0} [built]
+  [226] ./~/core-js/modules/es6.typed.int16-array.js 167 bytes {0} [built]
+  [227] ./~/core-js/modules/es6.typed.uint16-array.js 169 bytes {0} [built]
+  [228] ./~/core-js/modules/es6.typed.int32-array.js 167 bytes {0} [built]
+  [229] ./~/core-js/modules/es6.typed.uint32-array.js 169 bytes {0} [built]
+  [230] ./~/core-js/modules/es6.typed.float32-array.js 171 bytes {0} [built]
+  [231] ./~/core-js/modules/es6.typed.float64-array.js 171 bytes {0} [built]
+  [232] ./~/core-js/modules/es6.reflect.apply.js 640 bytes {0} [built]
+  [233] ./~/core-js/modules/es6.reflect.construct.js 1.95 kB {0} [built]
+  [234] ./~/core-js/modules/es6.reflect.define-property.js 763 bytes {0} [built]
+  [235] ./~/core-js/modules/es6.reflect.delete-property.js 405 bytes {0} [built]
+  [236] ./~/core-js/modules/es6.reflect.enumerate.js 732 bytes {0} [built]
+  [237] ./~/core-js/modules/es6.reflect.get.js 811 bytes {0} [built]
+  [238] ./~/core-js/modules/es6.reflect.get-own-property-descriptor.js 355 bytes {0} [built]
+  [239] ./~/core-js/modules/es6.reflect.get-prototype-of.js 287 bytes {0} [built]
+  [240] ./~/core-js/modules/es6.reflect.has.js 195 bytes {0} [built]
+  [241] ./~/core-js/modules/es6.reflect.is-extensible.js 332 bytes {0} [built]
+  [242] ./~/core-js/modules/es6.reflect.own-keys.js 137 bytes {0} [built]
+  [243] ./~/core-js/modules/_own-keys.js 418 bytes {0} [built]
+  [244] ./~/core-js/modules/es6.reflect.prevent-extensions.js 437 bytes {0} [built]
+  [245] ./~/core-js/modules/es6.reflect.set.js 1.19 kB {0} [built]
+  [246] ./~/core-js/modules/es6.reflect.set-prototype-of.js 376 bytes {0} [built]
+  [247] ./~/core-js/modules/es7.array.includes.js 377 bytes {0} [built]
+  [248] ./~/core-js/modules/es7.string.at.js 240 bytes {0} [built]
+  [249] ./~/core-js/modules/es7.string.pad-start.js 340 bytes {0} [built]
+  [250] ./~/core-js/modules/_string-pad.js 751 bytes {0} [built]
+  [251] ./~/core-js/modules/es7.string.pad-end.js 337 bytes {0} [built]
+  [252] ./~/core-js/modules/es7.string.trim-left.js 215 bytes {0} [built]
+  [253] ./~/core-js/modules/es7.string.trim-right.js 215 bytes {0} [built]
+  [254] ./~/core-js/modules/es7.string.match-all.js 1.04 kB {0} [built]
+  [255] ./~/core-js/modules/es7.symbol.async-iterator.js 42 bytes {0} [built]
+  [256] ./~/core-js/modules/es7.symbol.observable.js 39 bytes {0} [built]
+  [257] ./~/core-js/modules/es7.object.get-own-property-descriptors.js 659 bytes {0} [built]
+  [258] ./~/core-js/modules/es7.object.values.js 239 bytes {0} [built]
+  [259] ./~/core-js/modules/_object-to-array.js 469 bytes {0} [built]
+  [260] ./~/core-js/modules/es7.object.entries.js 243 bytes {0} [built]
+  [261] ./~/core-js/modules/es7.object.define-getter.js 519 bytes {0} [built]
+  [262] ./~/core-js/modules/_object-forced-pam.js 284 bytes {0} [built]
+  [263] ./~/core-js/modules/es7.object.define-setter.js 519 bytes {0} [built]
+  [264] ./~/core-js/modules/es7.object.lookup-getter.js 669 bytes {0} [built]
+  [265] ./~/core-js/modules/es7.object.lookup-setter.js 669 bytes {0} [built]
+  [266] ./~/core-js/modules/es7.map.to-json.js 186 bytes {0} [built]
+  [267] ./~/core-js/modules/_collection-to-json.js 313 bytes {0} [built]
+  [268] ./~/core-js/modules/_array-from-iterable.js 170 bytes {0} [built]
+  [269] ./~/core-js/modules/es7.set.to-json.js 186 bytes {0} [built]
+  [270] ./~/core-js/modules/es7.system.global.js 143 bytes {0} [built]
+  [271] ./~/core-js/modules/es7.error.is-error.js 218 bytes {0} [built]
+  [272] ./~/core-js/modules/es7.math.iaddh.js 335 bytes {0} [built]
+  [273] ./~/core-js/modules/es7.math.isubh.js 334 bytes {0} [built]
+  [274] ./~/core-js/modules/es7.math.imulh.js 436 bytes {0} [built]
+  [275] ./~/core-js/modules/es7.math.umulh.js 440 bytes {0} [built]
+  [276] ./~/core-js/modules/es7.reflect.define-metadata.js 406 bytes {0} [built]
+  [277] ./~/core-js/modules/_metadata.js 1.78 kB {0} [built]
+  [278] ./~/core-js/modules/es7.reflect.delete-metadata.js 750 bytes {0} [built]
+  [279] ./~/core-js/modules/es7.reflect.get-metadata.js 796 bytes {0} [built]
+  [280] ./~/core-js/modules/es7.reflect.get-metadata-keys.js 861 bytes {0} [built]
+  [281] ./~/core-js/modules/es7.reflect.get-own-metadata.js 417 bytes {0} [built]
+  [282] ./~/core-js/modules/es7.reflect.get-own-metadata-keys.js 400 bytes {0} [built]
+  [283] ./~/core-js/modules/es7.reflect.has-metadata.js 713 bytes {0} [built]
+  [284] ./~/core-js/modules/es7.reflect.has-own-metadata.js 417 bytes {0} [built]
+  [285] ./~/core-js/modules/es7.reflect.metadata.js 551 bytes {0} [built]
+  [286] ./~/core-js/modules/es7.asap.js 444 bytes {0} [built]
+  [287] ./~/core-js/modules/es7.observable.js 5.45 kB {0} [built]
+  [288] ./~/core-js/modules/web.timers.js 702 bytes {0} [built]
+  [289] ./~/core-js/modules/_partial.js 757 bytes {0} [built]
+  [290] ./~/core-js/modules/_path.js 38 bytes {0} [built]
+  [291] ./~/core-js/modules/web.immediate.js 164 bytes {0} [built]
+  [292] ./~/core-js/modules/web.dom.iterable.js 881 bytes {0} [built]
+  [293] ./~/regenerator-runtime/runtime.js 22.5 kB {0} [built]
+  [294] (webpack)/~/process/browser.js 2.82 kB {0} [built]
+  [295] ./~/core-js/fn/regexp/escape.js 107 bytes {0} [built]
+  [296] ./~/core-js/modules/core.regexp.escape.js 232 bytes {0} [built]
+  [297] ./~/core-js/modules/_replacer.js 227 bytes {0} [built]
+  [298] ./default.js 5.2 kB {0} [built]
+  [299] ./server.js 359 bytes {0} [built]
+  [300] ./~/webpack-dev-middleware/middleware.js 2.52 kB {0} [built] [1 error]
+  [301] ./~/webpack-dev-middleware/lib/GetFilenameFromUrl.js 1.13 kB {0} [built]
+  [302] ./~/webpack-dev-middleware/lib/PathJoin.js 106 bytes {0} [built]
+  [303] ./~/url/url.js 23.3 kB {0} [built]
+  [304] /Users/admos/~/punycode/punycode.js 14 kB {0} [built]
+  [305] (webpack)/buildin/module.js 251 bytes {0} [built]
+  [306] ./~/url/util.js 314 bytes {0} [built]
+  [307] /Users/admos/~/querystring/index.js 127 bytes {0} [built]
+  [308] /Users/admos/~/querystring/decode.js 2.4 kB {0} [built]
+  [309] /Users/admos/~/querystring/encode.js 2.09 kB {0} [built]
+  [310] ./~/webpack-dev-middleware/lib/Shared.js 7.19 kB {0} [built] [1 error]
+  [311] /Users/admos/~/path-is-absolute/index.js 599 bytes {0} [built]
+  [312] ./~/webpack-dev-middleware/~/memory-fs/lib/MemoryFileSystem.js 8.86 kB {0} [built]
+  [313] (webpack)/~/buffer/index.js 42.8 kB {0} [built]
+  [314] (webpack)/~/base64-js/lib/b64.js 3.57 kB {0} [built]
+  [315] (webpack)/~/ieee754/index.js 2.05 kB {0} [built]
+  [316] (webpack)/~/isarray/index.js 132 bytes {0} [built]
+  [317] (webpack)/~/timers-browserify/main.js 2.1 kB {0} [built]
+  [318] ./~/webpack-dev-middleware/~/memory-fs/lib/normalize.js 2.14 kB {0} [built]
+  [319] /Users/admos/~/errno/errno.js 5.61 kB {0} [built]
+  [320] /Users/admos/~/errno/custom.js 1.64 kB {0} [built]
+  [321] /Users/admos/~/prr/prr.js 1.58 kB {0} [built]
+  [322] ./~/webpack-dev-middleware/~/readable-stream/readable.js 630 bytes {0} [built]
+  [323] (webpack)/~/stream-browserify/index.js 3.63 kB {0} [built]
+  [324] (webpack)/~/events/events.js 8.33 kB {0} [built]
+  [325] (webpack)/~/inherits/inherits_browser.js 672 bytes {0} [built]
+  [326] (webpack)/~/stream-browserify/~/readable-stream/readable.js 470 bytes {0} [built]
+  [327] (webpack)/~/stream-browserify/~/readable-stream/lib/_stream_readable.js 26 kB {0} [built]
+  [328] (webpack)/~/stream-browserify/~/isarray/index.js 120 bytes {0} [built]
+  [329] (webpack)/~/core-util-is/lib/util.js 3.02 kB {0} [built]
+  [331] (webpack)/~/stream-browserify/~/readable-stream/lib/_stream_duplex.js 2.81 kB {0} [built]
+  [332] (webpack)/~/stream-browserify/~/readable-stream/lib/_stream_writable.js 13.1 kB {0} [built]
+  [333] (webpack)/~/string_decoder/index.js 7.8 kB {0} [built]
+  [334] (webpack)/~/stream-browserify/~/readable-stream/lib/_stream_transform.js 7.35 kB {0} [built]
+  [335] (webpack)/~/stream-browserify/~/readable-stream/lib/_stream_passthrough.js 1.73 kB {0} [built]
+  [336] (webpack)/~/stream-browserify/~/readable-stream/writable.js 54 bytes {0} [built]
+  [337] (webpack)/~/stream-browserify/~/readable-stream/duplex.js 52 bytes {0} [built]
+  [338] (webpack)/~/stream-browserify/~/readable-stream/transform.js 55 bytes {0} [built]
+  [339] (webpack)/~/stream-browserify/~/readable-stream/passthrough.js 57 bytes {0} [built]
+  [340] ./~/webpack-dev-middleware/~/readable-stream/lib/_stream_readable.js 28.3 kB {0} [built]
+  [341] /Users/admos/~/process-nextick-args/index.js 1.04 kB {0} [built]
+  [342] ./~/webpack-dev-middleware/~/isarray/index.js 132 bytes {0} [built]
+  [343] /Users/admos/~/events/events.js 8.25 kB {0} [built]
+  [344] /Users/admos/~/buffer/index.js 30.3 kB {0} [built]
+  [345] /Users/admos/~/base64-js/lib/b64.js 3.57 kB {0} [built]
+  [346] /Users/admos/~/ieee754/index.js 2.05 kB {0} [built]
+  [347] /Users/admos/~/buffer-shims/index.js 3.23 kB {0} [built]
+  [348] /Users/admos/~/core-util-is/lib/util.js 3.02 kB {0} [built]
+  [349] /Users/admos/~/inherits/inherits_browser.js 672 bytes {0} [built]
+  [351] ./~/webpack-dev-middleware/~/readable-stream/lib/internal/streams/BufferList.js 1.46 kB {0} [built]
+  [352] ./~/webpack-dev-middleware/~/readable-stream/lib/_stream_duplex.js 1.85 kB {0} [built]
+  [353] ./~/webpack-dev-middleware/~/readable-stream/lib/_stream_writable.js 16.1 kB {0} [built]
+  [354] /Users/admos/~/util-deprecate/browser.js 1.61 kB {0} [built]
+  [355] /Users/admos/~/string_decoder/index.js 7.8 kB {0} [built]
+  [356] ./~/webpack-dev-middleware/~/readable-stream/lib/_stream_transform.js 6.45 kB {0} [built]
+  [357] ./~/webpack-dev-middleware/~/readable-stream/lib/_stream_passthrough.js 604 bytes {0} [built]
+  [358] ./~/webpack-dev-middleware/~/memory-fs/lib/join.js 655 bytes {0} [built]
+  [359] ./~/webpack/lib/webpack.web.js 988 bytes {0} [built]
+  [360] ./~/webpack/lib/Compiler.js 15.1 kB {0} [built]
+  [361] (webpack)/~/path-browserify/index.js 6.18 kB {0} [built]
+  [362] ./~/tapable/lib/Tapable.js 9.36 kB {0} [built]
+  [363] ./~/webpack/lib/Compilation.js 35.9 kB {0} [built]
+  [364] ./~/webpack/~/async/dist/async.js 176 kB {0} [built]
+  [365] (webpack)/~/crypto-browserify/index.js 1.17 kB {0} [built]
+  [366] (webpack)/~/crypto-browserify/rng.js 800 bytes {0} [built]
+  [368] (webpack)/~/crypto-browserify/create-hash.js 707 bytes {0} [built]
+  [369] (webpack)/~/sha.js/index.js 402 bytes {0} [built]
+  [370] (webpack)/~/sha.js/hash.js 1.98 kB {0} [built]
+  [371] (webpack)/~/sha.js/sha1.js 3.21 kB {0} [built]
+  [372] (webpack)/~/util/util.js 15.6 kB {0} [built]
+  [373] (webpack)/~/util/support/isBufferBrowser.js 203 bytes {0} [built]
+  [374] (webpack)/~/sha.js/sha256.js 3.48 kB {0} [built]
+  [375] (webpack)/~/sha.js/sha512.js 7.32 kB {0} [built]
+  [376] (webpack)/~/crypto-browserify/md5.js 5.42 kB {0} [built]
+  [377] (webpack)/~/crypto-browserify/helpers.js 930 bytes {0} [built]
+  [378] (webpack)/~/ripemd160/lib/ripemd160.js 6.37 kB {0} [built]
+  [379] (webpack)/~/crypto-browserify/create-hmac.js 1.02 kB {0} [built]
+  [380] (webpack)/~/crypto-browserify/pbkdf2.js 262 bytes {0} [built]
+  [381] (webpack)/~/pbkdf2-compat/pbkdf2.js 2.06 kB {0} [built]
+  [382] ./~/webpack/lib/EntryModuleNotFoundError.js 563 bytes {0} [built]
+  [383] ./~/webpack/lib/ModuleNotFoundError.js 658 bytes {0} [built]
+  [384] ./~/webpack/lib/ModuleDependencyWarning.js 629 bytes {0} [built]
+  [385] ./~/webpack/lib/formatLocation.js 1.16 kB {0} [built]
+  [386] ./~/webpack/lib/ModuleDependencyError.js 625 bytes {0} [built]
+  [387] ./~/webpack/lib/Module.js 4.83 kB {0} [built]
+  [388] ./~/webpack/lib/DependenciesBlock.js 1.94 kB {0} [built]
+  [389] ./~/webpack/lib/DependenciesBlockVariable.js 1.36 kB {0} [built]
+  [390] ./~/webpack-sources/lib/index.js 581 bytes {0} [built]
+  [391] ./~/webpack-sources/lib/Source.js 752 bytes {0} [built]
+  [392] /Users/admos/~/source-map/source-map.js 405 bytes {0} [built]
+  [393] /Users/admos/~/source-map/lib/source-map-generator.js 13.4 kB {0} [built]
+  [394] /Users/admos/~/source-map/lib/base64-vlq.js 4.71 kB {0} [built]
+  [395] /Users/admos/~/source-map/lib/base64.js 1.54 kB {0} [built]
+  [396] /Users/admos/~/source-map/lib/util.js 10.5 kB {0} [built]
+  [397] /Users/admos/~/source-map/lib/array-set.js 2.76 kB {0} [built]
+  [398] /Users/admos/~/source-map/lib/mapping-list.js 2.34 kB {0} [built]
+  [399] /Users/admos/~/source-map/lib/source-map-consumer.js 38.4 kB {0} [built]
+  [400] /Users/admos/~/source-map/lib/binary-search.js 4.25 kB {0} [built]
+  [401] /Users/admos/~/source-map/lib/quick-sort.js 3.62 kB {0} [built]
+  [402] /Users/admos/~/source-map/lib/source-node.js 13.5 kB {0} [built]
+  [403] ./~/webpack-sources/lib/RawSource.js 897 bytes {0} [built]
+  [404] /Users/admos/~/source-list-map/lib/index.js 273 bytes {0} [built]
+  [405] /Users/admos/~/source-list-map/lib/SourceListMap.js 3.11 kB {0} [built]
+  [406] /Users/admos/~/source-list-map/lib/CodeNode.js 822 bytes {0} [built]
+  [407] /Users/admos/~/source-list-map/lib/helpers.js 286 bytes {0} [built]
+  [408] /Users/admos/~/source-list-map/lib/SourceNode.js 1.75 kB {0} [built]
+  [409] /Users/admos/~/source-list-map/lib/base64-vlq.js 5.54 kB {0} [built]
+  [410] /Users/admos/~/source-list-map/lib/MappingsContext.js 657 bytes {0} [built]
+  [411] /Users/admos/~/source-list-map/lib/fromStringWithSourceMap.js 3.08 kB {0} [built]
+  [412] ./~/webpack-sources/lib/OriginalSource.js 2.25 kB {0} [built]
+  [413] ./~/webpack-sources/lib/SourceAndMapMixin.js 838 bytes {0} [built]
+  [414] ./~/webpack-sources/lib/SourceMapSource.js 2.07 kB {0} [built]
+  [415] ./~/webpack-sources/lib/LineToLineMappedSource.js 1.52 kB {0} [built]
+  [416] ./~/webpack-sources/lib/CachedSource.js 2.05 kB {0} [built]
+  [417] ./~/webpack-sources/lib/ConcatSource.js 1.71 kB {0} [built]
+  [418] ./~/webpack-sources/lib/ReplaceSource.js 5.4 kB {0} [built]
+  [419] ./~/webpack-sources/lib/PrefixSource.js 2.06 kB {0} [built]
+  [420] ./~/webpack/lib/ModuleReason.js 262 bytes {0} [built]
+  [421] ./~/webpack/lib/Template.js 4.48 kB {0} [built]
+  [422] ./~/webpack/lib/removeAndDo.js 334 bytes {0} [built]
+  [423] ./~/webpack/lib/Chunk.js 8.61 kB {0} [built]
+  [424] ./~/webpack/lib/compareLocations.js 868 bytes {0} [built]
+  [425] ./~/webpack/lib/Entrypoint.js 932 bytes {0} [built]
+  [426] ./~/webpack/lib/Stats.js 25.3 kB {0} [built] [1 error]
+  [427] ./~/webpack/lib/RequestShortener.js 2.41 kB {0} [built]
+  [428] ./~/webpack/lib/SizeFormatHelpers.js 442 bytes {0} [built]
+  [430] ./~/webpack/lib/MainTemplate.js 9.02 kB {0} [built]
+  [431] ./~/webpack/lib/ChunkTemplate.js 1.12 kB {0} [built]
+  [432] ./~/webpack/lib/HotUpdateChunkTemplate.js 951 bytes {0} [built]
+  [433] ./~/webpack/lib/ModuleTemplate.js 831 bytes {0} [built]
+  [434] ./~/webpack/lib/Dependency.js 1 kB {0} [built]
+  [435] ./~/webpack/lib/ChunkRenderError.js 535 bytes {0} [built]
+  [436] ./~/webpack/lib/NormalModuleFactory.js 9.15 kB {0} [built]
+  [437] ./~/webpack/lib/NormalModule.js 10.7 kB {0} [built] [1 error]
+  [438] ./~/webpack/lib/ModuleParseError.js 1.1 kB {0} [built]
+  [439] ./~/webpack/lib/ModuleBuildError.js 1.2 kB {0} [built]
+  [440] ./~/webpack/lib/ModuleError.js 447 bytes {0} [built]
+  [441] ./~/webpack/lib/ModuleWarning.js 467 bytes {0} [built]
+  [442] ./~/loader-runner/lib/LoaderRunner.js 11.3 kB {0} [built] [1 error]
+  [443] ./~/loader-runner/lib/loadLoader.js 1.6 kB {0} [built]
+  [444] ./~/loader-runner/lib ^\.\/.*$ 238 bytes {0} [optional] [built]
+  [445] ./~/webpack/lib/RawModule.js 1.16 kB {0} [built]
+  [446] ./~/webpack/lib/Parser.js 41.7 kB {0} [built]
+  [447] ./~/acorn-dynamic-import/lib/index.js 655 bytes {0} [built]
+  [448] ./~/acorn/dist/acorn.js 126 kB {0} [built]
+  [449] ./~/acorn-dynamic-import/lib/inject.js 1.9 kB {0} [built]
+  [450] ./~/webpack/lib/BasicEvaluatedExpression.js 3.57 kB {0} [built]
+  [451] ./~/webpack/lib/RuleSet.js 11.3 kB {0} [built]
+  [452] ./~/webpack/lib/ContextModuleFactory.js 4.84 kB {0} [built]
+  [453] ./~/webpack/lib/ContextModule.js 6.85 kB {0} [built]
+  [454] ./~/webpack/lib/AsyncDependenciesBlock.js 1.4 kB {0} [built]
+  [455] ./~/webpack/lib/dependencies/ContextElementDependency.js 459 bytes {0} [built]
+  [456] ./~/webpack/lib/dependencies/ModuleDependency.js 491 bytes {0} [built]
+  [457] ./~/webpack/lib/web/WebEnvironmentPlugin.js 419 bytes {0} [built]
+  [458] ./~/webpack/lib/WebpackOptionsApply.js 11.1 kB {0} [built]
+  [459] ./~/webpack/lib/OptionsApply.js 236 bytes {0} [built]
+  [460] ./~/webpack/lib/LoaderTargetPlugin.js 458 bytes {0} [built]
+  [461] ./~/webpack/lib/FunctionModulePlugin.js 730 bytes {0} [built]
+  [462] ./~/webpack/lib/FunctionModuleTemplatePlugin.js 2.01 kB {0} [built]
+  [463] ./~/webpack/lib/EvalDevToolModulePlugin.js 668 bytes {0} [built]
+  [464] ./~/webpack/lib/EvalDevToolModuleTemplatePlugin.js 1.33 kB {0} [built]
+  [465] ./~/webpack/lib/ModuleFilenameHelpers.js 5.72 kB {0} [built]
+  [466] ./~/webpack/lib/SourceMapDevToolPlugin.js 6.97 kB {0} [built]
+  [467] ./~/webpack/lib/SourceMapDevToolModuleOptionsPlugin.js 1.04 kB {0} [built]
+  [468] ./~/webpack/lib/EvalSourceMapDevToolPlugin.js 1.01 kB {0} [built]
+  [469] ./~/webpack/lib/EvalSourceMapDevToolModuleTemplatePlugin.js 2.76 kB {0} [built]
+  [470] ./~/webpack/lib/EntryOptionPlugin.js 1.02 kB {0} [built]
+  [471] ./~/webpack/lib/SingleEntryPlugin.js 960 bytes {0} [built]
+  [472] ./~/webpack/lib/dependencies/SingleEntryDependency.js 375 bytes {0} [built]
+  [473] ./~/webpack/lib/MultiEntryPlugin.js 1.32 kB {0} [built]
+  [474] ./~/webpack/lib/dependencies/MultiEntryDependency.js 417 bytes {0} [built]
+  [475] ./~/webpack/lib/MultiModuleFactory.js 618 bytes {0} [built]
+  [476] ./~/webpack/lib/MultiModule.js 2.17 kB {0} [built]
+  [477] ./~/webpack/lib/DynamicEntryPlugin.js 1.96 kB {0} [built]
+  [478] ./~/webpack/lib/RecordIdsPlugin.js 4.67 kB {0} [built]
+  [479] ./~/webpack/lib/APIPlugin.js 2.01 kB {0} [built]
+  [480] ./~/webpack/lib/dependencies/ConstDependency.js 731 bytes {0} [built]
+  [481] ./~/webpack/lib/dependencies/NullDependency.js 428 bytes {0} [built]
+  [482] ./~/webpack/lib/ParserHelpers.js 1.93 kB {0} [built]
+  [483] ./~/webpack/lib/UnsupportedFeatureWarning.js 490 bytes {0} [built]
+  [484] ./~/webpack/lib/NullFactory.js 248 bytes {0} [built]
+  [485] ./~/webpack/lib/ConstPlugin.js 2.12 kB {0} [built]
+  [486] ./~/webpack/lib/RequireJsStuffPlugin.js 1.23 kB {0} [built]
+  [487] ./~/webpack/lib/NodeStuffPlugin.js 3.9 kB {0} [built]
+  [488] ./~/webpack/lib/CompatibilityPlugin.js 2.07 kB {0} [built]
+  [489] ./~/json-loader/index.js 355 bytes {0} [built]
+  [490] ./~/webpack/lib/TemplatedPathPlugin.js 4.17 kB {0} [built]
+  [491] ./~/webpack/lib/WarnCaseSensitiveModulesPlugin.js 973 bytes {0} [built]
+  [492] ./~/webpack/lib/CaseSensitiveModulesWarning.js 1.34 kB {0} [built]
+  [493] ./~/webpack/lib/UseStrictPlugin.js 1.17 kB {0} [built]
+  [494] ./~/webpack/lib/dependencies/LoaderPlugin.js 2.09 kB {0} [built]
+  [495] ./~/webpack/lib/dependencies/LoaderDependency.js 359 bytes {0} [built]
+  [496] ./~/webpack/lib/dependencies/CommonJsPlugin.js 4.15 kB {0} [built]
+  [497] ./~/webpack/lib/dependencies/CommonJsRequireDependency.js 563 bytes {0} [built]
+  [498] ./~/webpack/lib/dependencies/ModuleDependencyTemplateAsId.js 637 bytes {0} [built]
+  [499] ./~/webpack/lib/dependencies/WebpackMissingModule.js 941 bytes {0} [built]
+  [500] ./~/webpack/lib/dependencies/CommonJsRequireContextDependency.js 917 bytes {0} [built]
+  [501] ./~/webpack/lib/dependencies/ContextDependency.js 704 bytes {0} [built]
+  [502] ./~/webpack/lib/dependencies/CriticalDependencyWarning.js 469 bytes {0} [built]
+  [503] ./~/webpack/lib/dependencies/ContextDependencyTemplateAsRequireCall.js 1.41 kB {0} [built]
+  [504] ./~/webpack/lib/dependencies/RequireResolveDependency.js 548 bytes {0} [built]
+  [505] ./~/webpack/lib/dependencies/RequireResolveContextDependency.js 887 bytes {0} [built]
+  [506] ./~/webpack/lib/dependencies/ContextDependencyTemplateAsId.js 1.29 kB {0} [built]
+  [507] ./~/webpack/lib/dependencies/RequireResolveHeaderDependency.js 747 bytes {0} [built]
+  [508] ./~/webpack/lib/dependencies/RequireHeaderDependency.js 707 bytes {0} [built]
+  [509] ./~/webpack/lib/dependencies/RequireResolveDependencyParserPlugin.js 2.75 kB {0} [built]
+  [510] ./~/webpack/lib/dependencies/ContextDependencyHelpers.js 2.77 kB {0} [built]
+  [511] ./~/webpack/lib/dependencies/CommonJsRequireDependencyParserPlugin.js 3.54 kB {0} [built]
+  [512] ./~/webpack/lib/dependencies/LocalModuleDependency.js 625 bytes {0} [built]
+  [513] ./~/webpack/lib/dependencies/LocalModulesHelpers.js 1.14 kB {0} [built]
+  [514] ./~/webpack/lib/dependencies/LocalModule.js 424 bytes {0} [built]
+  [515] ./~/webpack/lib/dependencies/HarmonyModulesPlugin.js 3.73 kB {0} [built]
+  [516] ./~/webpack/lib/dependencies/HarmonyImportDependency.js 2.16 kB {0} [built]
+  [517] ./~/webpack/lib/dependencies/HarmonyImportSpecifierDependency.js 3.34 kB {0} [built]
+  [518] ./~/webpack/lib/dependencies/HarmonyCompatibilityDependency.js 855 bytes {0} [built]
+  [519] ./~/webpack/lib/dependencies/HarmonyExportHeaderDependency.js 750 bytes {0} [built]
+  [520] ./~/webpack/lib/dependencies/HarmonyExportExpressionDependency.js 1.47 kB {0} [built]
+  [521] ./~/webpack/lib/dependencies/HarmonyExportSpecifierDependency.js 1.78 kB {0} [built]
+  [522] ./~/webpack/lib/dependencies/HarmonyModulesHelpers.js 2.66 kB {0} [built]
+  [523] ./~/webpack/lib/dependencies/HarmonyExportImportedSpecifierDependency.js 9.54 kB {0} [built]
+  [524] ./~/webpack/lib/dependencies/HarmonyAcceptDependency.js 1.19 kB {0} [built]
+  [525] ./~/webpack/lib/dependencies/HarmonyAcceptImportDependency.js 605 bytes {0} [built]
+  [526] ./~/webpack/lib/dependencies/HarmonyDetectionParserPlugin.js 1.6 kB {0} [built]
+  [527] ./~/webpack/lib/dependencies/HarmonyImportDependencyParserPlugin.js 4.1 kB {0} [built]
+  [528] ./~/webpack/lib/dependencies/HarmonyExportDependencyParserPlugin.js 3.39 kB {0} [built]
+  [529] ./~/webpack/lib/dependencies/SystemPlugin.js 1.43 kB {0} [built]
+  [530] ./~/webpack/lib/dependencies/ImportPlugin.js 1.29 kB {0} [built]
+  [531] ./~/webpack/lib/dependencies/ImportDependency.js 1.62 kB {0} [built]
+  [532] ./~/webpack/lib/dependencies/DepBlockHelpers.js 1.43 kB {0} [built]
+  [533] ./~/webpack/lib/dependencies/ImportContextDependency.js 914 bytes {0} [built]
+  [534] ./~/webpack/lib/dependencies/ImportParserPlugin.js 1.29 kB {0} [built]
+  [535] ./~/webpack/lib/dependencies/ImportDependenciesBlock.js 530 bytes {0} [built]
+  [536] ./~/webpack/lib/dependencies/AMDPlugin.js 5.49 kB {0} [built]
+  [537] ./~/webpack/lib/dependencies/AMDRequireDependency.js 3.24 kB {0} [built]
+  [538] ./~/webpack/lib/dependencies/AMDRequireItemDependency.js 581 bytes {0} [built]
+  [539] ./~/webpack/lib/dependencies/ModuleDependencyTemplateAsRequireId.js 677 bytes {0} [built]
+  [540] ./~/webpack/lib/dependencies/AMDRequireArrayDependency.js 1.56 kB {0} [built]
+  [541] ./~/webpack/lib/dependencies/AMDRequireContextDependency.js 798 bytes {0} [built]
+  [542] ./~/webpack/lib/dependencies/AMDDefineDependency.js 5.12 kB {0} [built]
+  [543] ./~/webpack/lib/dependencies/UnsupportedDependency.js 664 bytes {0} [built]
+  [544] ./~/webpack/lib/dependencies/AMDRequireDependenciesBlockParserPlugin.js 6.44 kB {0} [built]
+  [545] ./~/webpack/lib/dependencies/AMDRequireDependenciesBlock.js 1.13 kB {0} [built]
+  [546] ./~/webpack/lib/dependencies/getFunctionExpression.js 1.37 kB {0} [built]
+  [547] ./~/webpack/lib/dependencies/AMDDefineDependencyParserPlugin.js 8.88 kB {0} [built]
+  [548] ./~/enhanced-resolve/lib/AliasPlugin.js 1.81 kB {0} [built]
+  [549] ./~/enhanced-resolve/lib/createInnerCallback.js 1.1 kB {0} [built]
+  [550] ./~/webpack/lib/dependencies/RequireContextPlugin.js 2.7 kB {0} [built]
+  [551] ./~/webpack/lib/dependencies/RequireContextDependency.js 626 bytes {0} [built]
+  [552] ./~/webpack/lib/dependencies/RequireContextDependencyParserPlugin.js 1.24 kB {0} [built]
+  [553] ./~/webpack/lib/dependencies/RequireEnsurePlugin.js 1.59 kB {0} [built]
+  [554] ./~/webpack/lib/dependencies/RequireEnsureItemDependency.js 514 bytes {0} [built]
+  [555] ./~/webpack/lib/dependencies/RequireEnsureDependency.js 1.07 kB {0} [built]
+  [556] ./~/webpack/lib/dependencies/RequireEnsureDependenciesBlockParserPlugin.js 2.38 kB {0} [built]
+  [557] ./~/webpack/lib/dependencies/RequireEnsureDependenciesBlock.js 782 bytes {0} [built]
+  [558] ./~/webpack/lib/dependencies/RequireIncludePlugin.js 1.24 kB {0} [built]
+  [559] ./~/webpack/lib/dependencies/RequireIncludeDependency.js 922 bytes {0} [built]
+  [560] ./~/webpack/lib/dependencies/RequireIncludeDependencyParserPlugin.js 643 bytes {0} [built]
+  [561] ./~/webpack/lib/optimize/EnsureChunkConditionsPlugin.js 1.13 kB {0} [built]
+  [562] ./~/webpack/lib/optimize/RemoveParentModulesPlugin.js 2.57 kB {0} [built]
+  [563] ./~/webpack/lib/optimize/RemoveEmptyChunksPlugin.js 606 bytes {0} [built]
+  [564] ./~/webpack/lib/optimize/MergeDuplicateChunksPlugin.js 845 bytes {0} [built]
+  [565] ./~/webpack/lib/optimize/FlagIncludedChunksPlugin.js 742 bytes {0} [built]
+  [566] ./~/webpack/lib/optimize/OccurrenceOrderPlugin.js 3.96 kB {0} [built]
+  [567] ./~/webpack/lib/FlagDependencyUsagePlugin.js 2.64 kB {0} [built]
+  [568] ./~/webpack/lib/FlagDependencyExportsPlugin.js 2.59 kB {0} [built]
+  [569] ./~/webpack/lib/performance/SizeLimitsPlugin.js 3.01 kB {0} [built]
+  [570] ./~/webpack/lib/performance/EntrypointsOverSizeLimitWarning.js 930 bytes {0} [built]
+  [571] ./~/webpack/lib/performance/AssetsOverSizeLimitWarning.js 778 bytes {0} [built]
+  [572] ./~/webpack/lib/performance/NoAsyncChunksWarning.js 578 bytes {0} [built]
+  [573] ./~/enhanced-resolve/lib/node.js 4.23 kB {0} [built]
+  [574] ./~/enhanced-resolve/lib/ResolverFactory.js 9.08 kB {0} [built]
+  [575] ./~/enhanced-resolve/lib/Resolver.js 5.54 kB {0} [built]
+  [576] ./~/memory-fs/lib/join.js 655 bytes {0} [built]
+  [577] ./~/memory-fs/lib/normalize.js 2.14 kB {0} [built]
+  [578] ./~/enhanced-resolve/lib/SyncAsyncFileSystemDecorator.js 1.23 kB {0} [built]
+  [579] ./~/enhanced-resolve/lib/ParsePlugin.js 790 bytes {0} [built]
+  [580] ./~/enhanced-resolve/lib/DescriptionFilePlugin.js 1.74 kB {0} [built]
+  [581] ./~/enhanced-resolve/lib/DescriptionFileUtils.js 2.44 kB {0} [built]
+  [582] ./~/enhanced-resolve/lib/forEachBail.js 890 bytes {0} [built]
+  [583] ./~/enhanced-resolve/lib/NextPlugin.js 432 bytes {0} [built]
+  [584] ./~/enhanced-resolve/lib/TryNextPlugin.js 509 bytes {0} [built]
+  [585] ./~/enhanced-resolve/lib/ModuleKindPlugin.js 805 bytes {0} [built]
+  [586] ./~/enhanced-resolve/lib/FileKindPlugin.js 550 bytes {0} [built]
+  [587] ./~/enhanced-resolve/lib/JoinRequestPlugin.js 673 bytes {0} [built]
+  [588] ./~/enhanced-resolve/lib/ModulesInHierachicDirectoriesPlugin.js 1.64 kB {0} [built]
+  [589] ./~/enhanced-resolve/lib/getPaths.js 967 bytes {0} [built]
+  [590] ./~/enhanced-resolve/lib/ModulesInRootPlugin.js 640 bytes {0} [built]
+  [591] ./~/enhanced-resolve/lib/AliasFieldPlugin.js 1.9 kB {0} [built]
+  [592] ./~/enhanced-resolve/lib/getInnerRequest.js 813 bytes {0} [built]
+  [593] ./~/enhanced-resolve/lib/ConcordExtensionsPlugin.js 1.41 kB {0} [built]
+  [594] ./~/enhanced-resolve/lib/concord.js 5.45 kB {0} [built]
+  [595] ./~/enhanced-resolve/lib/globToRegExp.js 4.2 kB {0} [built]
+  [596] ./~/enhanced-resolve/lib/ConcordMainPlugin.js 1.1 kB {0} [built]
+  [597] ./~/enhanced-resolve/lib/ConcordModulesPlugin.js 1.66 kB {0} [built]
+  [598] ./~/enhanced-resolve/lib/DirectoryExistsPlugin.js 972 bytes {0} [built]
+  [599] ./~/enhanced-resolve/lib/FileExistsPlugin.js 927 bytes {0} [built]
+  [600] ./~/enhanced-resolve/lib/SymlinkPlugin.js 1.51 kB {0} [built]
+  [601] ./~/enhanced-resolve/lib/MainFieldPlugin.js 1.47 kB {0} [built]
+  [602] ./~/enhanced-resolve/lib/UseFilePlugin.js 742 bytes {0} [built]
+  [603] ./~/enhanced-resolve/lib/AppendPlugin.js 676 bytes {0} [built]
+  [604] ./~/enhanced-resolve/lib/ResultPlugin.js 497 bytes {0} [built]
+  [605] ./~/enhanced-resolve/lib/ModuleAppendPlugin.js 1.14 kB {0} [built]
+  [606] ./~/enhanced-resolve/lib/UnsafeCachePlugin.js 1.21 kB {0} [built]
+  [607] ./~/enhanced-resolve/lib/NodeJsInputFileSystem.js 1.1 kB {0} [built]
+  [608] ./~/enhanced-resolve/~/graceful-fs/graceful-fs.js 6.94 kB {0} [built] [1 error]
+  [609] ./~/enhanced-resolve/~/graceful-fs/polyfills.js 8.84 kB {0} [built] [1 error]
+  [610] ./~/enhanced-resolve/~/graceful-fs/fs.js 429 bytes {0} [built] [1 error]
+  [612] ./~/enhanced-resolve/~/graceful-fs/legacy-streams.js 2.65 kB {0} [built]
+  [613] /Users/admos/~/util/util.js 15.6 kB {0} [built]
+  [614] /Users/admos/~/util/support/isBufferBrowser.js 203 bytes {0} [built]
+  [615] /Users/admos/~/assert/assert.js 11.8 kB {0} [built]
+  [616] ./~/enhanced-resolve/lib/CachedInputFileSystem.js 7.7 kB {0} [built]
+  [617] ./~/webpack/lib/JsonpTemplatePlugin.js 743 bytes {0} [built]
+  [618] ./~/webpack/lib/JsonpMainTemplatePlugin.js 7.76 kB {0} [built]
+  [619] ./~/webpack/lib/JsonpMainTemplate.runtime.js 2 kB {0} [built]
+  [620] ./~/webpack/lib/JsonpChunkTemplatePlugin.js 1.02 kB {0} [built]
+  [621] ./~/webpack/lib/JsonpHotUpdateChunkTemplatePlugin.js 879 bytes {0} [built]
+  [622] ./~/webpack/lib/node/NodeSourcePlugin.js 3.36 kB {0} [built]
+  [623] ./~/webpack/web_modules/node-libs-browser.js 0 bytes {0} [built]
+  [624] ./~/node-libs-browser/mock ^\.\/.*$ 403 bytes {0} [built]
+  [625] ./~/node-libs-browser/mock/buffer.js 204 bytes {0} [optional] [built]
+  [626] ./~/node-libs-browser/mock/console.js 408 bytes {0} [optional] [built]
+  [627] ./~/node-libs-browser/mock/dns.js 406 bytes {0} [optional] [built]
+  [628] ./~/node-libs-browser/mock/empty.js 0 bytes {0} [built]
+  [629] ./~/node-libs-browser/mock/net.js 164 bytes {0} [optional] [built]
+  [630] ./~/node-libs-browser/mock/process.js 719 bytes {0} [optional] [built]
+  [631] ./~/node-libs-browser/mock/punycode.js 188 bytes {0} [optional] [built]
+  [632] ./~/node-libs-browser/mock/tls.js 8 bytes {0} [optional] [built]
+  [633] ./~/node-libs-browser/mock/tty.js 70 bytes {0} [optional] [built]
+  [634] ./~/webpack/buildin/global.js 509 bytes {0} [built]
+  [635] ./~/webpack/lib/webworker/WebWorkerTemplatePlugin.js 809 bytes {0} [built]
+  [636] ./~/webpack/lib/webworker/WebWorkerMainTemplatePlugin.js 4.17 kB {0} [built]
+  [637] ./~/webpack/lib/webworker/WebWorkerMainTemplate.runtime.js 1.95 kB {0} [built]
+  [638] ./~/webpack/lib/webworker/WebWorkerChunkTemplatePlugin.js 972 bytes {0} [built]
+  [639] ./~/webpack/lib/webworker/WebWorkerHotUpdateChunkTemplatePlugin.js 1.07 kB {0} [built]
+  [640] ./~/webpack/lib/node/NodeTemplatePlugin.js 870 bytes {0} [built]
+  [641] ./~/webpack/lib/node/NodeMainTemplatePlugin.js 7.45 kB {0} [built]
+  [642] ./~/webpack/lib/node/NodeMainTemplateAsync.runtime.js 1.29 kB {0} [built] [1 error]
+  [643] (webpack)/~/vm-browserify/index.js 3.8 kB {0} [built]
+  [644] (webpack)/~/indexof/index.js 199 bytes {0} [built]
+  [645] ./~/webpack/lib/node/NodeMainTemplate.runtime.js 751 bytes {0} [built]
+  [646] ./~/webpack/lib/node ^\.\/.*$ 827 bytes {0} [built]
+  [647] ./~/webpack/lib/node/NodeChunkTemplatePlugin.js 658 bytes {0} [built]
+  [648] ./~/webpack/lib/node/NodeEnvironmentPlugin.js 973 bytes {0} [optional] [built]
+  [649] ./~/webpack/lib/node/NodeWatchFileSystem.js 2 kB {0} [built]
+  [650] ./~/watchpack/lib/watchpack.js 4.35 kB {0} [built]
+  [651] ./~/watchpack/lib/watcherManager.js 1.12 kB {0} [built]
+  [652] ./~/watchpack/lib/DirectoryWatcher.js 10.5 kB {0} [built]
+  [653] ./~/watchpack/~/async/dist/async.js 176 kB {0} [built]
+  [654] /Users/admos/~/chokidar/index.js 21.7 kB {0} [built] [1 error]
+  [655] /Users/admos/~/async-each/index.js 1.26 kB {0} [built]
+  [656] /Users/admos/~/anymatch/index.js 1.97 kB {0} [built]
+  [657] /Users/admos/~/arrify/index.js 130 bytes {0} [built]
+  [658] /Users/admos/~/micromatch/index.js 9.99 kB {0} [built]
+  [659] /Users/admos/~/micromatch/lib/expand.js 7.58 kB {0} [built]
+  [660] /Users/admos/~/micromatch/lib/utils.js 3.15 kB {0} [built]
+  [661] /Users/admos/~/filename-regex/index.js 223 bytes {0} [built]
+  [662] /Users/admos/~/lazy-cache/index.js 1.49 kB {0} [built]
+  [663] /Users/admos/~/micromatch/lib ^\.\/.*$ 268 bytes {0} [built]
+  [664] /Users/admos/~/micromatch/lib/chars.js 1.3 kB {0} [built]
+  [665] /Users/admos/~/micromatch/lib/glob.js 4.24 kB {0} [built]
+  [666] /Users/admos/~/glob-parent/index.js 259 bytes {0} [built]
+  [667] /Users/admos/~/is-glob/index.js 319 bytes {0} [built]
+  [668] /Users/admos/~/is-extglob/index.js 260 bytes {0} [built]
+  [669] /Users/admos/~/chokidar/lib/nodefs-handler.js 16.5 kB {0} [built] [1 error]
+  [670] /Users/admos/~/readdirp/readdirp.js 8.27 kB {0} [built]
+  [671] /Users/admos/~/graceful-fs/graceful-fs.js 6.82 kB {0} [built] [1 error]
+  [672] /Users/admos/~/graceful-fs/polyfills.js 6.57 kB {0} [built]
+  [673] /Users/admos/~/graceful-fs/fs.js 429 bytes {0} [built] [1 error]
+  [674] /Users/admos/~/graceful-fs/legacy-streams.js 2.65 kB {0} [built]
+  [675] /Users/admos/~/readdirp/~/minimatch/minimatch.js 24.9 kB {0} [built]
+  [676] /Users/admos/~/brace-expansion/index.js 4.34 kB {0} [built]
+  [677] /Users/admos/~/concat-map/index.js 345 bytes {0} [built]
+  [678] /Users/admos/~/balanced-match/index.js 1.18 kB {0} [built]
+  [679] /Users/admos/~/readdirp/stream-api.js 2.51 kB {0} [built]
+  [680] /Users/admos/~/readdirp/~/readable-stream/readable.js 630 bytes {0} [built]
+  [681] /Users/admos/~/readdirp/~/readable-stream/lib/_stream_readable.js 25.6 kB {0} [built]
+  [682] /Users/admos/~/readdirp/~/isarray/index.js 132 bytes {0} [built]
+  [684] /Users/admos/~/readdirp/~/readable-stream/lib/_stream_duplex.js 1.85 kB {0} [built]
+  [685] /Users/admos/~/readdirp/~/readable-stream/lib/_stream_writable.js 14.8 kB {0} [built]
+  [686] /Users/admos/~/readdirp/~/readable-stream/lib/_stream_transform.js 6.35 kB {0} [built]
+  [687] /Users/admos/~/readdirp/~/readable-stream/lib/_stream_passthrough.js 604 bytes {0} [built]
+  [688] /Users/admos/~/is-binary-path/index.js 297 bytes {0} [built]
+  [689] /Users/admos/~/binary-extensions/binary-extensions.json 1.52 kB {0} [built]
+  [690] /Users/admos/~/chokidar/lib/fsevents-handler.js 12.1 kB {0} [built] [1 error]
+  [691] /Users/admos/~/fsevents/fsevents.js 3.15 kB {0} [built] [1 error]
+  [692] /Users/admos/~/fsevents/~/node-pre-gyp/lib/node-pre-gyp.js 4.33 kB {0} [built] [1 error]
+  [693] /Users/admos/~/fsevents/~/node-pre-gyp/~/nopt/lib/nopt.js 11.7 kB {0} [built]
+  [694] /Users/admos/~/url/url.js 22.3 kB {0} [built]
+  [695] /Users/admos/~/url/~/punycode/punycode.js 14.6 kB {0} [built]
+  [696] /Users/admos/~/fsevents/~/abbrev/abbrev.js 1.76 kB {0} [built]
+  [697] /Users/admos/~/fsevents/~/npmlog/log.js 6.65 kB {0} [built]
+  [698] /Users/admos/~/fsevents/~/are-we-there-yet/index.js 3.59 kB {0} [built]
+  [699] /Users/admos/~/fsevents/~/readable-stream/readable.js 361 bytes {0} [built]
+  [700] /Users/admos/~/fsevents/~/readable-stream/lib/_stream_readable.js 26 kB {0} [built]
+  [701] /Users/admos/~/fsevents/~/isarray/index.js 120 bytes {0} [built]
+  [702] /Users/admos/~/fsevents/~/core-util-is/lib/util.js 3.04 kB {0} [built]
+  [703] /Users/admos/~/fsevents/~/inherits/inherits_browser.js 672 bytes {0} [built]
+  [705] /Users/admos/~/fsevents/~/readable-stream/lib/_stream_duplex.js 2.81 kB {0} [built]
+  [706] /Users/admos/~/fsevents/~/readable-stream/lib/_stream_writable.js 13.1 kB {0} [built]
+  [707] /Users/admos/~/fsevents/~/string_decoder/index.js 7.8 kB {0} [built]
+  [708] /Users/admos/~/fsevents/~/readable-stream/lib/_stream_transform.js 7.35 kB {0} [built]
+  [709] /Users/admos/~/fsevents/~/readable-stream/lib/_stream_passthrough.js 1.73 kB {0} [built]
+  [710] /Users/admos/~/fsevents/~/delegates/index.js 2.06 kB {0} [built]
+  [711] /Users/admos/~/fsevents/~/gauge/progress-bar.js 5.86 kB {0} [built]
+  [712] /Users/admos/~/fsevents/~/has-unicode/index.js 425 bytes {0} [built]
+  [713] (webpack)/~/os-browserify/browser.js 927 bytes {0} [built]
+  [714] /Users/admos/~/fsevents/~/ansi/lib/ansi.js 7.96 kB {0} [built]
+  [715] /Users/admos/~/fsevents/~/ansi/lib/newlines.js 1.53 kB {0} [built]
+  [716] /Users/admos/~/fsevents/~/lodash.pad/index.js 1.71 kB {0} [built]
+  [717] /Users/admos/~/fsevents/~/lodash._basetostring/index.js 738 bytes {0} [built]
+  [718] /Users/admos/~/fsevents/~/lodash._createpadding/index.js 1.38 kB {0} [built]
+  [719] /Users/admos/~/fsevents/~/lodash.repeat/index.js 1.5 kB {0} [built]
+  [720] /Users/admos/~/fsevents/~/lodash.padright/index.js 1.54 kB {0} [built]
+  [721] /Users/admos/~/fsevents/~/lodash.padleft/index.js 1.53 kB {0} [built]
+  [722] /Users/admos/~/fsevents/~/node-pre-gyp/lib/pre-binding.js 825 bytes {0} [built] [1 error]
+  [723] /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/versioning.js 13.8 kB {0} [built]
+  [724] /Users/admos/~/fsevents/~/semver/semver.js 32.8 kB {0} [built]
+  [725] /Users/admos/~/fsevents/~/node-pre-gyp/lib/util ^\.\/.*$ 436 bytes {0} [built]
+  [727] /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js 3 kB {0} [built] [1 warning] [2 errors]
+  [728] /Users/admos/~/node-gyp/lib/node-gyp.js 5.25 kB {0} [optional] [built] [2 errors]
+  [729] /Users/admos/~/nopt/lib/nopt.js 11.7 kB {0} [built]
+  [730] /Users/admos/~/abbrev/abbrev.js 1.76 kB {0} [built]
+  [731] /Users/admos/~/npmlog/log.js 6.76 kB {0} [built]
+  [732] /Users/admos/~/are-we-there-yet/index.js 163 bytes {0} [built]
+  [733] /Users/admos/~/are-we-there-yet/tracker-group.js 3.23 kB {0} [built]
+  [734] /Users/admos/~/are-we-there-yet/tracker-base.js 274 bytes {0} [built]
+  [735] /Users/admos/~/are-we-there-yet/tracker.js 826 bytes {0} [built]
+  [736] /Users/admos/~/are-we-there-yet/tracker-stream.js 943 bytes {0} [built]
+  [737] /Users/admos/~/readable-stream/readable.js 470 bytes {0} [built]
+  [738] /Users/admos/~/readable-stream/lib/_stream_readable.js 26 kB {0} [built]
+  [739] /Users/admos/~/isarray/index.js 120 bytes {0} [built]
+  [741] /Users/admos/~/readable-stream/lib/_stream_duplex.js 2.81 kB {0} [built]
+  [742] /Users/admos/~/readable-stream/lib/_stream_writable.js 13.1 kB {0} [built]
+  [743] /Users/admos/~/readable-stream/lib/_stream_transform.js 7.35 kB {0} [built]
+  [744] /Users/admos/~/readable-stream/lib/_stream_passthrough.js 1.73 kB {0} [built]
+  [745] /Users/admos/~/delegates/index.js 2.06 kB {0} [built]
+  [746] /Users/admos/~/gauge/progress-bar.js 5.87 kB {0} [built]
+  [747] /Users/admos/~/has-unicode/index.js 703 bytes {0} [built]
+  [748] /Users/admos/~/ansi/lib/ansi.js 7.97 kB {0} [built]
+  [749] /Users/admos/~/ansi/lib/newlines.js 1.53 kB {0} [built]
+  [750] /Users/admos/~/lodash.pad/index.js 11 kB {0} [built]
+  [751] /Users/admos/~/lodash._baseslice/index.js 1.16 kB {0} [built]
+  [752] /Users/admos/~/lodash.tostring/index.js 4.47 kB {0} [built]
+  [753] /Users/admos/~/lodash.padend/index.js 10.9 kB {0} [built]
+  [754] /Users/admos/~/lodash.padstart/index.js 10.9 kB {0} [built]
+  [755] /Users/admos/~/node-gyp/lib ^\.\/.*$ 500 bytes {0} [built]
+  [756] /Users/admos/~/node-gyp/lib/build.js 7.98 kB {0} [optional] [built] [1 error]
+  [757] /Users/admos/~/rimraf/rimraf.js 8.03 kB {0} [built] [1 error]
+  [758] /Users/admos/~/rimraf/~/glob/glob.js 19.3 kB {0} [built] [1 error]
+  [759] /Users/admos/~/minimatch/minimatch.js 25.3 kB {0} [built]
+  [760] /Users/admos/~/rimraf/~/glob/sync.js 11.7 kB {0} [built] [1 error]
+  [761] /Users/admos/~/rimraf/~/glob/common.js 5.86 kB {0} [built]
+  [762] /Users/admos/~/inflight/inflight.js 897 bytes {0} [built]
+  [763] /Users/admos/~/wrappy/wrappy.js 905 bytes {0} [built]
+  [764] /Users/admos/~/once/once.js 417 bytes {0} [built]
+  [765] /Users/admos/~/node-gyp/~/glob/glob.js 18.3 kB {0} [built] [1 error]
+  [766] /Users/admos/~/node-gyp/~/glob/~/minimatch/minimatch.js 24.9 kB {0} [built]
+  [767] /Users/admos/~/node-gyp/~/glob/sync.js 11.4 kB {0} [built] [1 error]
+  [768] /Users/admos/~/node-gyp/~/glob/common.js 5.9 kB {0} [built]
+  [769] /Users/admos/~/which/which.js 3.22 kB {0} [built] [1 error]
+  [770] /Users/admos/~/isexe/index.js 1.27 kB {0} [built] [1 error]
+  [771] /Users/admos/~/isexe/windows.js 735 bytes {0} [built] [1 error]
+  [772] /Users/admos/~/isexe/access.js 237 bytes {0} [built] [1 error]
+  [773] /Users/admos/~/isexe/mode.js 814 bytes {0} [built] [1 error]
+  [774] /Users/admos/~/is-absolute/index.js 543 bytes {0} [built]
+  [775] /Users/admos/~/is-relative/index.js 421 bytes {0} [built]
+  [776] /Users/admos/~/mkdirp/index.js 2.63 kB {0} [built] [1 error]
+  [777] /Users/admos/~/node-gyp/lib/process-release.js 6.05 kB {0} [built]
+  [778] /Users/admos/~/semver/semver.browser.js 31.8 kB {0} [built]
+  [779] /Users/admos/~/node-gyp/lib/clean.js 378 bytes {0} [optional] [built]
+  [780] /Users/admos/~/node-gyp/lib/configure.js 13.3 kB {0} [optional] [built] [1 error]
+  [781] /Users/admos/~/osenv/osenv.js 1.86 kB {0} [built] [1 error]
+  [782] /Users/admos/~/os-tmpdir/index.js 573 bytes {0} [built]
+  [783] /Users/admos/~/os-homedir/index.js 608 bytes {0} [built]
+  [784] /Users/admos/~/path-array/index.js 3.05 kB {0} [built]
+  [785] /Users/admos/~/array-index/index.js 3.74 kB {0} [built]
+  [786] /Users/admos/~/es6-symbol/index.js 96 bytes {0} [built]
+  [787] /Users/admos/~/es6-symbol/is-implemented.js 599 bytes {0} [built]
+  [788] /Users/admos/~/es6-symbol/polyfill.js 4.9 kB {0} [built]
+  [789] /Users/admos/~/d/index.js 1.48 kB {0} [built]
+  [790] /Users/admos/~/es5-ext/object/assign/index.js 101 bytes {0} [built]
+  [791] /Users/admos/~/es5-ext/object/assign/is-implemented.js 260 bytes {0} [built]
+  [792] /Users/admos/~/es5-ext/object/assign/shim.js 481 bytes {0} [built]
+  [793] /Users/admos/~/es5-ext/object/keys/index.js 99 bytes {0} [built]
+  [794] /Users/admos/~/es5-ext/object/keys/is-implemented.js 130 bytes {0} [built]
+  [795] /Users/admos/~/es5-ext/object/keys/shim.js 136 bytes {0} [built]
+  [796] /Users/admos/~/es5-ext/object/valid-value.js 142 bytes {0} [built]
+  [797] /Users/admos/~/es5-ext/object/normalize-options.js 385 bytes {0} [built]
+  [798] /Users/admos/~/es5-ext/object/is-callable.js 101 bytes {0} [built]
+  [799] /Users/admos/~/es5-ext/string/#/contains/index.js 113 bytes {0} [built]
+  [800] /Users/admos/~/es5-ext/string/#/contains/is-implemented.js 206 bytes {0} [built]
+  [801] /Users/admos/~/es5-ext/string/#/contains/shim.js 177 bytes {0} [built]
+  [802] /Users/admos/~/es6-symbol/validate-symbol.js 181 bytes {0} [built]
+  [803] /Users/admos/~/es6-symbol/is-symbol.js 138 bytes {0} [built]
+  [804] /Users/admos/~/debug/browser.js 3.76 kB {0} [built]
+  [805] /Users/admos/~/debug/debug.js 4.1 kB {0} [built]
+  [806] /Users/admos/~/ms/index.js 2.33 kB {0} [built]
+  [807] /Users/admos/~/node-gyp/lib/find-node-directory.js 2.39 kB {0} [built]
+  [808] /Users/admos/~/node-gyp/lib/install.js 15 kB {0} [optional] [built]
+  [809] /Users/admos/~/tar/tar.js 4.12 kB {0} [built]
+  [810] /Users/admos/~/tar/lib/pack.js 5.76 kB {0} [built]
+  [811] /Users/admos/~/tar/lib/entry-writer.js 3.75 kB {0} [built]
+  [812] /Users/admos/~/tar/lib/header.js 11 kB {0} [built]
+  [813] /Users/admos/~/tar/lib/entry.js 5.28 kB {0} [built]
+  [814] /Users/admos/~/fstream/fstream.js 1.11 kB {0} [built]
+  [815] /Users/admos/~/fstream/lib/abstract.js 2.03 kB {0} [built]
+  [816] /Users/admos/~/fstream/lib/reader.js 7.08 kB {0} [built]
+  [817] /Users/admos/~/fstream/lib/get-type.js 610 bytes {0} [built]
+  [818] /Users/admos/~/fstream/lib/link-reader.js 1.51 kB {0} [built]
+  [819] /Users/admos/~/fstream/lib/dir-reader.js 6.5 kB {0} [built]
+  [820] /Users/admos/~/fstream/lib/file-reader.js 3.98 kB {0} [built]
+  [821] /Users/admos/~/fstream/lib/socket-reader.js 915 bytes {0} [built]
+  [822] /Users/admos/~/fstream/lib/proxy-reader.js 2 kB {0} [built]
+  [823] /Users/admos/~/fstream/lib/writer.js 11 kB {0} [built]
+  [824] /Users/admos/~/fstream/lib/dir-writer.js 4.5 kB {0} [built]
+  [825] /Users/admos/~/fstream/lib/collect.js 1.71 kB {0} [built]
+  [826] /Users/admos/~/fstream/lib/link-writer.js 2.85 kB {0} [built]
+  [827] /Users/admos/~/fstream/lib/file-writer.js 2.59 kB {0} [built]
+  [828] /Users/admos/~/fstream/lib/proxy-writer.js 2.45 kB {0} [built] [1 error]
+  [829] /Users/admos/~/block-stream/block-stream.js 6.55 kB {0} [built]
+  [830] /Users/admos/~/tar/lib/extended-header-writer.js 5.33 kB {0} [built]
+  [831] /Users/admos/~/tar/lib/global-header-writer.js 388 bytes {0} [built]
+  [832] /Users/admos/~/tar/lib/parse.js 6.95 kB {0} [built]
+  [833] /Users/admos/~/tar/lib/buffer-entry.js 804 bytes {0} [built]
+  [834] /Users/admos/~/tar/lib/extended-header.js 3.56 kB {0} [built]
+  [835] /Users/admos/~/tar/lib/extract.js 2.56 kB {0} [built]
+  [836] (webpack)/~/browserify-zlib/src/index.js 16.6 kB {0} [built]
+  [837] (webpack)/~/node-libs-browser/~/readable-stream/transform.js 55 bytes {0} [built]
+  [838] (webpack)/~/node-libs-browser/~/readable-stream/lib/_stream_transform.js 7.35 kB {0} [built]
+  [839] (webpack)/~/node-libs-browser/~/readable-stream/lib/_stream_duplex.js 2.81 kB {0} [built]
+  [840] (webpack)/~/node-libs-browser/~/readable-stream/lib/_stream_readable.js 26 kB {0} [built]
+  [841] (webpack)/~/node-libs-browser/~/isarray/index.js 120 bytes {0} [built]
+  [843] (webpack)/~/node-libs-browser/~/readable-stream/lib/_stream_writable.js 13.1 kB {0} [built]
+  [844] (webpack)/~/browserify-zlib/src/binding.js 5.74 kB {0} [built]
+  [845] (webpack)/~/pako/lib/zlib/messages.js 577 bytes {0} [built]
+  [846] (webpack)/~/pako/lib/zlib/zstream.js 851 bytes {0} [built]
+  [847] (webpack)/~/pako/lib/zlib/deflate.js 57.6 kB {0} [built]
+  [848] (webpack)/~/pako/lib/utils/common.js 2.34 kB {0} [built]
+  [849] (webpack)/~/pako/lib/zlib/trees.js 38.6 kB {0} [built]
+  [850] (webpack)/~/pako/lib/zlib/adler32.js 694 bytes {0} [built]
+  [851] (webpack)/~/pako/lib/zlib/crc32.js 793 bytes {0} [built]
+  [852] (webpack)/~/pako/lib/zlib/inflate.js 46.4 kB {0} [built]
+  [853] (webpack)/~/pako/lib/zlib/inffast.js 11.7 kB {0} [built]
+  [854] (webpack)/~/pako/lib/zlib/inftrees.js 11.6 kB {0} [built]
+  [855] (webpack)/~/pako/lib/zlib/constants.js 1.34 kB {0} [built]
+  [856] (webpack)/~/assert/assert.js 15.4 kB {0} [built]
+  [857] /Users/admos/~/request/index.js 4.03 kB {0} [built]
+  [858] /Users/admos/~/extend/index.js 2.27 kB {0} [built]
+  [859] /Users/admos/~/request/lib/cookies.js 969 bytes {0} [built]
+  [860] /Users/admos/~/tough-cookie/lib/cookie.js 37.5 kB {0} [built] [2 errors]
+  [861] /Users/admos/~/tough-cookie/lib/pubsuffix.js 150 kB {0} [built]
+  [862] /Users/admos/~/tough-cookie/lib/store.js 2.84 kB {0} [built]
+  [863] /Users/admos/~/tough-cookie/lib/memstore.js 5.51 kB {0} [built]
+  [864] /Users/admos/~/tough-cookie/lib/permuteDomain.js 2.27 kB {0} [built]
+  [865] /Users/admos/~/tough-cookie/lib/pathMatch.js 2.44 kB {0} [built]
+  [867] /Users/admos/~/request/lib/helpers.js 1.62 kB {0} [built]
+  [868] /Users/admos/~/json-stringify-safe/stringify.js 907 bytes {0} [built]
+  [869] /Users/admos/~/request/request.js 40.9 kB {0} [built]
+  [870] (webpack)/~/http-browserify/index.js 4.44 kB {0} [built]
+  [871] (webpack)/~/http-browserify/lib/request.js 5.53 kB {0} [built]
+  [872] (webpack)/~/http-browserify/lib/response.js 3.13 kB {0} [built]
+  [873] (webpack)/~/Base64/base64.js 2.19 kB {0} [built]
+  [874] (webpack)/~/url/url.js 22.3 kB {0} [built]
+  [875] (webpack)/~/url/~/punycode/punycode.js 14.6 kB {0} [built]
+  [876] (webpack)/~/querystring/index.js 127 bytes {0} [built]
+  [877] (webpack)/~/querystring/decode.js 2.4 kB {0} [built]
+  [878] (webpack)/~/querystring/encode.js 2.09 kB {0} [built]
+  [879] (webpack)/~/https-browserify/index.js 293 bytes {0} [built]
+  [880] /Users/admos/~/bl/bl.js 5.35 kB {0} [built]
+  [881] /Users/admos/~/bl/~/readable-stream/duplex.js 52 bytes {0} [built]
+  [882] /Users/admos/~/bl/~/readable-stream/lib/_stream_duplex.js 1.85 kB {0} [built]
+  [883] /Users/admos/~/bl/~/readable-stream/lib/_stream_readable.js 25.6 kB {0} [built]
+  [884] /Users/admos/~/bl/~/isarray/index.js 132 bytes {0} [built]
+  [886] /Users/admos/~/bl/~/readable-stream/lib/_stream_writable.js 14.8 kB {0} [built]
+  [887] /Users/admos/~/hawk/lib/browser.js 27.2 kB {0} [built]
+  [888] /Users/admos/~/aws-sign2/index.js 4.42 kB {0} [built]
+  [889] /Users/admos/~/http-signature/lib/index.js 626 bytes {0} [built]
+  [890] /Users/admos/~/http-signature/lib/parser.js 9.77 kB {0} [built]
+  [891] /Users/admos/~/assert-plus/assert.js 5.33 kB {0} [built]
+  [892] /Users/admos/~/http-signature/lib/utils.js 2.84 kB {0} [built]
+  [893] /Users/admos/~/sshpk/lib/index.js 731 bytes {0} [built]
+  [894] /Users/admos/~/sshpk/lib/key.js 7.31 kB {0} [built]
+  [895] /Users/admos/~/sshpk/~/assert-plus/assert.js 5.45 kB {0} [built]
+  [896] /Users/admos/~/sshpk/lib/algs.js 4.84 kB {0} [built]
+  [897] /Users/admos/~/sshpk/lib/fingerprint.js 3.43 kB {0} [built]
+  [898] /Users/admos/~/sshpk/lib/errors.js 2.3 kB {0} [built]
+  [899] /Users/admos/~/sshpk/lib/utils.js 6.12 kB {0} [built]
+  [900] /Users/admos/~/sshpk/lib/private-key.js 6.04 kB {0} [built]
+  [901] /Users/admos/~/sshpk/lib/signature.js 6.05 kB {0} [built]
+  [902] /Users/admos/~/asn1/lib/index.js 320 bytes {0} [built]
+  [903] /Users/admos/~/asn1/lib/ber/index.js 469 bytes {0} [built]
+  [904] /Users/admos/~/asn1/lib/ber/errors.js 239 bytes {0} [built]
+  [905] /Users/admos/~/asn1/lib/ber/types.js 638 bytes {0} [built]
+  [906] /Users/admos/~/asn1/lib/ber/reader.js 5.59 kB {0} [built]
+  [907] /Users/admos/~/asn1/lib/ber/writer.js 7.59 kB {0} [built]
+  [908] /Users/admos/~/sshpk/lib/ssh-buffer.js 3.17 kB {0} [built]
+  [909] /Users/admos/~/sshpk/lib/ed-compat.js 2.33 kB {0} [optional] [built]
+  [910] /Users/admos/~/tweetnacl/nacl-fast.js 63 kB {0} [built]
+  [912] /Users/admos/~/sshpk/lib/formats/auto.js 1.9 kB {0} [built]
+  [913] /Users/admos/~/sshpk/lib/formats/pem.js 4.81 kB {0} [built]
+  [914] /Users/admos/~/sshpk/lib/formats/pkcs1.js 7.7 kB {0} [built]
+  [915] /Users/admos/~/sshpk/lib/formats/pkcs8.js 11.9 kB {0} [built]
+  [916] /Users/admos/~/sshpk/lib/formats/ssh-private.js 3.26 kB {0} [built]
+  [917] /Users/admos/~/sshpk/lib/formats/rfc4253.js 3.61 kB {0} [built]
+  [918] /Users/admos/~/sshpk/lib/formats/ssh.js 3.09 kB {0} [built]
+  [919] /Users/admos/~/jodid25519/index.js 805 bytes {0} [built]
+  [920] /Users/admos/~/jodid25519/lib/dh.js 3.42 kB {0} [built]
+  [921] /Users/admos/~/jodid25519/lib/core.js 20.3 kB {0} [built]
+  [922] /Users/admos/~/jodid25519/lib/utils.js 5.4 kB {0} [built]
+  [923] /Users/admos/~/jodid25519/lib/curve255.js 6.28 kB {0} [built]
+  [924] /Users/admos/~/jodid25519/lib/eddsa.js 17.1 kB {0} [built]
+  [925] /Users/admos/~/jsbn/index.js 41.8 kB {0} [built]
+  [926] /Users/admos/~/sshpk/lib/dhe.js 8.32 kB {0} [built]
+  [927] /Users/admos/~/ecc-jsbn/index.js 1.78 kB {0} [built]
+  [928] /Users/admos/~/ecc-jsbn/lib/ec.js 15.3 kB {0} [built]
+  [929] /Users/admos/~/ecc-jsbn/lib/sec.js 6.1 kB {0} [built]
+  [930] /Users/admos/~/http-signature/lib/signer.js 12.9 kB {0} [built]
+  [931] /Users/admos/~/jsprim/lib/jsprim.js 11.1 kB {0} [built]
+  [932] /Users/admos/~/extsprintf/lib/extsprintf.js 3.76 kB {0} [built]
+  [933] /Users/admos/~/verror/lib/verror.js 3.59 kB {0} [built]
+  [934] /Users/admos/~/json-schema/lib/validate.js 10.5 kB {0} [built]
+  [935] (webpack)/buildin/amd-define.js 85 bytes {0} [built]
+  [936] /Users/admos/~/http-signature/lib/verify.js 3.09 kB {0} [built]
+  [937] /Users/admos/~/mime-types/index.js 3.65 kB {0} [built]
+  [938] /Users/admos/~/mime-db/index.js 136 bytes {0} [built] [1 error]
+  [940] /Users/admos/~/stringstream/stringstream.js 2.79 kB {0} [built]
+  [941] /Users/admos/~/caseless/index.js 1.76 kB {0} [built]
+  [942] /Users/admos/~/forever-agent/index.js 4.18 kB {0} [built] [2 errors]
+  [943] /Users/admos/~/form-data/lib/browser.js 52 bytes {0} [built]
+  [944] /Users/admos/~/isstream/isstream.js 588 bytes {0} [built]
+  [945] /Users/admos/~/is-typedarray/index.js 1.02 kB {0} [built]
+  [946] /Users/admos/~/request/lib/getProxyFromURI.js 2.27 kB {0} [built]
+  [947] /Users/admos/~/request/lib/querystring.js 1.33 kB {0} [built]
+  [948] /Users/admos/~/qs/lib/index.js 153 bytes {0} [built]
+  [949] /Users/admos/~/qs/lib/stringify.js 3.98 kB {0} [built]
+  [950] /Users/admos/~/qs/lib/utils.js 4.12 kB {0} [built]
+  [951] /Users/admos/~/qs/lib/parse.js 5.25 kB {0} [built]
+  [952] /Users/admos/~/request/lib/har.js 4.82 kB {0} [built] [1 error]
+  [953] /Users/admos/~/har-validator/lib/index.js 554 bytes {0} [built]
+  [954] /Users/admos/~/pinkie-promise/index.js 93 bytes {0} [built]
+  [955] /Users/admos/~/pinkie/index.js 5.93 kB {0} [built]
+  [956] /Users/admos/~/har-validator/lib/runner.js 590 bytes {0} [built]
+  [957] /Users/admos/~/har-validator/lib/schemas/index.js 1.75 kB {0} [built] [15 errors]
+  [973] /Users/admos/~/har-validator/lib/error.js 186 bytes {0} [built]
+  [974] /Users/admos/~/is-my-json-valid/index.js 16.5 kB {0} [built]
+  [975] /Users/admos/~/generate-object-property/index.js 287 bytes {0} [built]
+  [976] /Users/admos/~/is-property/is-property.js 11 kB {0} [built]
+  [977] /Users/admos/~/generate-function/index.js 1.3 kB {0} [built]
+  [978] /Users/admos/~/jsonpointer/jsonpointer.js 1.58 kB {0} [built]
+  [979] /Users/admos/~/xtend/immutable.js 384 bytes {0} [built]
+  [980] /Users/admos/~/is-my-json-valid/formats.js 2.35 kB {0} [built]
+  [981] /Users/admos/~/request/lib/auth.js 4.78 kB {0} [built]
+  [982] /Users/admos/~/node-uuid/uuid.js 8.01 kB {0} [built]
+  [983] /Users/admos/~/request/lib/oauth.js 3.95 kB {0} [built]
+  [984] /Users/admos/~/oauth-sign/index.js 3.58 kB {0} [built]
+  [985] /Users/admos/~/request/lib/multipart.js 2.63 kB {0} [built]
+  [986] /Users/admos/~/combined-stream/lib/combined_stream.js 4.3 kB {0} [built]
+  [987] /Users/admos/~/delayed-stream/lib/delayed_stream.js 2.32 kB {0} [built]
+  [988] /Users/admos/~/request/lib/redirect.js 4.43 kB {0} [built]
+  [989] /Users/admos/~/request/lib/tunnel.js 4.54 kB {0} [built]
+  [990] /Users/admos/~/tunnel-agent/index.js 6.84 kB {0} [built] [2 errors]
+  [991] /Users/admos/~/aws4/aws4.js 10.1 kB {0} [built]
+  [992] /Users/admos/~/lru-cache/lib/lru-cache.js 11.1 kB {0} [built]
+  [993] /Users/admos/~/pseudomap/map.js 280 bytes {0} [built]
+  [994] /Users/admos/~/pseudomap/pseudomap.js 2.44 kB {0} [built]
+  [995] /Users/admos/~/yallist/yallist.js 7.16 kB {0} [built]
+  [996] /Users/admos/~/node-gyp/~/minimatch/minimatch.js 28.8 kB {0} [built]
+  [997] /Users/admos/~/node-gyp/~/minimatch ^\.\/.*$ 517 bytes {0} [built] [3 warnings]
+ [1001] /Users/admos/~/node-gyp/~/minimatch/test/basic.js 14.9 kB {0} [optional] [built] [1 error]
+ [1002] /Users/admos/~/node-gyp/~/minimatch/test/brace-expand.js 768 bytes {0} [optional] [built] [1 error]
+ [1003] /Users/admos/~/node-gyp/~/minimatch/test/caching.js 436 bytes {0} [optional] [built] [1 error]
+ [1004] /Users/admos/~/node-gyp/~/minimatch/test/defaults.js 9.72 kB {0} [optional] [built] [1 error]
+ [1005] /Users/admos/~/node-gyp/~/minimatch/test/extglob-ending-with-state-char.js 200 bytes {0} [optional] [built] [1 error]
+ [1006] /Users/admos/~/node-gyp/lib/list.js 718 bytes {0} [optional] [built]
+ [1007] /Users/admos/~/node-gyp/lib/rebuild.js 308 bytes {0} [optional] [built]
+ [1008] /Users/admos/~/node-gyp/lib/remove.js 1.32 kB {0} [optional] [built] [1 error]
+ [1010] /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/handle_gyp_opts.js 3.25 kB {0} [built] [1 error]
+ [1013] /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/s3_setup.js 769 bytes {0} [built]
+ [1014] /Users/admos/~/fsevents/~/node-pre-gyp/lib ^\.\/.*$ 994 bytes {0} [built] [3 warnings]
+ [1015] /Users/admos/~/fsevents/~/node-pre-gyp/lib/build.js 1.56 kB {0} [optional] [built]
+ [1016] /Users/admos/~/fsevents/~/node-pre-gyp/lib/configure.js 1.97 kB {0} [built]
+ [1017] /Users/admos/~/fsevents/~/node-pre-gyp/lib/clean.js 761 bytes {0} [built] [1 error]
+ [1018] /Users/admos/~/fsevents/~/rimraf/rimraf.js 7.94 kB {0} [built] [1 error]
+ [1019] /Users/admos/~/fsevents/~/rimraf/~/glob/glob.js 18.6 kB {0} [built] [1 error]
+ [1020] /Users/admos/~/fsevents/~/rimraf/~/minimatch/minimatch.js 24.9 kB {0} [built]
+ [1021] /Users/admos/~/fsevents/~/brace-expansion/index.js 4.33 kB {0} [built]
+ [1022] /Users/admos/~/fsevents/~/concat-map/index.js 345 bytes {0} [built]
+ [1023] /Users/admos/~/fsevents/~/balanced-match/index.js 902 bytes {0} [built]
+ [1024] /Users/admos/~/fsevents/~/path-is-absolute/index.js 599 bytes {0} [built]
+ [1025] /Users/admos/~/fsevents/~/rimraf/~/glob/sync.js 11.5 kB {0} [built] [1 error]
+ [1026] /Users/admos/~/fsevents/~/rimraf/~/glob/common.js 6.16 kB {0} [built]
+ [1027] /Users/admos/~/fsevents/~/inflight/inflight.js 897 bytes {0} [built]
+ [1028] /Users/admos/~/fsevents/~/wrappy/wrappy.js 905 bytes {0} [built]
+ [1029] /Users/admos/~/fsevents/~/inflight/~/once/once.js 417 bytes {0} [built]
+ [1030] /Users/admos/~/fsevents/~/rimraf/~/once/once.js 417 bytes {0} [built]
+ [1031] /Users/admos/~/fsevents/~/node-pre-gyp/lib/info.js 1.5 kB {0} [optional] [built] [2 errors]
+ [1032] /Users/admos/~/fsevents/~/rc/browser.js 137 bytes {0} [built]
+ [1033] /Users/admos/~/fsevents/~/node-pre-gyp/lib/install.js 8.62 kB {0} [optional] [built] [1 error]
+ [1034] /Users/admos/~/fsevents/~/node-pre-gyp/lib/testbinary.js 2.87 kB {0} [built] [2 errors]
+ [1035] /Users/admos/~/fsevents/~/request/index.js 4.02 kB {0} [optional] [built]
+ [1036] /Users/admos/~/fsevents/~/extend/index.js 2.27 kB {0} [built]
+ [1037] /Users/admos/~/fsevents/~/request/lib/cookies.js 969 bytes {0} [built]
+ [1038] /Users/admos/~/fsevents/~/tough-cookie/lib/cookie.js 37.6 kB {0} [built] [2 errors]
+ [1039] /Users/admos/~/fsevents/~/tough-cookie/lib/pubsuffix.js 150 kB {0} [built]
+ [1040] /Users/admos/~/fsevents/~/tough-cookie/lib/store.js 2.84 kB {0} [built]
+ [1041] /Users/admos/~/fsevents/~/tough-cookie/lib/memstore.js 5.51 kB {0} [built]
+ [1042] /Users/admos/~/fsevents/~/tough-cookie/lib/permuteDomain.js 2.27 kB {0} [built]
+ [1043] /Users/admos/~/fsevents/~/tough-cookie/lib/pathMatch.js 2.44 kB {0} [built]
+ [1045] /Users/admos/~/fsevents/~/request/lib/helpers.js 1.59 kB {0} [built]
+ [1046] /Users/admos/~/fsevents/~/json-stringify-safe/stringify.js 907 bytes {0} [built]
+ [1047] /Users/admos/~/fsevents/~/request/request.js 40.1 kB {0} [built]
+ [1048] /Users/admos/~/fsevents/~/bl/bl.js 4.95 kB {0} [built]
+ [1049] /Users/admos/~/fsevents/~/bl/~/readable-stream/duplex.js 52 bytes {0} [built]
+ [1050] /Users/admos/~/fsevents/~/bl/~/readable-stream/lib/_stream_duplex.js 1.87 kB {0} [built]
+ [1051] /Users/admos/~/fsevents/~/bl/~/readable-stream/~/process-nextick-args/index.js 263 bytes {0} [built]
+ [1052] /Users/admos/~/fsevents/~/bl/~/readable-stream/~/core-util-is/lib/util.js 3.04 kB {0} [built]
+ [1053] /Users/admos/~/fsevents/~/bl/~/readable-stream/~/inherits/inherits_browser.js 672 bytes {0} [built]
+ [1054] /Users/admos/~/fsevents/~/bl/~/readable-stream/lib/_stream_readable.js 25.8 kB {0} [built]
+ [1055] /Users/admos/~/fsevents/~/bl/~/readable-stream/~/isarray/index.js 120 bytes {0} [built]
+ [1057] /Users/admos/~/fsevents/~/bl/~/readable-stream/~/string_decoder/index.js 7.8 kB {0} [built]
+ [1058] /Users/admos/~/fsevents/~/bl/~/readable-stream/lib/_stream_writable.js 13.7 kB {0} [built]
+ [1059] /Users/admos/~/fsevents/~/bl/~/readable-stream/~/util-deprecate/browser.js 1.61 kB {0} [built]
+ [1060] /Users/admos/~/fsevents/~/hawk/lib/browser.js 27 kB {0} [built]
+ [1061] /Users/admos/~/fsevents/~/aws-sign2/index.js 4.42 kB {0} [built]
+ [1062] /Users/admos/~/fsevents/~/http-signature/lib/index.js 555 bytes {0} [built]
+ [1063] /Users/admos/~/fsevents/~/http-signature/lib/parser.js 8.86 kB {0} [built]
+ [1064] /Users/admos/~/fsevents/~/assert-plus/assert.js 6.32 kB {0} [built]
+ [1065] /Users/admos/~/fsevents/~/http-signature/lib/signer.js 5.2 kB {0} [built]
+ [1066] /Users/admos/~/fsevents/~/http-signature/lib/verify.js 2.02 kB {0} [built]
+ [1067] /Users/admos/~/fsevents/~/http-signature/lib/util.js 6.96 kB {0} [built]
+ [1068] /Users/admos/~/fsevents/~/asn1/lib/index.js 320 bytes {0} [built]
+ [1069] /Users/admos/~/fsevents/~/asn1/lib/ber/index.js 469 bytes {0} [built]
+ [1070] /Users/admos/~/fsevents/~/asn1/lib/ber/errors.js 239 bytes {0} [built]
+ [1071] /Users/admos/~/fsevents/~/asn1/lib/ber/types.js 638 bytes {0} [built]
+ [1072] /Users/admos/~/fsevents/~/asn1/lib/ber/reader.js 5.76 kB {0} [built]
+ [1073] /Users/admos/~/fsevents/~/asn1/lib/ber/writer.js 7.6 kB {0} [built]
+ [1074] /Users/admos/~/fsevents/~/ctype/ctype.js 25.3 kB {0} [built]
+ [1075] /Users/admos/~/fsevents/~/ctype/ctf.js 5.83 kB {0} [built]
+ [1076] /Users/admos/~/fsevents/~/ctype/ctio.js 43.6 kB {0} [built]
+ [1077] /Users/admos/~/fsevents/~/mime-types/index.js 3.65 kB {0} [built]
+ [1078] /Users/admos/~/fsevents/~/mime-db/index.js 136 bytes {0} [built] [1 error]
+ [1080] /Users/admos/~/fsevents/~/stringstream/stringstream.js 2.79 kB {0} [built]
+ [1081] /Users/admos/~/fsevents/~/caseless/index.js 1.76 kB {0} [built]
+ [1082] /Users/admos/~/fsevents/~/forever-agent/index.js 4.18 kB {0} [built] [2 errors]
+ [1083] /Users/admos/~/fsevents/~/form-data/lib/browser.js 26 bytes {0} [built]
+ [1084] /Users/admos/~/fsevents/~/request/lib/getProxyFromURI.js 2.27 kB {0} [built]
+ [1085] /Users/admos/~/fsevents/~/request/lib/querystring.js 1.33 kB {0} [built]
+ [1086] /Users/admos/~/fsevents/~/qs/lib/index.js 200 bytes {0} [built]
+ [1087] /Users/admos/~/fsevents/~/qs/lib/stringify.js 3.91 kB {0} [built]
+ [1088] /Users/admos/~/fsevents/~/qs/lib/utils.js 4.32 kB {0} [built]
+ [1089] /Users/admos/~/fsevents/~/qs/lib/parse.js 5.36 kB {0} [built]
+ [1090] /Users/admos/~/fsevents/~/request/lib/har.js 4.79 kB {0} [built] [1 error]
+ [1091] /Users/admos/~/fsevents/~/har-validator/lib/index.js 554 bytes {0} [built]
+ [1092] /Users/admos/~/fsevents/~/pinkie-promise/index.js 69 bytes {0} [built]
+ [1093] /Users/admos/~/fsevents/~/pinkie/index.js 5.41 kB {0} [built]
+ [1094] /Users/admos/~/fsevents/~/har-validator/lib/runner.js 590 bytes {0} [built]
+ [1095] /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 1.75 kB {0} [built] [15 errors]
+ [1111] /Users/admos/~/fsevents/~/har-validator/lib/error.js 186 bytes {0} [built]
+ [1112] /Users/admos/~/fsevents/~/is-my-json-valid/index.js 16.2 kB {0} [built]
+ [1113] /Users/admos/~/fsevents/~/generate-object-property/index.js 287 bytes {0} [built]
+ [1114] /Users/admos/~/fsevents/~/is-property/is-property.js 11 kB {0} [built]
+ [1115] /Users/admos/~/fsevents/~/generate-function/index.js 1.3 kB {0} [built]
+ [1116] /Users/admos/~/fsevents/~/jsonpointer/jsonpointer.js 1.58 kB {0} [built]
+ [1117] /Users/admos/~/fsevents/~/xtend/immutable.js 384 bytes {0} [built]
+ [1118] /Users/admos/~/fsevents/~/is-my-json-valid/formats.js 2.34 kB {0} [built]
+ [1119] /Users/admos/~/fsevents/~/request/lib/auth.js 4.78 kB {0} [built]
+ [1120] /Users/admos/~/fsevents/~/node-uuid/uuid.js 7.24 kB {0} [built]
+ [1121] /Users/admos/~/fsevents/~/request/lib/oauth.js 3.95 kB {0} [built]
+ [1122] /Users/admos/~/fsevents/~/oauth-sign/index.js 3.55 kB {0} [built]
+ [1123] /Users/admos/~/fsevents/~/request/lib/multipart.js 2.56 kB {0} [built]
+ [1124] /Users/admos/~/fsevents/~/combined-stream/lib/combined_stream.js 4.3 kB {0} [built]
+ [1125] /Users/admos/~/fsevents/~/delayed-stream/lib/delayed_stream.js 2.32 kB {0} [built]
+ [1126] /Users/admos/~/fsevents/~/isstream/isstream.js 588 bytes {0} [built]
+ [1127] /Users/admos/~/fsevents/~/request/lib/redirect.js 4.46 kB {0} [built]
+ [1128] /Users/admos/~/fsevents/~/request/lib/tunnel.js 4.84 kB {0} [built]
+ [1129] /Users/admos/~/fsevents/~/tunnel-agent/index.js 6.79 kB {0} [built] [2 errors]
+ [1130] /Users/admos/~/fsevents/~/tar/tar.js 4.12 kB {0} [built]
+ [1131] /Users/admos/~/fsevents/~/tar/lib/pack.js 5.76 kB {0} [built]
+ [1132] /Users/admos/~/fsevents/~/tar/lib/entry-writer.js 3.75 kB {0} [built]
+ [1133] /Users/admos/~/fsevents/~/tar/lib/header.js 11 kB {0} [built]
+ [1134] /Users/admos/~/fsevents/~/tar/lib/entry.js 5.28 kB {0} [built]
+ [1135] /Users/admos/~/fsevents/~/fstream/fstream.js 1.11 kB {0} [built]
+ [1136] /Users/admos/~/fsevents/~/fstream/lib/abstract.js 2.03 kB {0} [built]
+ [1137] /Users/admos/~/fsevents/~/fstream/lib/reader.js 7.08 kB {0} [built]
+ [1138] /Users/admos/~/fsevents/~/graceful-fs/graceful-fs.js 6.77 kB {0} [built] [1 error]
+ [1139] /Users/admos/~/fsevents/~/graceful-fs/polyfills.js 6.57 kB {0} [built]
+ [1140] /Users/admos/~/fsevents/~/graceful-fs/fs.js 429 bytes {0} [built] [1 error]
+ [1141] /Users/admos/~/fsevents/~/graceful-fs/legacy-streams.js 2.65 kB {0} [built]
+ [1142] /Users/admos/~/fsevents/~/fstream/lib/get-type.js 610 bytes {0} [built]
+ [1143] /Users/admos/~/fsevents/~/fstream/lib/link-reader.js 1.51 kB {0} [built]
+ [1144] /Users/admos/~/fsevents/~/fstream/lib/dir-reader.js 6.5 kB {0} [built]
+ [1145] /Users/admos/~/fsevents/~/fstream/lib/file-reader.js 3.98 kB {0} [built]
+ [1146] /Users/admos/~/fsevents/~/fstream/lib/socket-reader.js 915 bytes {0} [built]
+ [1147] /Users/admos/~/fsevents/~/fstream/lib/proxy-reader.js 2 kB {0} [built]
+ [1148] /Users/admos/~/fsevents/~/fstream/lib/writer.js 11 kB {0} [built]
+ [1149] /Users/admos/~/fsevents/~/mkdirp/index.js 2.63 kB {0} [built] [1 error]
+ [1150] /Users/admos/~/fsevents/~/fstream/lib/dir-writer.js 4.5 kB {0} [built]
+ [1151] /Users/admos/~/fsevents/~/fstream/lib/collect.js 1.71 kB {0} [built]
+ [1152] /Users/admos/~/fsevents/~/fstream/lib/link-writer.js 2.85 kB {0} [built]
+ [1153] /Users/admos/~/fsevents/~/fstream/lib/file-writer.js 2.59 kB {0} [built]
+ [1154] /Users/admos/~/fsevents/~/fstream/lib/proxy-writer.js 2.45 kB {0} [built] [1 error]
+ [1155] /Users/admos/~/fsevents/~/block-stream/block-stream.js 6.55 kB {0} [built]
+ [1156] /Users/admos/~/fsevents/~/tar/lib/extended-header-writer.js 5.33 kB {0} [built]
+ [1157] /Users/admos/~/fsevents/~/tar/lib/global-header-writer.js 388 bytes {0} [built]
+ [1158] /Users/admos/~/fsevents/~/tar/lib/parse.js 6.95 kB {0} [built]
+ [1159] /Users/admos/~/fsevents/~/tar/lib/buffer-entry.js 804 bytes {0} [built]
+ [1160] /Users/admos/~/fsevents/~/tar/lib/extended-header.js 3.56 kB {0} [built]
+ [1161] /Users/admos/~/fsevents/~/tar/lib/extract.js 2.56 kB {0} [built]
+ [1162] /Users/admos/~/fsevents/~/node-pre-gyp/lib/package.js 1.74 kB {0} [optional] [built] [1 error]
+ [1163] /Users/admos/~/fsevents/~/tar-pack/index.js 7.38 kB {0} [built]
+ [1164] /Users/admos/~/fsevents/~/debug/debug.js 2.46 kB {0} [built]
+ [1165] /Users/admos/~/fsevents/~/uid-number/uid-number.js 1.69 kB {0} [built] [1 error]
+ [1166] /Users/admos/~/fsevents/~/uid-number/get-uid-gid.js 644 bytes {0} [built]
+ [1167] /Users/admos/~/fsevents/~/tar-pack/~/rimraf/rimraf.js 5.75 kB {0} [built] [1 error]
+ [1168] /Users/admos/~/fsevents/~/once/once.js 346 bytes {0} [built]
+ [1169] /Users/admos/~/fsevents/~/fstream-ignore/ignore.js 7.5 kB {0} [built] [1 error]
+ [1170] /Users/admos/~/fsevents/~/fstream-ignore/~/minimatch/minimatch.js 24.9 kB {0} [built]
+ [1171] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/readable.js 451 bytes {0} [built]
+ [1172] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/lib/_stream_readable.js 27.1 kB {0} [built]
+ [1173] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/~/isarray/index.js 120 bytes {0} [built]
+ [1174] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/~/core-util-is/lib/util.js 3.04 kB {0} [built]
+ [1175] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/~/inherits/inherits_browser.js 672 bytes {0} [built]
+ [1176] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/~/string_decoder/index.js 7.8 kB {0} [built]
+ [1177] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/lib/_stream_writable.js 10.9 kB {0} [built]
+ [1178] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/lib/_stream_duplex.js 2.81 kB {0} [built]
+ [1179] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/lib/_stream_transform.js 7.4 kB {0} [built]
+ [1180] /Users/admos/~/fsevents/~/tar-pack/~/readable-stream/lib/_stream_passthrough.js 1.73 kB {0} [built]
+ [1181] /Users/admos/~/fsevents/~/node-pre-gyp/lib/publish.js 3.66 kB {0} [optional] [built] [2 errors]
+ [1182] /Users/admos/~/fsevents/~/node-pre-gyp/lib/rebuild.js 281 bytes {0} [optional] [built]
+ [1183] /Users/admos/~/fsevents/~/node-pre-gyp/lib/reinstall.js 276 bytes {0} [optional] [built]
+ [1184] /Users/admos/~/fsevents/~/node-pre-gyp/lib/reveal.js 920 bytes {0} [optional] [built] [1 error]
+ [1185] /Users/admos/~/fsevents/~/node-pre-gyp/lib/testpackage.js 1.84 kB {0} [optional] [built] [1 error]
+ [1186] /Users/admos/~/fsevents/~/node-pre-gyp/lib/unpublish.js 1.58 kB {0} [optional] [built] [2 errors]
+ [1188] /Users/admos/~/fsevents ^\.\/.*$ 577 bytes {0} [built] [13 warnings]
+ [1202] /Users/admos/~/fsevents/test/fsevents.js 722 bytes {0} [optional] [built] [1 error]
+ [1203] /Users/admos/~/fsevents/test ^\.\/.*$ 226 bytes {0} [optional] [built]
+ [1204] /Users/admos/~/fsevents/test/function.js 3.69 kB {0} [optional] [built] [2 errors]
+ [1205] ./~/watchpack/~/graceful-fs/graceful-fs.js 6.94 kB {0} [built] [1 error]
+ [1206] ./~/watchpack/~/graceful-fs/polyfills.js 8.84 kB {0} [built]
+ [1207] ./~/watchpack/~/graceful-fs/fs.js 429 bytes {0} [built] [1 error]
+ [1208] ./~/watchpack/~/graceful-fs/legacy-streams.js 2.65 kB {0} [built]
+ [1209] ./~/webpack/lib/node/NodeOutputFileSystem.js 633 bytes {0} [built] [1 error]
+ [1210] ./~/webpack/lib/node/NodeHotUpdateChunkTemplatePlugin.js 869 bytes {0} [built]
+ [1211] ./~/webpack/lib/node/NodeTargetPlugin.js 363 bytes {0} [built]
+ [1212] ./~/webpack/lib/ExternalsPlugin.js 527 bytes {0} [built]
+ [1213] ./~/webpack/lib/ExternalModuleFactoryPlugin.js 2.92 kB {0} [built]
+ [1214] ./~/webpack/lib/ExternalModule.js 2.89 kB {0} [built]
+ [1215] ./~/webpack/lib/LibraryTemplatePlugin.js 2.88 kB {0} [built]
+ [1216] ./~/webpack/lib/SetVarMainTemplatePlugin.js 1.23 kB {0} [built]
+ [1217] ./~/webpack/lib/AmdMainTemplatePlugin.js 1.57 kB {0} [built]
+ [1218] ./~/webpack/lib/UmdMainTemplatePlugin.js 6.37 kB {0} [built]
+ [1219] ./~/webpack/lib/JsonpExportMainTemplatePlugin.js 915 bytes {0} [built]
+ [1220] ./~/webpack/lib/CachePlugin.js 2.37 kB {0} [built]
+ [1221] ./~/webpack/lib/WebpackOptionsDefaulter.js 3.7 kB {0} [built]
+ [1222] ./~/webpack/lib/OptionsDefaulter.js 1.88 kB {0} [built]
+ [1223] ./webpack.config.js 387 bytes {0} [built]
+     + 10 hidden modules
+
+WARNING in ./~/loader-runner/lib/loadLoader.js
+Critical dependencies:
+13:16-36 the request of a dependency is an expression
+ @ ./~/loader-runner/lib/loadLoader.js 13:16-36
+
+WARNING in /Users/admos/~/fsevents/fsevents.js
+Critical dependencies:
+11:13-71 the request of a dependency is an expression
+ @ /Users/admos/~/fsevents/fsevents.js 11:13-71
+
+WARNING in /Users/admos/~/micromatch/lib/utils.js
+Critical dependencies:
+6:34-41 require function is used in a way in which dependencies cannot be statically extracted
+ @ /Users/admos/~/micromatch/lib/utils.js 6:34-41
+
+WARNING in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/nw-pre-gyp/package.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util/nw-pre-gyp/package.json Unexpected token (2:6)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:6)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/package.json
+Module parse failed: /Users/admos/node_modules/fsevents/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/~/node-pre-gyp/lib/pre-binding.js
+Critical dependencies:
+19:22-48 the request of a dependency is an expression
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/pre-binding.js 19:22-48
+
+WARNING in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/abi_crosswalk.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util/abi_crosswalk.json Unexpected token (2:10)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:10)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/versioning.js
+Critical dependencies:
+15:20-67 the request of a dependency is an expression
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/versioning.js 15:20-67
+
+WARNING in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js
+Module not found: Error: Cannot resolve module 'npm' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js 39:27-49
+
+WARNING in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/nw-pre-gyp/index.html
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util/nw-pre-gyp/index.html Unexpected token (1:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (1:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.parseExprAtom (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:333:12)
+    at Parser.pp.parseExprSubscripts (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:228:19)
+    at Parser.pp.parseMaybeUnary (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:207:17)
+    at Parser.pp.parseExprOps (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:154:19)
+    at Parser.pp.parseMaybeConditional (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:136:19)
+    at Parser.pp.parseMaybeAssign (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:112:19)
+    at Parser.pp.parseExpression (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:88:19)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1771:23)
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/LICENSE
+Module parse failed: /Users/admos/node_modules/fsevents/LICENSE Unexpected token (1:4)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (1:4)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/Readme.md
+Module parse failed: /Users/admos/node_modules/fsevents/Readme.md Unexpected character '#' (1:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '#' (1:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/CHANGELOG.md
+Module parse failed: /Users/admos/node_modules/fsevents/CHANGELOG.md Unexpected character '#' (1:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '#' (1:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/binding.gyp
+Module parse failed: /Users/admos/node_modules/fsevents/binding.gyp Unexpected token (2:11)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:11)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/fsevents.cc
+Module parse failed: /Users/admos/node_modules/fsevents/fsevents.cc Unexpected character '#' (6:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '#' (6:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/src/locking.cc
+Module parse failed: /Users/admos/node_modules/fsevents/src/locking.cc Unexpected token (6:13)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (6:13)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/src/async.cc
+Module parse failed: /Users/admos/node_modules/fsevents/src/async.cc Unexpected token (7:40)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (7:40)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/src/methods.cc
+Module parse failed: /Users/admos/node_modules/fsevents/src/methods.cc Unexpected token (6:13)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (6:13)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/src/thread.cc
+Module parse failed: /Users/admos/node_modules/fsevents/src/thread.cc Unexpected character '#' (7:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '#' (7:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/test/fsevents.js
+Critical dependencies:
+23:11-21 the request of a dependency is an expression
+ @ /Users/admos/~/fsevents/test/fsevents.js 23:11-21
+
+WARNING in /Users/admos/~/fsevents/src/storage.cc
+Module parse failed: /Users/admos/node_modules/fsevents/src/storage.cc Unexpected token (6:7)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (6:7)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/src/constants.cc
+Module parse failed: /Users/admos/node_modules/fsevents/src/constants.cc Unexpected character '#' (7:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '#' (7:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/fsevents/lib/binding/Release/node-v47-darwin-x64/fse.node
+Module parse failed: /Users/admos/node_modules/fsevents/lib/binding/Release/node-v47-darwin-x64/fse.node Unexpected character '�' (1:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '�' (1:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/fsevents ^\.\/.*$
+
+WARNING in /Users/admos/~/node-gyp/~/minimatch/minimatch.js
+Critical dependencies:
+6:5-12 require function is used in a way in which dependencies cannot be statically extracted
+ @ /Users/admos/~/node-gyp/~/minimatch/minimatch.js 6:5-12
+
+WARNING in /Users/admos/~/node-gyp/~/minimatch/package.json
+Module parse failed: /Users/admos/node_modules/node-gyp/node_modules/minimatch/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/node-gyp/~/minimatch ^\.\/.*$
+
+WARNING in /Users/admos/~/node-gyp/~/minimatch/LICENSE
+Module parse failed: /Users/admos/node_modules/node-gyp/node_modules/minimatch/LICENSE Unexpected token (1:10)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (1:10)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+ @ /Users/admos/~/node-gyp/~/minimatch ^\.\/.*$
+
+WARNING in /Users/admos/~/node-gyp/~/minimatch/README.md
+Module parse failed: /Users/admos/node_modules/node-gyp/node_modules/minimatch/README.md Unexpected character '#' (1:0)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected character '#' (1:0)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.getTokenFromCode (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2831:8)
+    at Parser.pp.readToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2526:15)
+    at Parser.pp.nextToken (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2518:71)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1631:10)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/lib/Parser.js:902:15)
+    at DependenciesBlock.<anonymous> (/usr/local/lib/node_modules/webpack/lib/NormalModule.js:104:16)
+    at DependenciesBlock.onModuleBuild (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:310:10)
+    at nextLoader (/usr/local/lib/node_modules/webpack/node_modules/webpack-core/lib/NormalModuleMixin.js:275:25)
+ @ /Users/admos/~/node-gyp/~/minimatch ^\.\/.*$
+
+ERROR in ./~/webpack-dev-middleware/middleware.js
+Module not found: Error: Cannot resolve module 'mime' in /Users/admos/Documents/collect/img/node_modules/webpack-dev-middleware
+ @ ./~/webpack-dev-middleware/middleware.js 5:11-26
+
+ERROR in ./~/webpack-dev-middleware/lib/Shared.js
+Module not found: Error: Cannot resolve module 'range-parser' in /Users/admos/Documents/collect/img/node_modules/webpack-dev-middleware/lib
+ @ ./~/webpack-dev-middleware/lib/Shared.js 1:17-40
+
+ERROR in ./~/webpack/lib/NormalModule.js
+Module not found: Error: Cannot resolve module 'module' in /Users/admos/Documents/collect/img/node_modules/webpack/lib
+ @ ./~/webpack/lib/NormalModule.js 94:16-33
+
+ERROR in ./~/webpack/package.json
+Module parse failed: /Users/admos/Documents/collect/img/node_modules/webpack/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ ./~/webpack/lib/Stats.js 163:17-43
+
+ERROR in ./~/webpack/lib/node/NodeMainTemplateAsync.runtime.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/webpack/lib/node
+ @ ./~/webpack/lib/node/NodeMainTemplateAsync.runtime.js 9:2-15 25:3-16
+
+ERROR in ./~/loader-runner/lib/LoaderRunner.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/loader-runner/lib
+ @ ./~/loader-runner/lib/LoaderRunner.js 5:9-22
+
+ERROR in ./~/webpack/lib/node/NodeOutputFileSystem.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/webpack/lib/node
+ @ ./~/webpack/lib/node/NodeOutputFileSystem.js 5:9-22
+
+ERROR in ./~/enhanced-resolve/~/graceful-fs/graceful-fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/enhanced-resolve/node_modules/graceful-fs
+ @ ./~/enhanced-resolve/~/graceful-fs/graceful-fs.js 1:9-22
+
+ERROR in ./~/enhanced-resolve/~/graceful-fs/fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/enhanced-resolve/node_modules/graceful-fs
+ @ ./~/enhanced-resolve/~/graceful-fs/fs.js 3:9-22
+
+ERROR in /Users/admos/~/mkdirp/index.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/mkdirp
+ @ /Users/admos/~/mkdirp/index.js 2:9-22
+
+ERROR in (webpack)/~/constants-browserify/constants.json
+Module parse failed: /usr/local/lib/node_modules/webpack/node_modules/constants-browserify/constants.json Unexpected token (2:12)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:12)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ ./~/enhanced-resolve/~/graceful-fs/polyfills.js 2:16-36
+
+ERROR in ./~/watchpack/~/graceful-fs/graceful-fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/watchpack/node_modules/graceful-fs
+ @ ./~/watchpack/~/graceful-fs/graceful-fs.js 1:9-22
+
+ERROR in /Users/admos/~/chokidar/index.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/chokidar
+ @ /Users/admos/~/chokidar/index.js 3:9-22
+
+ERROR in ./~/watchpack/~/graceful-fs/fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/Documents/collect/img/node_modules/watchpack/node_modules/graceful-fs
+ @ ./~/watchpack/~/graceful-fs/fs.js 3:9-22
+
+ERROR in /Users/admos/~/chokidar/lib/nodefs-handler.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/chokidar/lib
+ @ /Users/admos/~/chokidar/lib/nodefs-handler.js 3:9-22
+
+ERROR in /Users/admos/~/chokidar/lib/fsevents-handler.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/chokidar/lib
+ @ /Users/admos/~/chokidar/lib/fsevents-handler.js 3:9-22
+
+ERROR in /Users/admos/~/fsevents/fsevents.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents
+ @ /Users/admos/~/fsevents/fsevents.js 14:9-22
+
+ERROR in /Users/admos/~/graceful-fs/graceful-fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/graceful-fs
+ @ /Users/admos/~/graceful-fs/graceful-fs.js 1:9-22
+
+ERROR in /Users/admos/~/graceful-fs/fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/graceful-fs
+ @ /Users/admos/~/graceful-fs/fs.js 3:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/package.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/node-pre-gyp.js 60:16-37
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/clean.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/clean.js 7:9-22 9:13-26
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/info.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/info.js 7:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/package.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/package.js 7:9-22 11:12-25
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/install.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/install.js 7:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/publish.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/publish.js 7:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/pre-binding.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/pre-binding.js 4:17-30
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/reveal.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/reveal.js 7:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/testbinary.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/testbinary.js 7:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/testpackage.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/testpackage.js 7:9-22 13:11-24
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/unpublish.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/unpublish.js 7:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/info.js
+Module not found: Error: Cannot resolve module 'aws-sdk' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/info.js 14:14-32
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/publish.js
+Module not found: Error: Cannot resolve module 'aws-sdk' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/publish.js 17:14-32
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/unpublish.js
+Module not found: Error: Cannot resolve module 'aws-sdk' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/unpublish.js 15:14-32
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/testbinary.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/testbinary.js 10:9-33
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js 5:9-22
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/compile.js 9:9-33
+
+ERROR in /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/handle_gyp_opts.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/node-pre-gyp/lib/util
+ @ /Users/admos/~/fsevents/~/node-pre-gyp/lib/util/handle_gyp_opts.js 5:9-22
+
+ERROR in /Users/admos/~/fsevents/test/function.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/test
+ @ /Users/admos/~/fsevents/test/function.js 9:9-22
+
+ERROR in /Users/admos/~/fsevents/test/fsevents.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/fsevents/test
+ @ /Users/admos/~/fsevents/test/fsevents.js 9:11-25
+
+ERROR in /Users/admos/~/fsevents/test/function.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/fsevents/test
+ @ /Users/admos/~/fsevents/test/function.js 11:11-25
+
+ERROR in /Users/admos/~/fsevents/~/mkdirp/index.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/mkdirp
+ @ /Users/admos/~/fsevents/~/mkdirp/index.js 2:9-22
+
+ERROR in /Users/admos/~/fsevents/~/rimraf/rimraf.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/rimraf
+ @ /Users/admos/~/fsevents/~/rimraf/rimraf.js 6:9-22
+
+ERROR in /Users/admos/~/node-gyp/package.json
+Module parse failed: /Users/admos/node_modules/node-gyp/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/node-gyp/lib/node-gyp.js 78:16-37
+
+ERROR in /Users/admos/~/node-gyp/lib/node-gyp.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/node-gyp/lib
+ @ /Users/admos/~/node-gyp/lib/node-gyp.js 16:20-44
+
+ERROR in /Users/admos/~/fsevents/~/tar-pack/~/rimraf/rimraf.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/tar-pack/node_modules/rimraf
+ @ /Users/admos/~/fsevents/~/tar-pack/~/rimraf/rimraf.js 6:9-22
+
+ERROR in /Users/admos/~/fsevents/~/uid-number/uid-number.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/fsevents/node_modules/uid-number
+ @ /Users/admos/~/fsevents/~/uid-number/uid-number.js 9:20-44
+
+ERROR in /Users/admos/~/fsevents/~/graceful-fs/graceful-fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/graceful-fs
+ @ /Users/admos/~/fsevents/~/graceful-fs/graceful-fs.js 1:9-22
+
+ERROR in /Users/admos/~/fsevents/~/fstream-ignore/ignore.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/fstream-ignore
+ @ /Users/admos/~/fsevents/~/fstream-ignore/ignore.js 11:7-20
+
+ERROR in /Users/admos/~/fsevents/~/rimraf/~/glob/glob.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/rimraf/node_modules/glob
+ @ /Users/admos/~/fsevents/~/rimraf/~/glob/glob.js 43:9-22
+
+ERROR in /Users/admos/~/node-gyp/lib/configure.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/node-gyp/lib
+ @ /Users/admos/~/node-gyp/lib/configure.js 16:9-33
+
+ERROR in /Users/admos/~/node-gyp/lib/build.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/node-gyp/lib
+ @ /Users/admos/~/node-gyp/lib/build.js 15:11-35
+
+ERROR in /Users/admos/~/fsevents/~/request/lib/har.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/request/lib
+ @ /Users/admos/~/fsevents/~/request/lib/har.js 3:9-22
+
+ERROR in /Users/admos/~/node-gyp/lib/remove.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/node-gyp/lib
+ @ /Users/admos/~/node-gyp/lib/remove.js 10:9-22
+
+ERROR in /Users/admos/~/fsevents/~/graceful-fs/fs.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/graceful-fs
+ @ /Users/admos/~/fsevents/~/graceful-fs/fs.js 3:9-22
+
+ERROR in /Users/admos/~/fsevents/~/rimraf/~/glob/sync.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/rimraf/node_modules/glob
+ @ /Users/admos/~/fsevents/~/rimraf/~/glob/sync.js 4:9-22
+
+ERROR in /Users/admos/~/fsevents/~/forever-agent/index.js
+Module not found: Error: Cannot resolve module 'net' in /Users/admos/node_modules/fsevents/node_modules/forever-agent
+ @ /Users/admos/~/fsevents/~/forever-agent/index.js 6:10-24
+
+ERROR in /Users/admos/~/fsevents/~/forever-agent/index.js
+Module not found: Error: Cannot resolve module 'tls' in /Users/admos/node_modules/fsevents/node_modules/forever-agent
+ @ /Users/admos/~/fsevents/~/forever-agent/index.js 7:10-24
+
+ERROR in /Users/admos/~/fsevents/~/fstream/lib/proxy-writer.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fsevents/node_modules/fstream/lib
+ @ /Users/admos/~/fsevents/~/fstream/lib/proxy-writer.js 14:9-22
+
+ERROR in /Users/admos/~/fsevents/~/tough-cookie/lib/cookie.js
+Module not found: Error: Cannot resolve module 'net' in /Users/admos/node_modules/fsevents/node_modules/tough-cookie/lib
+ @ /Users/admos/~/fsevents/~/tough-cookie/lib/cookie.js 32:10-24
+
+ERROR in /Users/admos/~/fsevents/~/tough-cookie/package.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/tough-cookie/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/tough-cookie/lib/cookie.js 38:14-40
+
+ERROR in /Users/admos/~/rimraf/rimraf.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/rimraf
+ @ /Users/admos/~/rimraf/rimraf.js 6:9-22
+
+ERROR in /Users/admos/~/fsevents/~/tunnel-agent/index.js
+Module not found: Error: Cannot resolve module 'net' in /Users/admos/node_modules/fsevents/node_modules/tunnel-agent
+ @ /Users/admos/~/fsevents/~/tunnel-agent/index.js 3:10-24
+
+ERROR in /Users/admos/~/fsevents/~/tunnel-agent/index.js
+Module not found: Error: Cannot resolve module 'tls' in /Users/admos/node_modules/fsevents/node_modules/tunnel-agent
+ @ /Users/admos/~/fsevents/~/tunnel-agent/index.js 4:10-24
+
+ERROR in /Users/admos/~/which/which.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/which
+ @ /Users/admos/~/which/which.js 11:9-22
+
+ERROR in /Users/admos/~/osenv/osenv.js
+Module not found: Error: Cannot resolve module 'child_process' in /Users/admos/node_modules/osenv
+ @ /Users/admos/~/osenv/osenv.js 3:11-35
+
+ERROR in /Users/admos/~/fstream/lib/proxy-writer.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/fstream/lib
+ @ /Users/admos/~/fstream/lib/proxy-writer.js 14:9-22
+
+ERROR in /Users/admos/~/node-gyp/~/glob/glob.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/node-gyp/node_modules/glob
+ @ /Users/admos/~/node-gyp/~/glob/glob.js 43:9-22
+
+ERROR in /Users/admos/~/fsevents/~/mime-db/db.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/mime-db/db.json Unexpected token (2:40)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:40)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/mime-db/index.js 11:17-37
+
+ERROR in /Users/admos/~/forever-agent/index.js
+Module not found: Error: Cannot resolve module 'net' in /Users/admos/node_modules/forever-agent
+ @ /Users/admos/~/forever-agent/index.js 6:10-24
+
+ERROR in /Users/admos/~/forever-agent/index.js
+Module not found: Error: Cannot resolve module 'tls' in /Users/admos/node_modules/forever-agent
+ @ /Users/admos/~/forever-agent/index.js 7:10-24
+
+ERROR in /Users/admos/~/node-gyp/~/glob/sync.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/node-gyp/node_modules/glob
+ @ /Users/admos/~/node-gyp/~/glob/sync.js 4:9-22
+
+ERROR in /Users/admos/~/tough-cookie/lib/cookie.js
+Module not found: Error: Cannot resolve module 'net' in /Users/admos/node_modules/tough-cookie/lib
+ @ /Users/admos/~/tough-cookie/lib/cookie.js 32:10-24
+
+ERROR in /Users/admos/~/request/lib/har.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/request/lib
+ @ /Users/admos/~/request/lib/har.js 3:9-22
+
+ERROR in /Users/admos/~/rimraf/~/glob/glob.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/rimraf/node_modules/glob
+ @ /Users/admos/~/rimraf/~/glob/glob.js 43:9-22
+
+ERROR in /Users/admos/~/tough-cookie/package.json
+Module parse failed: /Users/admos/node_modules/tough-cookie/package.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/tough-cookie/lib/cookie.js 38:14-40
+
+ERROR in /Users/admos/~/isexe/index.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/isexe
+ @ /Users/admos/~/isexe/index.js 1:9-22
+
+ERROR in /Users/admos/~/node-gyp/~/minimatch/test/caching.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/node-gyp/node_modules/minimatch/test
+ @ /Users/admos/~/node-gyp/~/minimatch/test/caching.js 2:10-24
+
+ERROR in /Users/admos/~/node-gyp/~/minimatch/test/basic.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/node-gyp/node_modules/minimatch/test
+ @ /Users/admos/~/node-gyp/~/minimatch/test/basic.js 6:10-24
+
+ERROR in /Users/admos/~/node-gyp/~/minimatch/test/brace-expand.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/node-gyp/node_modules/minimatch/test
+ @ /Users/admos/~/node-gyp/~/minimatch/test/brace-expand.js 1:10-24
+
+ERROR in /Users/admos/~/node-gyp/~/minimatch/test/defaults.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/node-gyp/node_modules/minimatch/test
+ @ /Users/admos/~/node-gyp/~/minimatch/test/defaults.js 6:10-24
+
+ERROR in /Users/admos/~/node-gyp/~/minimatch/test/extglob-ending-with-state-char.js
+Module not found: Error: Cannot resolve module 'tap' in /Users/admos/node_modules/node-gyp/node_modules/minimatch/test
+ @ /Users/admos/~/node-gyp/~/minimatch/test/extglob-ending-with-state-char.js 1:11-25
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/cache.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/cache.json Unexpected token (2:14)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:14)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 4:9-32
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/cacheEntry.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/cacheEntry.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 5:14-42
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/content.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/content.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 6:11-36
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/creator.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/creator.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 8:11-36
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/cookie.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/cookie.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 7:10-34
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/har.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/har.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 10:7-28
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/entry.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/entry.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 9:9-32
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/page.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/page.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 12:8-30
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/log.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/log.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 11:7-28
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/request.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/request.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 16:11-36
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/pageTimings.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/pageTimings.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 13:15-44
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/postData.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/postData.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 14:12-38
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/record.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/record.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 15:10-34
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/response.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/response.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 17:12-38
+
+ERROR in /Users/admos/~/fsevents/~/har-validator/lib/schemas/timings.json
+Module parse failed: /Users/admos/node_modules/fsevents/node_modules/har-validator/lib/schemas/timings.json Unexpected token (2:12)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:12)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/fsevents/~/har-validator/lib/schemas/index.js 18:11-36
+
+ERROR in /Users/admos/~/tunnel-agent/index.js
+Module not found: Error: Cannot resolve module 'net' in /Users/admos/node_modules/tunnel-agent
+ @ /Users/admos/~/tunnel-agent/index.js 3:10-24
+
+ERROR in /Users/admos/~/tunnel-agent/index.js
+Module not found: Error: Cannot resolve module 'tls' in /Users/admos/node_modules/tunnel-agent
+ @ /Users/admos/~/tunnel-agent/index.js 4:10-24
+
+ERROR in /Users/admos/~/rimraf/~/glob/sync.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/rimraf/node_modules/glob
+ @ /Users/admos/~/rimraf/~/glob/sync.js 4:9-22
+
+ERROR in /Users/admos/~/isexe/access.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/isexe
+ @ /Users/admos/~/isexe/access.js 4:9-22
+
+ERROR in /Users/admos/~/isexe/windows.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/isexe
+ @ /Users/admos/~/isexe/windows.js 4:9-22
+
+ERROR in /Users/admos/~/isexe/mode.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/admos/node_modules/isexe
+ @ /Users/admos/~/isexe/mode.js 4:9-22
+
+ERROR in /Users/admos/~/mime-db/db.json
+Module parse failed: /Users/admos/node_modules/mime-db/db.json Unexpected token (2:40)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:40)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/mime-db/index.js 11:17-37
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/cache.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/cache.json Unexpected token (2:14)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:14)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 4:9-32
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/cookie.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/cookie.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 7:10-34
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/creator.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/creator.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 8:11-36
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/content.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/content.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 6:11-36
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/cacheEntry.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/cacheEntry.json Unexpected token (2:9)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:9)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 5:14-42
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/log.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/log.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 11:7-28
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/page.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/page.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 12:8-30
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/har.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/har.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 10:7-28
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/entry.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/entry.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 9:9-32
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/postData.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/postData.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 14:12-38
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/request.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/request.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 16:11-36
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/pageTimings.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/pageTimings.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 13:15-44
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/record.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/record.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 15:10-34
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/response.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/response.json Unexpected token (2:8)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:8)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 17:12-38
+
+ERROR in /Users/admos/~/har-validator/lib/schemas/timings.json
+Module parse failed: /Users/admos/node_modules/har-validator/lib/schemas/timings.json Unexpected token (2:12)
+You may need an appropriate loader to handle this file type.
+SyntaxError: Unexpected token (2:12)
+    at Parser.pp.raise (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:923:13)
+    at Parser.pp.unexpected (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1490:8)
+    at Parser.pp.semicolon (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1469:73)
+    at Parser.pp.parseExpressionStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1994:8)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1772:188)
+    at Parser.pp.parseBlock (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:2009:21)
+    at Parser.pp.parseStatement (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1753:19)
+    at Parser.pp.parseTopLevel (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1666:21)
+    at Parser.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:1632:17)
+    at Object.parse (/usr/local/lib/node_modules/webpack/node_modules/acorn/dist/acorn.js:885:44)
+ @ /Users/admos/~/har-validator/lib/schemas/index.js 18:11-36
+webpack: bundle is now VALID.
