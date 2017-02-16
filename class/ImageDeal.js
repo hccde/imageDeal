@@ -217,5 +217,7 @@ class ImageDeal{
 
 		return this._imageData;
 	};
+
+	log()
 }
 export default ImageDeal;
