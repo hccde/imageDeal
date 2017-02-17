@@ -218,6 +218,8 @@ class ImageDeal{
 		return this._imageData;
 	};
 
-	log()
+	log(){
+		
+	}
 }
 export default ImageDeal;
