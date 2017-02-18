@@ -11,6 +11,7 @@ class ImageDeal{
 		this._Matrix = [];
 		this._grayMatrix = [];
 		this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
+		this.factor = this.factor<=1?1:this.factor;
 	};
 
 	get grayMatrix(){
@@ -39,9 +40,11 @@ class ImageDeal{
 	 * @param  {int} [scale]
 	 * @return {[type]}
 	 */
-	scale(fn,factor=1){
+	scale(fn=(r,b,g,a)=>{return [r,b,g,a]}){
+
 		let [width,height] = [this._imageData.width,this._imageData.height],
 			data = this._imageData.data,
+			factor = this.factor,
 			samllerwidth = Math.floor(width/factor),
 			samllerheight = Math.floor(height/factor),
 			tem = [];
@@ -57,6 +60,7 @@ class ImageDeal{
 				smalldata[t+3] = tem[3];
 			}
 		}
+		this._imageData = imagedata;
 		return imagedata;
 	};
 	/**
@@ -187,14 +191,14 @@ class ImageDeal{
 		this._imageData = this.scale((r,g,b,a)=>{
 				let gray = parseInt((r*30+g*59+b*11)/100);
 				return[gray,gray,gray,a]
-		},this.factor)
+		})
 		return this._imageData
 	};
 
 	reversal(){
 		this._imageData = this.scale((r,g,b,a)=>{
 			return[255-r,255-g,255-b,a];
-		},this.factor)
+		})
 		return this._imageData;
 	};
 	/**
@@ -213,13 +217,59 @@ class ImageDeal{
 			// a = parseInt(param.degree*Math.pow(a/255,param.factor)*255+param.offset)
 			// 	a = a>255?255:a;
 			return[r,g,b,a];
-		},this.factor)
+		})
 
 		return this._imageData;
 	};
+	/**
+	 * Logarithmic transformation
+	 * @param  {[double]} param  [between 0 and 1]
+	 * @param  {int} weight [weight]
+	 * @return {[ImageData]} 
+	 */
+	log(param,weight=1){
+		this._imageData = this.scale((r,g,b,a)=>{
+			r= weight*Math.log(r*param+1)/Math.log(r+1)*r
+			g= weight*Math.log(g*param+1)/Math.log(g+1)*g
+			b= weight*Math.log(b*param+1)/Math.log(r+1)*b
+			return [r,g,b,a]
+		})
+		return this._imageData
+	}
 
-	log(){
-		
+	
+	bitmap(bit){
+		this._imageData = this.scale((r,g,b,a)=>{
+			let bitnumber = 1 << bit;
+			return[r&bitnumber,g&bitnumber,b&bitnumber,a&bitnumber];
+		})
+		return this._imageData;
+	};
+	histogram() {
+		let tabler = utils.createArray(255),
+			tableg = utils.createArray(255),
+			tableb =utils.createArray(255);
+		let t= 0;
+		this.scale((r,g,b,a)=>{
+			tabler[r] +=1;
+			tableb[b] +=1;
+			tableg[g] +=1;
+			length+=1;
+			return [r,g,b,a];
+		})
+		let rgb = [tabler,tableg,tableb]
+		rgb.map((arr)=>{
+			let sum = 0;
+			return arr.map((val)=>{
+				sum+=val;
+				parseInt(255*1*sum/this.grayimage.length);
+			})
+			for(let i = 0;i<256;i++){
+				sum += val;
+				parseInt(255*1*sum/length);
+			}
+		});
+
 	}
 }
 export default ImageDeal;

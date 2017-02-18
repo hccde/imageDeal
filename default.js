@@ -19,4 +19,8 @@
 		// utils.imageOutput(t(image.gray.bind(image)),ele);
 		// utils.imageOutput(t(image.power.bind(image,{factor:6,degree:1,offset:6})),ele);
 		// utils.imageOutput(t(image.reversal.bind(image)),ele);
+		// utils.imageOutput(t(image.log.bind(image,0.2,1)),ele)
+		// utils.imageOutput(t(image.bitmap.bind(image,7)),ele);
+		image.histogram();
+		
  	});

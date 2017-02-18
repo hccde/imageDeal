@@ -39,6 +39,11 @@ module.exports = {
   		new webpack.HotModuleReplacementPlugin(),
   		new webpack.DefinePlugin({
   			_ENV_DEV:JSON.stringify(true)// we can judge environment in source code
-		})
+		  }),
+      // new webpack.optimize.UglifyJsPlugin({
+      //   compress: {
+      //     warnings: false
+      //   }
+      // })
 	]
 }
