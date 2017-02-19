@@ -47,7 +47,7 @@ class Compute{
 		//key step
 		for (let i = extraRow,n=0; i <= imagerow; i++,n++) { //for loop compute 
 			for (let j = extraCol,m=0; j <= imagecol; j++,m++) {
-				this._Matrix[n][m] = fn(tmpl, getArea(i, j));
+				this._Matrix[n][m] = fn(tmpl, getArea(n, m));
 			}
 		}
 

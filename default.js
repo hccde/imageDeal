@@ -23,6 +23,6 @@
 		// utils.imageOutput(t(image.bitmap.bind(image,7)),ele);
 		// utils.imageOutput(t(image.histogram.bind(image)),ele);
 
-		image.CarlFilter()
+		utils.imageOutput(ImageDeal.MatrixtoImageData(image.CarlFilter()),ele)
 		
  	});

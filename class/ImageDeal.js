@@ -136,7 +136,7 @@ class ImageDeal{
 	 * turn imagedata into array
 	 * @return {Array} [turn imageData into RGB 2DArray]
 	 */
-	toAbstract(){
+	toAbstract(){// todo scale then abstruct
 		if(!this._Matrix || this._Matrix.length <= 0){
 			let r = [],g=[],b=[],a=[];
 			let [width,height,data] = [this._imageData.width,this._imageData.height,this._imageData.data];
@@ -284,7 +284,7 @@ class ImageDeal{
 	 * Gaussian blur
 	 */
 	CarlFilter(){
-		console.log([this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix)=>{
+		let arr = [this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix)=>{
 			let compute = new Compute(matrix)
 			return compute.moveTmpl([
 					[2,4,5,4,2],
@@ -308,7 +308,9 @@ class ImageDeal{
 						}
 						return parseInt(sum/div);
 					})
-		}))
+		})
+		console.log(arr.push(this.Matrix[3]));
+		return arr;
 	}
 }
 export default ImageDeal;
