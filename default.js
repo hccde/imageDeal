@@ -21,6 +21,8 @@
 		// utils.imageOutput(t(image.reversal.bind(image)),ele);
 		// utils.imageOutput(t(image.log.bind(image,0.2,1)),ele)
 		// utils.imageOutput(t(image.bitmap.bind(image,7)),ele);
-		image.histogram();
+		// utils.imageOutput(t(image.histogram.bind(image)),ele);
+
+		image.CarlFilter()
 		
  	});

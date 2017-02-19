@@ -7,7 +7,7 @@ class ImageDeal{
 			utils.error('image must be a instance of ImageData');
 		this._height = this._imageData.height;
 		this._width = this._imageData.width;
-		this._oldimageData = this.imageData //keep initally imageData;
+		this._oldimageData = this.imageData //keep initally imageData; todo debug
 		this._Matrix = [];
 		this._grayMatrix = [];
 		this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
@@ -31,7 +31,7 @@ class ImageDeal{
 
 	get Matrix(){
 		if(!this._Matrix || this._Matrix.length <= 0){
-			this.toGrayAbstract();
+			this.toAbstract();
 		}
 		return this._Matrix;
 	}
@@ -245,12 +245,17 @@ class ImageDeal{
 		})
 		return this._imageData;
 	};
+	/**
+	 * [Histogram equalization]
+	 * @return {[ImageData]} [description]
+	 */
+	//todo:may display histogram for image
 	histogram() {
-		let tabler = utils.createArray(255),
-			tableg = utils.createArray(255),
-			tableb =utils.createArray(255);
-		let t= 0;
-		this.scale((r,g,b,a)=>{
+		let tabler = utils.createArray(256),
+			tableg = utils.createArray(256),
+			tableb =utils.createArray(256);
+		let length= 0;
+		let imagedata = this.scale((r,g,b,a)=>{
 			tabler[r] +=1;
 			tableb[b] +=1;
 			tableg[g] +=1;
@@ -258,18 +263,52 @@ class ImageDeal{
 			return [r,g,b,a];
 		})
 		let rgb = [tabler,tableg,tableb]
-		rgb.map((arr)=>{
+
+		rgb = rgb.map((arr,index)=>{
 			let sum = 0;
 			return arr.map((val)=>{
 				sum+=val;
-				parseInt(255*1*sum/this.grayimage.length);
+				return parseInt(255*1*sum/length);
 			})
-			for(let i = 0;i<256;i++){
-				sum += val;
-				parseInt(255*1*sum/length);
-			}
 		});
-
+		let data = imagedata.data;
+		for(let i = 0;i<length*4;i=i+4){
+			data[i] = rgb[0][data[i]];
+			data[i+1] = rgb[1][data[i+1]];
+			data[i+2] = rgb[2][data[i+2]];
+		}
+		this._imageData =imagedata;
+		return imagedata;
+	}
+	/**
+	 * Gaussian blur
+	 */
+	CarlFilter(){
+		console.log([this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix)=>{
+			let compute = new Compute(matrix)
+			return compute.moveTmpl([
+					[2,4,5,4,2],
+					[4,9,12,9,4],
+  					[5,12,15,12,5],
+  					[4,9,12,9,4],
+  					[2,4,5,4,2]],function(tmpl,imagearea){
+						let row = tmpl.length;
+						let col = tmpl[0].length;
+						let sum=0;
+						let div = 0;
+						for(let i =0;i<tmpl.length;i++){
+							for(let j = 0;j<tmpl[0].length;j++){
+								div+=tmpl[i][j];
+							}
+						}
+						for(let i = 0;i<row;i++){
+							for(let j = 0;j<col;j++){
+								sum += tmpl[i][j]*imagearea[i][j];
+							}
+						}
+						return parseInt(sum/div);
+					})
+		}))
 	}
 }
 export default ImageDeal;
