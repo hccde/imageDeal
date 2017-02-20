@@ -1,8 +1,10 @@
-import utils from '../lib/utils'
-import Compute from './Compute'
-class ImageDeal{
+import utils from '../lib/utils';
+// import Compute from './Compute'
+import AbstructCompute from './AbstructCompute';
+class ImageDeal extends AbstructCompute{
 
 	constructor(img){
+		super()
 		img instanceof ImageData? (this._imageData = img):
 			utils.error('image must be a instance of ImageData');
 		this._height = this._imageData.height;
@@ -140,20 +142,20 @@ class ImageDeal{
 		if(!this._Matrix || this._Matrix.length <= 0){
 			let r = [],g=[],b=[],a=[];
 			let [width,height,data] = [this._imageData.width,this._imageData.height,this._imageData.data];
-			let offset = 0;
-			for(let i = 0;i<height;i++){
-				r[i] = [];
-				b[i] = [];
-				g[i] = [];
-				a[i] = [];
-				offset = i*width*4;
-				for(let j = 0;j<width;j++){
+			let offset = 0,base = 0,factor = this.factor;
+			for(let i = 0,m=0;i<height;i=i+factor,m++){
+				r[m] = [];
+				b[m] = [];
+				g[m] = [];
+				a[m] = [];
+				base = offset = i*width*4;
+				for(let j = 0,n=0;j<width;j=j+factor,n++){
+					offset = base+4*j;
 					let gray = ( data[offset] * 30 +  data[offset+1] * 59+  data[offset+2] * 11) / 100;
-					r[i][j] = data[offset];
-					g[i][j] = data[offset+1];
-					b[i][j] =data[offset+2];
-					a[i][j] = data[offset+3];
-					offset += 4;
+					r[m][n] = data[offset];
+					g[m][n] = data[offset+1];
+					b[m][n] =data[offset+2];
+					a[m][n] = data[offset+3];
 				}
 			}
 			this._Matrix = [r,g,b,a];
@@ -168,18 +170,18 @@ class ImageDeal{
 		if(!this._grayMatrix || this._grayMatrix.length <= 0){
 			let [width,height,data,grayimageMatrix,apha] = [this._imageData.width,this._imageData.height,
 			this._imageData.data,[],[]];
-			let offset  = 0;
+			let offset  = 0,base=0,factor = this.factor;
 
-			for(let i = 0;i<height;i++){
-				grayimageMatrix[i] = [];
-				apha[i] = [];
-				offset = i*width*4;
-				for(let j = 0;j<width;j++){
+			for(let i = 0,m=0;i<height;i=i+factor,m++){
+				grayimageMatrix[m] = [];
+				apha[m] = [];
+				base = offset = i*width*4;
+				for(let j = 0,n=0;j<width;j=j+factor,n++){
+					offset = base+j*4;
 					let gray = ( data[offset] * 30 +  data[offset+1] * 59+  data[offset+2] * 11) / 100;
 					// gray = parseInt(gray);
-					apha[i][j] = data[offset+3];
-					grayimageMatrix[i][j] = gray;
-					offset+=4;
+					apha[m][n] = data[offset+3];
+					grayimageMatrix[m][n] = gray;
 				}
 			}
 			this._grayMatrix = [grayimageMatrix,apha]
@@ -279,38 +281,6 @@ class ImageDeal{
 		}
 		this._imageData =imagedata;
 		return imagedata;
-	}
-	/**
-	 * Gaussian blur
-	 */
-	CarlFilter(){
-		let arr = [this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix)=>{
-			let compute = new Compute(matrix)
-			return compute.moveTmpl([
-					[2,4,5,4,2],
-					[4,9,12,9,4],
-  					[5,12,15,12,5],
-  					[4,9,12,9,4],
-  					[2,4,5,4,2]],function(tmpl,imagearea){
-						let row = tmpl.length;
-						let col = tmpl[0].length;
-						let sum=0;
-						let div = 0;
-						for(let i =0;i<tmpl.length;i++){
-							for(let j = 0;j<tmpl[0].length;j++){
-								div+=tmpl[i][j];
-							}
-						}
-						for(let i = 0;i<row;i++){
-							for(let j = 0;j<col;j++){
-								sum += tmpl[i][j]*imagearea[i][j];
-							}
-						}
-						return parseInt(sum/div);
-					})
-		})
-		arr.push(this.Matrix[3]);
-		return arr;
 	}
 }
 export default ImageDeal;
