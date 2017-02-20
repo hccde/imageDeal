@@ -40,7 +40,7 @@ class AbstructCompute{
 	}
 
 	//图片锐化
-	Sharpen(maks=[
+	Sharpen(mask=[
 				[-1, -1, -1],
 				[-1, 9.5, -1],
 				[-1, -1, -1]
@@ -109,6 +109,40 @@ class AbstructCompute{
 			}
 		}
 		return ImageDeal.MatrixtoImageData(this.Matrix);
+	}
+	/**
+	 * [Mosaic description]
+	 * @param {[int]} x      [begin point-x]
+	 * @param {[int]} y      [begin point-y]
+	 * @param {[int]} height [area height]
+	 * @param {[int]} width  [area width]
+	 * @param {Array}  mask   [description]
+	 */
+	// todo
+	Mosaic(x,y,height,width,mask=[
+		[0,0,0],
+		[1,0,0],
+		[0,0,0]
+		]){
+		let arr = [this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix)=>{
+			let compute = new Compute(matrix);
+			return compute.moveTmpl(mask,function(tmpl,imagearea){
+				let row = tmpl.length;
+				let col = tmpl[0].length;
+				let sum = 0;
+				let tmplsum = 0;
+				for (let i = 0; i < row; i++) {
+					for (let j = 0; j < col; j++) {
+						// tmplsum+=tmpl[i][j];
+						sum += tmpl[i][j] * imagearea[i][j];
+					}
+				}
+				return sum;
+			},x,y,width,height)
+		})
+		arr.push(this.Matrix[3]);
+
+		return ImageDeal.MatrixtoImageData(arr);
 	}
 
 

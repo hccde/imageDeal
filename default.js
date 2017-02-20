@@ -24,10 +24,12 @@
 		// utils.imageOutput(t(image.histogram.bind(image)),ele);
 
 		// utils.imageOutput(t(image.LaplaceSharpen.bind(image)),ele)
+		// utils.imageOutput(t(image.Sharpen.bind(image)),ele)
 		// utils.imageOutput(t(ImageDeal.grayMatrixtoImageData.bind(image,image.grayMatrix)),ele)
 		// utils.imageLoad('./amazingball.png',function(imaged){
 		// 	let images = new ImageDeal(imaged);
 		// 	utils.imageOutput(t(image.Merge.bind(image,images.Matrix,50,50)),ele);
 		// })
+		utils.imageOutput(t(image.Mosaic.bind(image,0,0,50,50)),ele)
 		
  	});
