@@ -309,7 +309,7 @@ class ImageDeal{
 						return parseInt(sum/div);
 					})
 		})
-		console.log(arr.push(this.Matrix[3]));
+		arr.push(this.Matrix[3]);
 		return arr;
 	}
 }
