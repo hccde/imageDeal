@@ -88,11 +88,27 @@ class AbstructCompute{
 		return ImageDeal.MatrixtoImageData(arr);
 	}
 	/**
-	 * Merge image
-	 * @param {[Array]} matrix [anther image's matrix]
+	 * merge image,will change matrix
+	 * @param {[Array]} matrix array
+	 * @param {[int]} x      point x
+	 * @param {[int]} y      point y
 	 */
-	Merge(matrix){
+	Merge(matrix,x,y){
+		let [r,g,b,a] = matrix,
+		width_small = r[0].length,
+		height_small = r.length;
 
+		let [_r,_g,_b,_a] = this.Matrix;
+		for(let i = y,m=0;i<height_small+y;i++,m++){
+			for(let j =x,n=0;j<width_small+x;j++,n++){
+				let apha = (a[m][n]/255).toFixed(2);
+				_r[i][j] = r[m][n]*apha+(1-apha)*_r[m][n];
+				_g[i][j] = g[m][n]*apha+(1-apha)*_g[m][n];
+				_b[i][j] = b[m][n]*apha+(1-apha)*_b[m][n];
+				// _r[i][j] = a[m][n];
+			}
+		}
+		return ImageDeal.MatrixtoImageData(this.Matrix);
 	}
 
 
