@@ -30,6 +30,7 @@
 		// 	let images = new ImageDeal(imaged);
 		// 	utils.imageOutput(t(image.Merge.bind(image,images.Matrix,50,50)),ele);
 		// })
-		utils.imageOutput(t(image.Mosaic.bind(image,20,20,10,10)),ele)
+		// utils.imageOutput(t(image.Mosaic.bind(image,20,20,10,10)),ele)
+		// utils.imageOutput(t(image.Rotate.bind(image,0,334,Math.PI/4)),ele)
 		
  	});

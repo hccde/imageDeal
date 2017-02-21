@@ -1,6 +1,6 @@
 import Compute from './Compute';
 import ImageDeal from './ImageDeal';
-
+import utils from '../lib/utils';
 class AbstructCompute{
 	constructor(matrix){
 		this.Matrix = matrix
@@ -134,7 +134,49 @@ class AbstructCompute{
 		arr.push(this.Matrix[3]);
 
 		return ImageDeal.MatrixtoImageData(arr);
+	};
+	//rotate image
+	//todo  something error
+	Rotate(x,y,deg){
+		let newmatrix = utils.copyArray(this.Matrix);
+		let [width,height] = [newmatrix[0][0].length,newmatrix[0].length];
+		function getr(n,m){
+				return Math.pow(Math.pow(n-x,2)+Math.pow(m-y,2),0.5);
+			}
+		
+		let arr = [this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix,index)=>{
+			let cur = newmatrix[index];
+			function rotate(matri){
+				let mappointx,mappointy;
+				for(let i = 0;i<height;i++){
+					for(let j = 0;j<width;j++){
+						// newmatrix[i][j]
+						let r = getr(j,i);
+						// mappointx = parseInt(j+r*Math.sin(deg));
+						// mappointy = parseInt(i+r-r*Math.cos(deg));
+						mappointy = parseInt((j-x)*Math.cos(deg)+(j-y)*Math.sin(deg)+y);
+						mappointx = parseInt((j-x)*Math.sin(deg)+(i-y)*Math.cos(deg)+x);
+						if(matri[mappointy] && matrix[mappointy][mappointx]){
+							cur[i][j] = matrix[mappointy][mappointx];
+						}else{
+							cur[i][j] = 255;
+						}
+					}
+				}
+				return cur;
+		}
+			return rotate(matrix);
+		})
+		arr.push(this.Matrix[3]);
+
+		return ImageDeal.MatrixtoImageData(arr);
+	};
+
+	//split image
+	split(n,m){
+		
 	}
+
 
 
 }
