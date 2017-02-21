@@ -9,9 +9,9 @@ class Compute{
 	 * Template operation
 	 * @param  {Array} tmpl [2D Array]
 	 * @param  {Array} fn [compute function]
-	 * @param  { int } height [move how long]
-	 * @param  { int } widht [move how long]
-	 * @return {[Array]}   [computed array]
+	 * @param  { int } height [ Moving distance]
+	 * @param  { int } width [Moving distance]
+	 * @return {[Array]}   [Calculation results]
 	 */
 	moveTmpl(tmpl,fn,begin_x=0,begin_y=0,width_len,height_len){//移动tmpl 传入对应的回调fn
 		// copy
@@ -64,6 +64,7 @@ class Compute{
 		return this._Matrix;
 	};
 
+	
 }
 
 export default Compute;

@@ -112,34 +112,25 @@ class AbstructCompute{
 	}
 	/**
 	 * [Mosaic description]
-	 * @param {[int]} x      [begin point-x]
-	 * @param {[int]} y      [begin point-y]
+	 * @param {[int]} n      [begin point-x]
+	 * @param {[int]} m     [begin point-y]
 	 * @param {[int]} height [area height]
 	 * @param {[int]} width  [area width]
-	 * @param {Array}  mask   [description]
 	 */
-	// todo
-	Mosaic(x,y,height,width,mask=[
-		[0,0,0],
-		[1,0,0],
-		[0,0,0]
-		]){
+	Mosaic(n,m,width=20,height=20){
 		let arr = [this.Matrix[0],this.Matrix[1],this.Matrix[2]].map((matrix)=>{
-			let compute = new Compute(matrix);
-			return compute.moveTmpl(mask,function(tmpl,imagearea){
-				let row = tmpl.length;
-				let col = tmpl[0].length;
-				let sum = 0;
-				let tmplsum = 0;
-				for (let i = 0; i < row; i++) {
-					for (let j = 0; j < col; j++) {
-						// tmplsum+=tmpl[i][j];
-						sum += tmpl[i][j] * imagearea[i][j];
+				let value = matrix[m][n],
+				_height = height+m,
+				_width = width+n;
+
+				for(let i = n;i<_height;i++){
+					for(let j = m;j<_width;j++){
+						matrix[i][j] = value;
 					}
 				}
-				return sum;
-			},x,y,width,height)
-		})
+				return matrix;
+			})
+
 		arr.push(this.Matrix[3]);
 
 		return ImageDeal.MatrixtoImageData(arr);
