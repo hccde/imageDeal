@@ -1,4 +1,5 @@
 import utils from '../lib/utils';
+import ImageDeal from './ImageDeal';
 
 class Compute{
 	constructor(matrix){
@@ -64,7 +65,41 @@ class Compute{
 		return this._Matrix;
 	};
 
-	
+	split(n,m){
+		let width = this.Matrix[0].length,
+			height = this.Matrix.length,
+			row = Math.floor(width/n),
+			col = Math.floor(height/m);
+
+			// console.log(row,col) 250 167
+			//cant be split into more than 36
+			if(n*m >36 )
+				utils.error('cant be split into more than 36')
+
+			let getArea = (rowindex,colindex)=>{
+				let area = [];
+				let height_begin = colindex*col,
+					height_end = height_begin+col,
+					width_begin = rowindex*row,
+					width_end = width_begin+row;
+				for(let i = height_begin,k=0;i<height_end;i++,k++){
+					area.push([])
+					for(let j = width_begin,l=0;j<width_end;j++,l++){
+						area[k][l] = this.Matrix[i][j];
+					}
+				}
+				return area;
+			}
+
+			let res = []
+			for(let i = 0;i<n;i++){
+				res.push([])
+				for(let j = 0;j<m;j++){
+					res[i][j] = getArea(i,j);
+				}
+			}
+			return res;
+	}
 }
 
 export default Compute;

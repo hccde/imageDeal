@@ -33,4 +33,13 @@
 		// utils.imageOutput(t(image.Mosaic.bind(image,20,20,10,10)),ele)
 		// utils.imageOutput(t(image.Rotate.bind(image,0,334,Math.PI/4)),ele)
 		
+		// let arr = image.Split.bind(image)(4,4)
+		// arr.forEach((arry)=>{
+		// 	arry.forEach((e)=>{
+		// 		utils.imageOutput(e,ele);
+		// 	})
+		// })
+		
+		
+		
  	});

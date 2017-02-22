@@ -172,8 +172,30 @@ class AbstructCompute{
 		return ImageDeal.MatrixtoImageData(arr);
 	};
 
-	//split image
-	split(n,m){
+	/**
+	 * split image
+	 * @param  {[int]} n [each line]
+	 * @param  {[int]} m [each col]
+	 * @return {[type]}   [description]
+	 */
+	Split(n,m){
+		let arr = [this.Matrix[0],this.Matrix[1],this.Matrix[2],this.Matrix[3]].map((matrix)=>{
+				let compute = new Compute(matrix);
+				return compute.split(n,m);
+		});
+		let res = []
+		for(let i = 0;i<n;i++){
+			res.push([]);
+			for(let j = 0;j<m;j++){
+				let smallimage = [arr[0][i][j],arr[1][i][j],arr[2][i][j],arr[3][i][j]];
+				res[i][j] = ImageDeal.MatrixtoImageData(smallimage);
+			}
+		}
+		console.log(res);
+		return res
+	}
+
+	DetectFace(){
 		
 	}
 
