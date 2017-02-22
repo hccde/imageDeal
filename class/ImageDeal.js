@@ -14,6 +14,7 @@ class ImageDeal extends AbstructCompute{
 		this._grayMatrix = [];
 		this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
 		this.factor = this.factor<=1?1:this.factor;
+		this.factor = 1;
 	};
 
 	get grayMatrix(){
@@ -151,7 +152,6 @@ class ImageDeal extends AbstructCompute{
 				base = offset = i*width*4;
 				for(let j = 0,n=0;j<width;j=j+factor,n++){
 					offset = base+4*j;
-					let gray = ( data[offset] * 30 +  data[offset+1] * 59+  data[offset+2] * 11) / 100;
 					r[m][n] = data[offset];
 					g[m][n] = data[offset+1];
 					b[m][n] =data[offset+2];
@@ -164,7 +164,7 @@ class ImageDeal extends AbstructCompute{
 	};
 
 	/**
-	 * @return {Array} [turn imageData into gray 2DArray]
+	 * @return {Array} [turn imageData into gray 2DArray
 	 */
 	toGrayAbstract(){
 		if(!this._grayMatrix || this._grayMatrix.length <= 0){
@@ -179,7 +179,7 @@ class ImageDeal extends AbstructCompute{
 				for(let j = 0,n=0;j<width;j=j+factor,n++){
 					offset = base+j*4;
 					let gray = ( data[offset] * 30 +  data[offset+1] * 59+  data[offset+2] * 11) / 100;
-					// gray = parseInt(gray);
+					gray = parseInt(gray);
 					apha[m][n] = data[offset+3];
 					grayimageMatrix[m][n] = gray;
 				}

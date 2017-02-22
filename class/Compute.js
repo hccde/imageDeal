@@ -1,5 +1,6 @@
 import utils from '../lib/utils';
 import ImageDeal from './ImageDeal';
+import classier from '../haarjson.js';
 
 class Compute{
 	constructor(matrix){
@@ -99,6 +100,99 @@ class Compute{
 				}
 			}
 			return res;
+	};
+
+	GetIntegralImage(){
+		let graymatrix = utils.copyArray(this.Matrix);
+		let height = graymatrix.length,
+			width = graymatrix[0].length,
+			integralImage = utils.copyArray(graymatrix);
+		//extra row 
+		graymatrix.unshift(new Array(width).fill(0));
+		//extra col
+		for (let i = 0; i < height; i++) {
+				graymatrix[i].unshift(0);
+		}
+
+		for(let i = 1,n=0;i<=height;i++,n++){
+			for(let j = 1,m=0;j<=width;j++,m++){
+				integralImage[n][m]  =  graymatrix[i][j]+graymatrix[i-1][j]+graymatrix[i][j-1]-graymatrix[i-1][j-1];
+			}
+		}
+		// console.log(integralImage)
+		return this.integralImage = integralImage;
+	};
+
+	classify(pointx,pointy){
+		let weakSum = 0,
+			cascade = classier.opencv_storage.cascade,
+			features = classier.opencv_storage.cascade.features._,
+			stageNum = cascade.stageNum,
+			length = this.Matrix.length*this.Matrix[0].length;
+
+		let getOnePointCalGraphValue = (x,y)=>{
+			return this.integralImage[y][x];
+		}
+
+		function isCorrect(res,arr,jud){
+			if (res > jud) {
+				return arr[1];
+			} else {
+				return arr[0]
+			}
+		}
+
+		function getCalGraphValue(x, y, width, height) {
+			x = parseInt(x);
+			y = parseInt(y);
+			width = parseInt(width);
+			height = parseInt(height);
+			return getOnePointCalGraphValue(pointx+x + width, pointy+y + height) -
+				getOnePointCalGraphValue(pointx+x,pointy+y + height) -
+				getOnePointCalGraphValue(pointx+x + width, pointy+y) +
+				getOnePointCalGraphValue(x+pointx, y+pointy)
+		}
+
+		let computeFeture = (index)=>{
+			let rect = features[index].rects._;
+			let sum = 0;
+			for(let i = 0 ;i<rect.length;i++){
+				sum += rect[i][4]*getCalGraphValue(rect[i][0],rect[i][1],rect[i][2],rect[i][3]);
+			}
+			return sum;
+		}
+
+		for (let i = 0; i < stageNum; i++) {
+			 let maxWeakCount = cascade.stages._[i]['maxWeakCount']
+			for (let j = 0; j < maxWeakCount; j++) {
+				let weakclassier = cascade.stages._[i].weakClassifiers._[j];
+				let res = computeFeture(weakclassier.internalNodes[2]) / length;
+
+				weakSum += isCorrect(res, weakclassier.leafValues, weakclassier.internalNodes[3]);
+			}
+			let stageThreshold = cascade.stages._[i]['stageThreshold'];
+
+			console.log(weakSum,stageThreshold)
+			if (weakSum < stageThreshold) {
+				weakSum = 0;
+				return;
+			}
+			weakSum = 0;
+		}
+		console.log('ok')
+	}
+
+	detectface(){
+		let height = this.Matrix.length-24,
+			width = this.Matrix[0].length-24;
+
+		this.GetIntegralImage();
+		this.classify(0,0);
+		for(let i = 0;i<height;i++){
+			for(let j = 0;j<width;j++){
+				this.classify(j,i);
+			}
+		}
 	}
 }
 

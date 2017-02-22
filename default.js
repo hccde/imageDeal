@@ -12,7 +12,7 @@
 	// 				prepic
 	// };
 	let ele = document.getElementsByTagName('body')[0];
-	utils.imageLoad('./house.jpg',function(imagedata){
+	utils.imageLoad('./99.jpg',function(imagedata){
 		let image = new ImageDeal(imagedata);
 		
 		// utils.imageOutput(t(image.scale.bind(image)),ele)

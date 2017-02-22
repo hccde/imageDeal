@@ -1,7 +1,6 @@
 import Compute from './Compute';
 import ImageDeal from './ImageDeal';
 import utils from '../lib/utils';
-import classier from '../haarjson.js';
 
 class AbstructCompute{
 	constructor(matrix){
@@ -198,7 +197,9 @@ class AbstructCompute{
 	};
 
 	DetectFace(){
-		// console.log(classier);
+		let compute = new Compute(this.grayMatrix[0]);
+		compute.detectface();
+		// console.log(this.GetIntegralImage(this.grayMatrix[0]))
 		return ImageDeal.grayMatrixtoImageData(this.grayMatrix);
 		// 
 	}
