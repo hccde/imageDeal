@@ -40,6 +40,6 @@
 		// 	})
 		// })
 		
-		
+		utils.imageOutput(image.DetectFace(),ele);
 		
  	});

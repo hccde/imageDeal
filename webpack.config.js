@@ -20,6 +20,9 @@ module.exports = {
                 loader: "babel-loader",
                 query: {
                 	presets: ['es2015', 'stage-3'],
+                  compact:true,
+                  ignore:[
+                    'harrJson.js']
                 	// sourceMaps: ['both']//babel的sourcemap
                 	}
             	},{
