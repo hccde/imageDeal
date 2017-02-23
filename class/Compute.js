@@ -141,7 +141,7 @@ class Compute{
 		}
 
 		function isCorrect(res,arr,jud){
-			console.log(res,jud)
+			// console.log(res,jud)
 			if (res > jud) {
 				// console.log('arr[1]',arr[1])
 				return arr[1];
@@ -188,24 +188,33 @@ class Compute{
 			if (weakSum <= stageThreshold) {
 				weakSum = 0;
 				console.log('no');
-				return;
+				return false;
 			}
 			weakSum = 0;
 		}
 		console.log('ok')
+		return true;
 	}
 
 	detectface(){
 		let height = this.Matrix.length-24,
 			width = this.Matrix[0].length-24;
 
+		let comment = (h_begin,w_begin)=>{
+			for(let i = h_begin;i<h_begin+24;i++){
+				for(let j=w_begin;j<w_begin+24;j++){
+					this.Matrix[i][j] = 0;
+				}
+			}
+		}
 		this.GetIntegralImage();
 		// this.classify(150,250);
 		for(let i = 0;i<height;i++){
 			for(let j = 0;j<width;j++){
-				this.classify(j,i);
+				this.classify(j,i)?comment(i,j):undefined;
 			}
 		}
+
 	}
 }
 
