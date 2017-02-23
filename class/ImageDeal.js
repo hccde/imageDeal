@@ -14,7 +14,7 @@ class ImageDeal extends AbstructCompute{
 		this._grayMatrix = [];
 		this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
 		this.factor = this.factor<=1?1:this.factor;
-		this.factor = 1;
+		this.factor = 2;
 	};
 
 	get grayMatrix(){

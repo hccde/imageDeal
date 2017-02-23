@@ -108,18 +108,25 @@ class Compute{
 			width = graymatrix[0].length,
 			integralImage = utils.copyArray(graymatrix);
 		//extra row 
-		graymatrix.unshift(new Array(width).fill(0));
+		integralImage.unshift(new Array(width).fill(0));
 		//extra col
 		for (let i = 0; i < height; i++) {
-				graymatrix[i].unshift(0);
+				integralImage[i].unshift(0);
 		}
 
-		for(let i = 1,n=0;i<=height;i++,n++){
-			for(let j = 1,m=0;j<=width;j++,m++){
-				integralImage[n][m]  =  graymatrix[i][j]+graymatrix[i-1][j]+graymatrix[i][j-1]-graymatrix[i-1][j-1];
+		for(let n=1;n<=height;n++){
+			for(let m=1;m<=width;m++){
+				integralImage[n][m]  =  integralImage[n][m]+integralImage[n-1][m]+
+					integralImage[n][m-1]-integralImage[n-1][m-1];
 			}
 		}
-		// console.log(integralImage)
+
+		integralImage.shift();
+		//extra col
+		for (let i = 0; i < height; i++) {
+				integralImage[i].shift();
+		}
+
 		return this.integralImage = integralImage;
 	};
 
@@ -129,15 +136,17 @@ class Compute{
 			features = classier.opencv_storage.cascade.features._,
 			stageNum = cascade.stageNum,
 			length = this.Matrix.length*this.Matrix[0].length;
-
 		let getOnePointCalGraphValue = (x,y)=>{
-			return this.integralImage[y][x];
+			return this.integralImage[y][x]; //todo
 		}
 
 		function isCorrect(res,arr,jud){
+			console.log(res,jud)
 			if (res > jud) {
+				// console.log('arr[1]',arr[1])
 				return arr[1];
 			} else {
+				// console.log('arr[0]',arr[0])
 				return arr[0]
 			}
 		}
@@ -170,11 +179,15 @@ class Compute{
 
 				weakSum += isCorrect(res, weakclassier.leafValues, weakclassier.internalNodes[3]);
 			}
+
 			let stageThreshold = cascade.stages._[i]['stageThreshold'];
 
-			console.log(weakSum,stageThreshold)
-			if (weakSum < stageThreshold) {
+			// console.log(weakSum)
+			// console.log(stageThreshold)
+
+			if (weakSum <= stageThreshold) {
 				weakSum = 0;
+				console.log('no');
 				return;
 			}
 			weakSum = 0;
@@ -187,7 +200,7 @@ class Compute{
 			width = this.Matrix[0].length-24;
 
 		this.GetIntegralImage();
-		this.classify(0,0);
+		// this.classify(150,250);
 		for(let i = 0;i<height;i++){
 			for(let j = 0;j<width;j++){
 				this.classify(j,i);
