@@ -12,7 +12,7 @@
 	// 				prepic
 	// };
 	let ele = document.getElementsByTagName('body')[0];
-	utils.imageLoad('./99.jpg',function(imagedata){
+	utils.imageLoad('./people.jpg',function(imagedata){
 		let image = new ImageDeal(imagedata);
 		
 		// utils.imageOutput(t(image.scale.bind(image)),ele)
@@ -40,6 +40,9 @@
 		// 	})
 		// })
 		
-		utils.imageOutput(image.DetectFace(),ele);
-		
+		// utils.imageOutput(image.DetectFace(),ele);
+		let arr = [1,2,3,[4,5,6,7]]
+		var worker = new Worker('worker.js');
+
+		// worker.postMessage(['hello','world']);
  	});
