@@ -12,8 +12,8 @@
 	// 				prepic
 	// };
 	let ele = document.getElementsByTagName('body')[0];
-	utils.imageLoad('./people.jpg',function(imagedata){
-		let image = new ImageDeal(imagedata);
+	// utils.imageLoad('./people.jpg',function(imagedata){
+		// let image = new ImageDeal(imagedata);
 		
 		// utils.imageOutput(t(image.scale.bind(image)),ele)
 		// utils.imageOutput(t(image.gray.bind(image)),ele);
@@ -41,8 +41,15 @@
 		// })
 		
 		// utils.imageOutput(image.DetectFace(),ele);
-		let arr = [1,2,3,[4,5,6,7]]
-		var worker = new Worker('worker.js');
+ 	// });
 
-		// worker.postMessage(['hello','world']);
- 	});
+	 	let arr = [1,2,3,[4,5,6,7]];
+		var worker = new Worker('worker.js');
+		worker.postMessage('haha')
+		let imageData = new ImageData(100,100)
+		worker.postMessage('hahha',[imageData.data.buffer]);
+		worker.onmessage = function(e){
+			console.log('from worker',e);
+		}
+		// console.log(arr);
+		arr = [];

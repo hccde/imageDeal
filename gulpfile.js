@@ -24,6 +24,7 @@
 		// 	console.log("Starting server on http://localhost:8080");
 		// });
 
+		//webpack-dev-server has a bug about web worker
 		webpackServer =  require('child_process').spawn('webpack-dev-server', ['--inline','--color']); 
 		console.log(webpackServer.pid);
 		webpackServer.stdout.on('data', function (data) { 

@@ -2,11 +2,11 @@ let webpack = require('webpack');
 let path = require('path');
 module.exports = {
 	devtool:"sourcemap",
-	watch:true,
+	// watch:true,
 	entry:{
     //webpack dev server bug
-    // worker:['./class/worker.js'],
-    dest:['webpack-dev-server/client?http://localhost:8080/','babel-polyfill','./default.js']
+    worker:['./class/worker.js'],
+    dest:['babel-polyfill','./default.js']
   },
 	devServer: {
   		contentBase: path.join(__dirname, "dest"),
