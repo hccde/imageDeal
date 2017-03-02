@@ -3,7 +3,7 @@ import utils from '../lib/utils';
 import AbstructCompute from './AbstructCompute';
 class ImageDeal extends AbstructCompute{
 
-	constructor(img){
+	constructor(img,factor){
 		super()
 		img instanceof ImageData? (this._imageData = img):
 			utils.error('image must be a instance of ImageData');
@@ -14,7 +14,7 @@ class ImageDeal extends AbstructCompute{
 		this._grayMatrix = [];
 		this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
 		this.factor = this.factor<=1?1:this.factor;
-		this.factor = 3;
+		this.factor = factor;
 	};
 
 	get grayMatrix(){
@@ -66,6 +66,15 @@ class ImageDeal extends AbstructCompute{
 		this._imageData = imagedata;
 		return imagedata;
 	};
+	/**
+	 * nearest neighbour interpolation
+	 * @return {[type]} [description]
+	 */
+	//todo
+	nearestScale(){
+
+	}
+
 	/**
 	 * @param  {Element} [dom element wait be appended a child]
 	 * @param  {ImageData} [image's imagedata]
