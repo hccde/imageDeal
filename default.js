@@ -41,8 +41,8 @@
 		// })
 		
 		// utils.imageOutput(image.DetectFace(),ele);
-		let arr = [1,2,3,[4,5,6,7]]
-		var worker = new Worker('worker.js');
-
+		// let arr = [1,2,3,[4,5,6,7]]
+		// var worker = new Worker('worker.js');
+		utils.imageOutput(image.transform(50,50),ele)
 		// worker.postMessage(['hello','world']);
  	});

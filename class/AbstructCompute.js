@@ -204,7 +204,7 @@ class AbstructCompute{
 		// 
 	}
 
-	transform() {
+	transform(widths,heights) {
 		let height = this.grayMatrix.length;
 		let width = this.grayMatrix[0].length;
 		let extraRow = 1;
@@ -223,16 +223,16 @@ class AbstructCompute{
 		}
 
 		function getNewValue(i, j) {
-			posx = i * heightfactor + 1 //因为增加了一行一列
-			posy = j * widthfactor + 1;
+			let posx = i * heightfactor + 1 //因为增加了一行一列
+			let posy = j * widthfactor + 1;
 
 			let newPos = hasPos.bind(this)(posx, posy);
 			if (newPos == -1) {
 				//双线性插值
-				f00 = this.grayMatrix[Math.floor(posx)][Math.floor(posy)];
-				f10 = this.grayMatrix[Math.floor(posx)][Math.ceil(posy)];
-				f01 = this.grayMatrix[Math.ceil(posx)][Math.floor(posy)];
-				f11 = this.grayMatrix[Math.ceil(posx)][Math.ceil(posy)];
+				let f00 = this.grayMatrix[Math.floor(posx)][Math.floor(posy)];
+				let f10 = this.grayMatrix[Math.floor(posx)][Math.ceil(posy)];
+				let f01 = this.grayMatrix[Math.ceil(posx)][Math.floor(posy)];
+				let f11 = this.grayMatrix[Math.ceil(posx)][Math.ceil(posy)];
 				return Math.floor(f00 * (1 - posx) * (1 - posy) + f10 * posy * (1 - posx) + f01 * posx * (1 - posy) + f11 * posx * posy);
 			} else {
 				return newPos;
@@ -267,6 +267,7 @@ class AbstructCompute{
 			}
 		}
 		this.grayMatrix = newgrayMatrix;
+		return ImageDeal.grayMatrixtoImageData(this.grayMatrix);
 	}
 
 
