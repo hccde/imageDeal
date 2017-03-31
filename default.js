@@ -3,7 +3,7 @@
 	}
 
 	import ImageDeal from './class/ImageDeal';
-	import utils from './lib/utils'
+	import utils from './lib/utils';
 	let t = utils.execTime
 	// State = {
 	// 				canvasEle,

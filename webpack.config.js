@@ -5,7 +5,7 @@ module.exports = {
 	watch:true,
 	entry:{
     //webpack dev server bug
-    // worker:['./class/worker.js'],
+    worker:['./class/worker.js'],
     dest:['webpack-dev-server/client?http://localhost:8080/','babel-polyfill','./default.js']
   },
 	devServer: {
