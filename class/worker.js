@@ -1,11 +1,17 @@
 //judge event target
+//change data form 
+//data = {type:'Worker',data:any}
+
 (function(_this) {
 	_this.onmessage = function(e) {
-		console.log(e)
-		console.log('get some info')
+		if(e.data&&e.data.type=='Worker'){
+			console.log('onmessage')
+		}
 	}
 
 	_this.postmessage = function(e) {
-		console.log(e)
+		if(e.data&&e.data.type=='Worker'){
+			console.log('postmessage')
+		}
 	}
 })(window)

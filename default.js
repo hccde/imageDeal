@@ -11,6 +11,8 @@
 	// 				imageData,
 	// 				prepic
 	// };
+	
+	
 	let ele = document.getElementsByTagName('body')[0];
 	utils.imageLoad('./people.jpg',function(imagedata){
 		let image = new ImageDeal(imagedata);
