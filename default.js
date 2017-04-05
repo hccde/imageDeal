@@ -14,7 +14,7 @@
 	
 	
 	let ele = document.getElementsByTagName('body')[0];
-	utils.imageLoad('./people.jpg',function(imagedata){
+	utils.imageLoad('./headsmall.jpg',function(imagedata){
 		let image = new ImageDeal(imagedata);
 		
 		// utils.imageOutput(t(image.scale.bind(image)),ele)
@@ -35,17 +35,7 @@
 		// utils.imageOutput(t(image.Mosaic.bind(image,20,20,10,10)),ele)
 		// utils.imageOutput(t(image.Rotate.bind(image,0,334,Math.PI/4)),ele)
 		
-		// let arr = image.Split.bind(image)(4,4)
-		// arr.forEach((arry)=>{
-		// 	arry.forEach((e)=>{
-		// 		utils.imageOutput(e,ele);
-		// 	})
-		// })
-		
-		// utils.imageOutput(image.DetectFace(),ele);
-		// let arr = [1,2,3,[4,5,6,7]]
-		// var worker = new Worker('worker.js');
+		utils.imageOutput(image.DetectFace(),ele);
 		// utils.imageOutput(image.transform(50,50),ele)
-		// worker.postMessage(['hello','world']);
-		utils.asyncMapThree([1,2,3,4],function(e){console.log('output'+e)})
+		// utils.asyncMapThree([1,2,3,4],function(e){console.log('output'+e)})
  	});
