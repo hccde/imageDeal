@@ -22,7 +22,7 @@ int main( void )
     if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading face cascade\n"); return -1; };
     if( !eyes_cascade.load( eyes_cascade_name ) ){ printf("--(!)Error loading eyes cascade\n"); return -1; };
 
-    Mat frame = imread("/Users/admos/Documents/imageDeal/dest/people.jpg");
+    Mat frame = imread("/Users/admos/Documents/imageDeal/dest/test.jpg");
     detectAndDisplay( frame );
     waitKey(0);
     return 0;
