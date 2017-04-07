@@ -12,9 +12,9 @@ class ImageDeal extends AbstructCompute{
 		this._oldimageData = this.imageData //keep initally imageData; todo debug
 		this._Matrix = [];
 		this._grayMatrix = [];
-		this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
-		this.factor = this.factor<=1?1:this.factor;
-		// this.factor = 1;
+		// this.factor = Math.max(Math.floor(this._width / 500),Math.floor(this._height)/500);
+		// this.factor = this.factor<=1?1:this.factor;
+		this.factor = 1;
 	};
 
 	get grayMatrix(){

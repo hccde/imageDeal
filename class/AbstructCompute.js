@@ -210,17 +210,22 @@ class AbstructCompute{
 			[1,2,1]]){//version 2
 		width = parseInt(width);
 		height = parseInt(height);
-		this.Matrix = this.Matrix.map((arr,index)=>{
-			return this._transform(width,height,arr)
-		})
-		//default CarlFilter
-		// return this.CarlFilter(mask);
-		return ImageDeal.MatrixtoImageData(this.Matrix);
-	}
-
-	_transform(width,height,arr,index){
 		let xfactor = this._width/width,
 			yfactor = this._height/height;
+
+		this.Matrix = this.Matrix.map((arr,index)=>{
+			return this._transform(width,height,arr,xfactor,yfactor)
+		});
+		
+		if(xfactor==1&&yfactor==1){
+			return ImageDeal.MatrixtoImageData(this.Matrix);			
+		}else{
+			//default CarlFilter
+			return this.CarlFilter(mask);
+		}
+	}
+
+	_transform(width,height,arr,xfactor,yfactor){
 		let transformed = [];
 		for(let i = 0;i<height;i++){
 			transformed.push([]);
@@ -235,7 +240,7 @@ class AbstructCompute{
 	//Bilinear interpolation
 	_bilinear(w,h,xfactor,yfactor,arr){//arr is one of rgba channel
 		let x = w*xfactor,y = h*yfactor;
-		if(arr[y]!=undefined && arr[y][x]!=undefined){
+		if(arr[y] && arr[y][x]!=undefined){
 			return arr[y][x];
 		}
 
@@ -247,7 +252,7 @@ class AbstructCompute{
 
 		let x0y0 = arr[inty][intx],x1y0 = arr[inty][intx1],
 			x0y1  = arr[inty1][intx],x1y1 = arr[inty1][intx1];
-
+			// console.log(x0y0,x1y0,x0y1,x1y1);
 		let newval = x0y1*(intx1-x)*(inty1-y)+x1y1*(x-intx)*(inty1-y)+
 			x0y0*(intx1-x)*(y-inty)+x1y0*(x-intx)*(y-inty);
 		return newval;
