@@ -216,12 +216,16 @@ class AbstructCompute{
 		this.Matrix = this.Matrix.map((arr,index)=>{
 			return this._transform(width,height,arr,xfactor,yfactor)
 		});
-		
+
 		if(xfactor==1&&yfactor==1){
 			return ImageDeal.MatrixtoImageData(this.Matrix);			
 		}else{
 			//default CarlFilter
-			return this.CarlFilter(mask);
+				this.CarlFilter(mask);
+				return this.Sharpen(
+					[-1, -1, -1],
+					[-1, 2, -1],
+					[-1, -1, -1]);
 		}
 	}
 

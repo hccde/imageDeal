@@ -37,7 +37,7 @@
 		
 		// utils.imageOutput(image.DetectFace(),ele);
 		// utils.imageOutput(image.transform(50,50),ele)
-		utils.imageOutput(image.transform(799,533),ele);
+		utils.imageOutput(image.transform(799*1.5,533*1.5),ele);
 		// console.log(image.Matrix)
 		// utils.asyncMapThree([1,2,3,4],function(e){console.log('output'+e)})
  	});
