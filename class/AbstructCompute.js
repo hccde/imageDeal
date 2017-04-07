@@ -204,70 +204,53 @@ class AbstructCompute{
 		// 
 	}
 
-	transform(widths,heights) {
-		let height = this.grayMatrix.length;
-		let width = this.grayMatrix[0].length;
-		let extraRow = 1;
-		let extraCol = 1;
-		let newgrayMatrix = [];
-		let heightfactor = height / heights;
-		let widthfactor = width / widths;
+	transform(width,height,mask=[
+			[1,2,1],
+			[2,4,2],
+			[1,2,1]]){//version 2
+		width = parseInt(width);
+		height = parseInt(height);
+		this.Matrix = this.Matrix.map((arr,index)=>{
+			return this._transform(width,height,arr)
+		})
+		//default CarlFilter
+		// return this.CarlFilter(mask);
+		return ImageDeal.MatrixtoImageData(this.Matrix);
+	}
 
-		function hasPos(posx, posy) { //判断新像素在旧像素是否有对应位置
-			if (parseInt(posx) !== posx || parseInt(posy) !== posy ||
-				posx >= this.grayMatrix.length || posy >= this.grayMatrix[0].length) {
-				return -1;
-			} else {
-				return this.grayMatrix[posx][posy];
+	_transform(width,height,arr,index){
+		let xfactor = this._width/width,
+			yfactor = this._height/height;
+		let transformed = [];
+		for(let i = 0;i<height;i++){
+			transformed.push([]);
+			for(let j = 0;j<width;j++){
+				//get transformed value
+				transformed[i][j] = this._bilinear(j,i,xfactor,yfactor,arr);
 			}
 		}
-
-		function getNewValue(i, j) {
-			let posx = i * heightfactor + 1 //因为增加了一行一列
-			let posy = j * widthfactor + 1;
-
-			let newPos = hasPos.bind(this)(posx, posy);
-			if (newPos == -1) {
-				//双线性插值
-				let f00 = this.grayMatrix[Math.floor(posx)][Math.floor(posy)];
-				let f10 = this.grayMatrix[Math.floor(posx)][Math.ceil(posy)];
-				let f01 = this.grayMatrix[Math.ceil(posx)][Math.floor(posy)];
-				let f11 = this.grayMatrix[Math.ceil(posx)][Math.ceil(posy)];
-				return Math.floor(f00 * (1 - posx) * (1 - posy) + f10 * posy * (1 - posx) + f01 * posx * (1 - posy) + f11 * posx * posy);
-			} else {
-				return newPos;
-			}
+		
+		return transformed;
+	}
+	//Bilinear interpolation
+	_bilinear(w,h,xfactor,yfactor,arr){//arr is one of rgba channel
+		let x = w*xfactor,y = h*yfactor;
+		if(arr[y]!=undefined && arr[y][x]!=undefined){
+			return arr[y][x];
 		}
 
+		let height = this._height,width = this._width,
+			intx = parseInt(x),inty = parseInt(y),
+			intx1 = intx+1,inty1 = inty+1;
+			intx1 = intx1>=width?width-1:intx1;
+			inty1 = inty1>=height?height-1:inty1;
 
-		//上面添加行
-		for (let i = 0; i < extraRow; i++) {
-			this.grayMatrix.unshift(this.grayMatrix[2 * i + 1]) //插入行的时候下标也变了！注意
-		}
-		// 	//下面添加行
-		for (let i = 0; i < extraRow; i++) {
-			this.grayMatrix.push(this.grayMatrix[this.grayMatrix.length - 2 - i])
-		}
-		// 	//左边添加列
-		for (let i = 0; i < this.grayMatrix.length; i++) {
-			for (let k = 0; k < extraCol; k++) {
-				this.grayMatrix[i].unshift(this.grayMatrix[i][2 * k + 1]);
-			}
-		}
-		// 	//右边添加列
-		for (let i = 0; i < this.grayMatrix.length; i++) {
-			for (let k = 0; k < extraCol; k++) {
-				this.grayMatrix[i].push(this.grayMatrix[i][this.grayMatrix[0].length - 2 - k])
-			}
-		}
-		for (let i = 0; i < heights; i++) {
-			newgrayMatrix.push([]);
-			for (let j = 0; j < widths; j++) {
-				newgrayMatrix[i][j] = getNewValue.bind(this)(i, j);
-			}
-		}
-		this.grayMatrix = newgrayMatrix;
-		return ImageDeal.grayMatrixtoImageData(this.grayMatrix);
+		let x0y0 = arr[inty][intx],x1y0 = arr[inty][intx1],
+			x0y1  = arr[inty1][intx],x1y1 = arr[inty1][intx1];
+
+		let newval = x0y1*(intx1-x)*(inty1-y)+x1y1*(x-intx)*(inty1-y)+
+			x0y0*(intx1-x)*(y-inty)+x1y0*(x-intx)*(y-inty);
+		return newval;
 	}
 
 
